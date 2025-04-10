@@ -377,9 +377,8 @@ Inicie o PowerShell como administrador para executar os comandos desta seção.
 Execute os comandos abaixo para tentar solucionar uma atualização mal sucedida do Windows.
 
 ```powershell
-Stop-Service -Name "bits" -Force
-Stop-Service -Name "cryptsvc" -Force
-Stop-Service -Name "wuauserv" -Force
+Stop-Service -Name "bits", "cryptsvc", "wuauserv" -Force
+Get-Service -Name "bits", "cryptsvc", "wuauserv"
 Remove-Item -Path "C:\Windows\SoftwareDistribution\" -Recurse -Force
 Remove-Item -Path "C:\Windows\System32\catroot2" -Recurse -Force
 Invoke-Expression -Command "sfc /scannow"
