@@ -94,7 +94,7 @@ Execute `winget list` para listar os _softwares_ instalados.
 
 Utilize a _flag_ `--upgrade-available` para listar apenas os _softwares_ que possuam atualizações disponíveis.
 
-```bash
+```powershell
 winget list --source "winget" --scope "machine"
 
 winget list --source "winget" --scope "machine" --upgrade-available
