@@ -42,7 +42,6 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 - [`chrome`](https://www.google.com/chrome)
 - [`code`](https://code.visualstudio.com)
 - [`docker`](https://docs.docker.com/engine)
-- [`fish`](https://github.com/fish-shell/fish-shell)
 - [`gcloud`](https://cloud.google.com/sdk/docs/install)
 - [`gh`](https://github.com/cli/cli)
 - [`git`](https://git-scm.com)
@@ -161,7 +160,7 @@ sudo apt update && sudo apt upgrade --assume-yes
 Instale os pacotes especificados abaixo.
 
 ```bash
-sudo apt install --assume-yes "apt-transport-https" "bat" "build-essential" "ca-certificates" "curl" "file" "fish" "git" "gnupg" "procps" "unzip" "wget" "zip"
+sudo apt install --assume-yes "apt-transport-https" "bat" "build-essential" "ca-certificates" "curl" "file" "git" "gnupg" "procps" "unzip" "wget" "zip"
 ```
 
 Crie o diretório `/etc/apt/keyrings/` com as permissões `0755`, para armazenar chaves GPG.
