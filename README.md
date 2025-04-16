@@ -46,6 +46,7 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 - [`gcloud`](https://cloud.google.com/sdk/docs/install)
 - [`gh`](https://github.com/cli/cli)
 - [`git`](https://git-scm.com)
+- [`nushell`](https://github.com/nushell/nushell)
 - [`pwsh`](https://learn.microsoft.com/en-us/powershell)
 - [`starship`](https://github.com/starship/starship)
 - [`terminal`](https://github.com/microsoft/terminal)
@@ -175,6 +176,7 @@ Baixe e converta as chaves GPG especificadas abaixo, salvando-as no diretório `
 sudo curl --fail "https://download.docker.com/linux/debian/gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/docker.gpg"
 sudo curl --fail "https://packages.cloud.google.com/apt/doc/apt-key.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/gcloud.gpg"
 sudo curl --fail "https://cli.github.com/packages/githubcli-archive-keyring.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/gh.gpg"
+sudo curl --fail "https://apt.fury.io/nushell/gpg.key" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/nushell.gpg"
 ```
 
 Adicione os repositórios especificados abaixo como fontes de pacotes para o `apt`.
@@ -185,6 +187,7 @@ Em seguida, com as novas fontes, sincronize os índices de pacotes.
 echo "deb [signed-by=/etc/apt/keyrings/docker.gpg arch=amd64] https://download.docker.com/linux/debian bookworm stable" | sudo tee "/etc/apt/sources.list.d/docker.list" > /dev/null
 echo "deb [signed-by=/etc/apt/keyrings/gcloud.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee "/etc/apt/sources.list.d/google-cloud-sdk.list" > /dev/null
 echo "deb [signed-by=/etc/apt/keyrings/gh.gpg arch=amd64] https://cli.github.com/packages stable main" | sudo tee "/etc/apt/sources.list.d/github-cli.list" > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/nushell.gpg] https://apt.fury.io/nushell/ /" | sudo tee "/etc/apt/sources.list.d/nushell.list" > /dev/null
 
 sudo apt update
 ```
@@ -195,6 +198,7 @@ Instale os pacotes especificados abaixo.
 sudo apt install --assume-yes "docker-ce" "docker-ce-cli" "containerd.io" "docker-buildx-plugin" "docker-compose-plugin"
 sudo apt install --assume-yes "google-cloud-cli"
 sudo apt install --assume-yes "gh"
+sudo apt install --assume-yes "nushell"
 ```
 
 Adiciona o usuário referenciado pela variável `$USER` ao grupo `"docker"`.
