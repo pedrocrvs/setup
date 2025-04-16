@@ -15,8 +15,8 @@ function Enter-WSLDebian {
     & "wsl" $Arguments
 }
 
-function Enter-WSLDebianFish {
-    Enter-WSLDebian -ShellPath "/usr/bin/fish"
+function Enter-WSLDebianNushell {
+    Enter-WSLDebian -ShellPath "/usr/bin/nu"
 }
 
 function Get-ImAdministrator {
@@ -255,7 +255,7 @@ function Start-MouseMovement {
 }
 
 
-Set-Alias -Name "deb" -Value Enter-WSLDebianFish
+Set-Alias -Name "deb" -Value Enter-WSLDebianNushell
 Set-Alias -Name "ip" -Value Set-ClipboardToIPAddress
 Set-Alias -Name "isudo" -Value Get-ImAdministrator
 Set-Alias -Name "junk" -Value Remove-Junk
