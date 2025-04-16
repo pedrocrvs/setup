@@ -47,7 +47,7 @@ $env.config.use_kitty_protocol = false
 
 
 # Error display settings
-$env.config.display_errors.exit_code = true
+$env.config.display_errors.exit_code = false
 $env.config.display_errors.termination_signal = true
 $env.config.error_style = "fancy"
 
