@@ -195,7 +195,7 @@ def ll [glob: glob = "." ] {
 
 alias pp = echo $env.PATH
 
-alias rr = rm --force --interactive-once --recursive --trash --verbose
+alias rr = rm --force --recursive --trash --verbose
 
 # Completions
 
