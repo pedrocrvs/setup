@@ -69,8 +69,8 @@ Inicie o PowerShell como administrador e instale os _softwares_ especificados ab
 > Os comandos abaixo foram escritos como estão para que seja possível executá-los individualmente.
 
 ```powershell
-winget install --source "winget" --id "Yaak.app"
 winget install --source "winget" --id "Microsoft.WindowsTerminal"
+winget install --source "winget" --id "Yaak.app"
 winget install --source "winget" --scope "machine" --id "7zip.7zip"
 winget install --source "winget" --scope "machine" --id "Git.Git" --override '/VERYSILENT /NODESKTOPICON /NOEXPLORER /COMPONENTS="icons,gitlfs" /NOASSOC /NOSCALAR /PATH'
 winget install --source "winget" --scope "machine" --id "GitHub.cli"
