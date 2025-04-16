@@ -15,6 +15,11 @@
     "showTabsInTitlebar": false,
     "showTerminalTitleInTitlebar": false,
 
+    "actions": [
+        { "command": { "action": "scrollDown" }, "id": "User.scrollDown.0" },
+        { "command": { "action": "scrollUp" }, "id": "User.scrollUp.0" }
+    ],
+
     "keybindings": [
         { "keys": "alt+down", "id": "" },
         { "keys": "alt+enter", "id": "" },
@@ -68,7 +73,11 @@
         { "keys": "enter", "id": "" },
         { "keys": "menu", "id": "" },
         { "keys": "shift+insert", "id": "" },
-        { "keys": "win+sc(41)", "id": "" }
+        { "keys": "win+sc(41)", "id": "" },
+
+        { "keys": "shift+down", "id": "User.scrollDown.0" },
+        { "keys": "shift+up", "id": "User.scrollUp.0" }
+
     ],
 
     "profiles": {
