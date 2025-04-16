@@ -123,7 +123,7 @@
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.defaultProfile.linux": "Fish",
+  "terminal.integrated.defaultProfile.linux": "Nushell",
   "terminal.integrated.defaultProfile.windows": "PowerShell 7",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.enablePersistentSessions": false,
@@ -134,8 +134,8 @@
   "terminal.integrated.tabs.enabled": false,
 
   "terminal.integrated.profiles.linux": {
-    "Fish": {
-      "path": "/usr/bin/fish",
+    "Nushell": {
+      "path": "/usr/bin/nu",
       "args": [ ],
       "icon": "terminal",
       "overrideName": true
