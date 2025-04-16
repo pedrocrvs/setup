@@ -1,37 +1,37 @@
 [alias]
-	l = log --format=\"%C(brightmagenta)%h %C(brightgreen)%ad %C(white)%s %C(brightblue)<%ae> %C(brightyellow)%d\" --date=format:\"%Y-%m-%d %H:%M\"
-	s = status --short
+    l = log --format=\"%C(brightmagenta)%h %C(brightgreen)%ad %C(white)%s %C(brightblue)<%ae> %C(brightyellow)%d\" --date=format:\"%Y-%m-%d %H:%M\"
+    s = status --short
 
 [advice]
-	addIgnoredFile = false
+    addIgnoredFile = false
 
 [commit]
-	verbose = true
+    verbose = true
 
 [core]
-	bigFileThreshold = 10m
-	editor = code --wait
-	eol = lf
+    bigFileThreshold = 10m
+    editor = code --wait
+    eol = lf
 
 [fetch]
-  all = true
-  prune = true
-  pruneTags = true
+    all = true
+    prune = true
+    pruneTags = true
 
 [gc]
-  auto = 256
+    auto = 256
 
 [init]
-	defaultBranch = main
+    defaultBranch = main
 
 [pull]
-	ff = only
-	rebase = true
+    ff = only
+    rebase = true
 
 [push]
-	autoSetupRemote = true
-	default = simple
+    autoSetupRemote = true
+    default = simple
 
 [user]
-	name = Pedro Cardo Vasconcellos
-	email = pedro.cardo.vasconcellos@gmail.com
+    name = Pedro Cardo Vasconcellos
+    email = pedro.cardo.vasconcellos@gmail.com
