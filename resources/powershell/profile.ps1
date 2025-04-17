@@ -19,18 +19,6 @@ function Enter-WSLDebianNushell {
     Enter-WSLDebian -ShellPath "/usr/bin/nu"
 }
 
-function Get-ImAdministrator {
-    $WindowsIdentity = [Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()
-    $WindowsAdministratorRole = [Security.Principal.WindowsBuiltInRole]::Administrator
-
-    if ($WindowsIdentity.IsInRole($WindowsAdministratorRole)) {
-        Write-Host "You are running as administrator" -ForegroundColor "Green"
-    }
-    else {
-        Write-Host "You are not running as administrator" -ForegroundColor "Red"
-    }
-}
-
 function Get-IPAddress {
     param (
         [Parameter(Mandatory = $false)]
