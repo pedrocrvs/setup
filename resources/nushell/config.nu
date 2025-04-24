@@ -187,6 +187,7 @@ $env.BROWSER = "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
 
 
 # Aliases and custom commands
+
 alias code = ^"/mnt/c/Program Files/Microsoft VS Code/bin/code"
 
 def ll [glob: glob = "." ] {
@@ -198,5 +199,4 @@ alias pp = echo $env.PATH
 alias rr = rm --force --recursive --trash --verbose
 
 # Completions
-
 source "/home/pedro/.config/nushell/completions-uv.nu"
