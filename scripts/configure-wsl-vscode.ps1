@@ -14,3 +14,5 @@ Invoke-Expression -Command "$Bash '$VisualStudioCode --version'"
 foreach ($Extension in $Extensions) {
     Invoke-Expression "$Bash '$VisualStudioCode --install-extension $Extension --force'"
 }
+
+Remove-Item -Path "$Env:USERPROFILE\vscode-remote-wsl" -Recurse -Force
