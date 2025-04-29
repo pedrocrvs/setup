@@ -186,7 +186,6 @@
 
     "terminalCursor.foreground": "#BBBBBB",
 
-    // ANSI colors
     "terminal.ansiBlack": "#000000",
     "terminal.ansiBrightBlack": "#1A1A1A",
 
