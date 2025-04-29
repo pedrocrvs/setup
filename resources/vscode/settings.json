@@ -249,6 +249,7 @@
   "powershell.powerShellDefaultVersion": "PowerShell 7",
 
   // yzhang.markdown-all-in-one
+  "markdown.extension.bold.indicator": "**",
   "markdown.extension.italic.indicator": "_",
   "markdown.extension.orderedList.autoRenumber": true,
   "markdown.extension.tableFormatter.enabled": false,
