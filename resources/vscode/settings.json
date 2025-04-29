@@ -158,8 +158,10 @@
   // window
   "window.commandCenter": false,
   "window.menuBarVisibility": "compact",
-  "window.newWindowDimensions": "maximized",
+  "window.newWindowDimensions": "fullscreen",
   "window.restoreWindows": "none",
+  "window.title": "${dirty}${appName}${separator}${rootName}${separator}${activeEditorShort}",
+  "window.titleSeparator": " > ",
 
   // workbench
   "workbench.activityBar.location": "hidden",
