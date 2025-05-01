@@ -75,6 +75,7 @@ function Invoke-CustomGetChildItem {
     )
 
     Get-ChildItem -Path $Path -Force |
+    Where-Object { -not ($_.Attributes -band [System.IO.FileAttributes]::System) } |
     ForEach-Object {
         $IsDirectory = $_.PsIsContainer
 
