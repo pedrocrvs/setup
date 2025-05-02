@@ -46,6 +46,7 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 - [`git`](https://git-scm.com)
 - [`nushell`](https://github.com/nushell/nushell)
 - [`pwsh`](https://learn.microsoft.com/en-us/powershell)
+- [`screenbox`](https://github.com/huynhsontung/Screenbox)
 - [`starship`](https://github.com/starship/starship)
 - [`terminal`](https://github.com/microsoft/terminal)
 - [`uv`](https://github.com/astral-sh/uv)
@@ -89,6 +90,7 @@ Inicie o PowerShell sem permissões de administrador e instale os _softwares_ es
 
 ```powershell
 winget install --source "winget" --id "Microsoft.WindowsTerminal"
+winget install --source "winget" --id "Starpine.Screenbox"
 winget install --source "winget" --id "Yaak.app"
 ```
 
@@ -306,7 +308,7 @@ winget upgrade --source "winget" --scope "machine" --all
 Execute `winget uninstall` para desinstalar um _software_ especificado.
 
 ```powershell
-winget uninstall --source "winget" --scope "machine" --id "Git.Git" --all-versions --purge
+winget uninstall --id "Git.Git" --all-versions --purge
 ```
 
 ### `wsl`
