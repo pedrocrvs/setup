@@ -2,14 +2,11 @@
     l = log --format=\"%C(brightmagenta)%h %C(brightgreen)%ad %C(white)%s %C(brightblue)<%ae> %C(brightyellow)%d\" --date=format:\"%Y-%m-%d %H:%M\"
     s = status --short
 
-[advice]
-    addIgnoredFile = false
-
 [commit]
     verbose = true
 
 [core]
-    bigFileThreshold = 10m
+    compression = 9
     editor = code --wait
     eol = lf
 
@@ -30,7 +27,12 @@
 
 [push]
     autoSetupRemote = true
-    default = simple
+    default = current
+
+[status]
+    branch = true
+    showStash = true
+    showUntrackedFiles = all
 
 [user]
     name = Pedro Cardo Vasconcellos
