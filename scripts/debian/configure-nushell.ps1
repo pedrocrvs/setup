@@ -8,7 +8,7 @@ Invoke-Expression "wsl --distribution Debian --exec /usr/bin/bash -c 'mkdir --pa
 Invoke-Expression "wsl --distribution Debian --exec /usr/bin/bash -c 'rm --recursive ~/.config/nushell/*'"
 
 Copy-Item `
-    -Path "$PSScriptRoot\..\resources\nushell\*" `
+    -Path "$PSScriptRoot\..\..\resources\nushell\*" `
     -Destination "\\wsl$\Debian\home\$LinuxUserName\.config\nushell\" `
     -Recurse `
     -Force

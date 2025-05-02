@@ -35,13 +35,13 @@ Remove-Item `
 New-Item `
     -ItemType "SymbolicLink" `
     -Path $PathConfigurationFile `
-    -Target "$PSScriptRoot\..\resources\vscode\settings.json" `
+    -Target "$PSScriptRoot\..\..\resources\vscode\settings.json" `
     -Force
 
 New-Item `
     -ItemType "SymbolicLink" `
     -Path $PathKeybindingsFile `
-    -Target "$PSScriptRoot\..\resources\vscode\keybindings.json" `
+    -Target "$PSScriptRoot\..\..\resources\vscode\keybindings.json" `
     -Force
 
 
@@ -51,7 +51,7 @@ Remove-Item `
     -Force `
     -ErrorAction "SilentlyContinue"
 
-$Extensions = Get-Content -Path "$PSScriptRoot\..\resources\vscode\extensions-windows.txt"
+$Extensions = Get-Content -Path "$PSScriptRoot\..\..\resources\vscode\extensions-windows.txt"
 
 foreach ($Extension in $Extensions) {
     Invoke-Expression "code --install-extension $Extension --force"

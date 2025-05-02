@@ -17,5 +17,5 @@ Remove-Item `
 New-Item `
     -ItemType "SymbolicLink" `
     -Path $PathConfigurationFile `
-    -Target "$PSScriptRoot\..\resources\powershell\profile.ps1" `
+    -Target "$PSScriptRoot\..\..\resources\powershell\profile.ps1" `
     -Force

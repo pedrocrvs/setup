@@ -5,7 +5,7 @@ $Bash = "wsl --distribution Debian --exec /usr/bin/bash -c"
 
 $VisualStudioCode = "/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code"
 
-$Extensions = Get-Content -Path "$PSScriptRoot\..\resources\vscode\extensions-wsl.txt"
+$Extensions = Get-Content -Path "$PSScriptRoot\..\..\resources\vscode\extensions-wsl.txt"
 
 Invoke-Expression -Command "$Bash 'rm --force ~/.vscode-server 2> /dev/null'"
 
