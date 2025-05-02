@@ -9,6 +9,6 @@ New-Item `
     -Force
 
 Copy-Item `
-    -Path "$PSScriptRoot\..\resources\terminal\settings.json" `
+    -Path "$PSScriptRoot\..\..\resources\terminal\settings.json" `
     -Destination $PathConfigurationDirectory  `
     -Force

@@ -17,5 +17,5 @@ Remove-Item `
 New-Item `
     -ItemType "SymbolicLink" `
     -Path $PathConfigurationFile `
-    -Target "$PSScriptRoot\..\resources\starship\starship.toml" `
+    -Target "$PSScriptRoot\..\..\resources\starship\starship.toml" `
     -Force
