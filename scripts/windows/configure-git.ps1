@@ -11,5 +11,5 @@ Remove-Item `
 New-Item `
     -ItemType "SymbolicLink" `
     -Path $PathConfigurationFile `
-    -Target "$PSScriptRoot\..\resources\git\.gitconfig" `
+    -Target "$PSScriptRoot\..\..\resources\git\.gitconfig" `
     -Force
