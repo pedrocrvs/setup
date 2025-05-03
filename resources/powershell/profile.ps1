@@ -157,13 +157,13 @@ function Remove-Junk {
     $CacheAndLogsParentDirectories = @(
         "$Env:LOCALAPPDATA\app.yaak.desktop\"
         "$Env:LOCALAPPDATA\Battle.net\"
-        "$Env:LOCALAPPDATA\Blizzard Entertainment"
+        "$Env:LOCALAPPDATA\Blizzard Entertainment\"
         "$Env:LOCALAPPDATA\EADesktop\"
         "$Env:LOCALAPPDATA\EALaunchHelper\"
         "$Env:LOCALAPPDATA\Electronic Arts\"
         "$Env:LOCALAPPDATA\Microsoft\OneDrive\"
         "$Env:LOCALAPPDATA\Microsoft\Teams\"
-        "$Env:LOCALAPPDATA\OneDrive"
+        "$Env:LOCALAPPDATA\OneDrive\"
         "$Env:LOCALAPPDATA\Origin\"
         "$Env:LOCALAPPDATA\Steam\"
     )
