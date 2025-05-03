@@ -137,7 +137,6 @@ function Remove-Junk {
         "$Env:LOCALAPPDATA\SquirrelTemp"
         "$Env:LOCALAPPDATA\VirtualStore"
         "$Env:USERPROFILE\.cache"
-        "$Env:USERPROFILE\.lesshst"
         "$Env:USERPROFILE\Documents\Custom Office Templates"
         "$Env:USERPROFILE\Documents\Power BI Desktop"
         "$Env:USERPROFILE\Favorites"
@@ -273,6 +272,9 @@ if (Get-Module -Name "PSReadLine") {
 else {
     Write-Host "PSReadLine was not found" -BackgroundColor "Red"
 }
+
+
+$env:LESSHISTFILE = "-"
 
 
 $Env:STARSHIP_CACHE = "$Env:APPDATA\starship\"

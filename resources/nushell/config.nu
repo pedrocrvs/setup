@@ -172,6 +172,8 @@ $env.config.color_config.range = "light_green"
 
 
 # Environment variables
+$env.LESSHISTFILE = "/dev/null"
+
 $env.HOMEBREW_PREFIX = "/home/linuxbrew/.linuxbrew"
 $env.HOMEBREW_CELLAR = "/home/linuxbrew/.linuxbrew/Cellar"
 $env.HOMEBREW_REPOSITORY =  "/home/linuxbrew/.linuxbrew/Homebrew"
