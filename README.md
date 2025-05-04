@@ -48,6 +48,7 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 - [`pwsh`](https://learn.microsoft.com/en-us/powershell)
 - [`screenbox`](https://github.com/huynhsontung/Screenbox)
 - [`starship`](https://github.com/starship/starship)
+- [`task`](https://github.com/go-task/task)
 - [`terminal`](https://github.com/microsoft/terminal)
 - [`uv`](https://github.com/astral-sh/uv)
 - [`winget`](https://github.com/microsoft/winget-cli)
@@ -253,6 +254,7 @@ Instale os pacotes especificados abaixo.
 /home/linuxbrew/.linuxbrew/bin/brew install --formula \
   "carapace" \
   "gcc" \
+  "go-task" \
   "starship" \
   "uv"
 ```
