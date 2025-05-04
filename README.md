@@ -250,7 +250,11 @@ bash -c "$(curl --fail --silent --show-error --location https://raw.githubuserco
 Instale os pacotes especificados abaixo.
 
 ```bash
-/home/linuxbrew/.linuxbrew/bin/brew install --formula "carapace" "gcc" "starship" "uv"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula \
+  "carapace" \
+  "gcc" \
+  "starship" \
+  "uv"
 ```
 
 ## `chrome`
