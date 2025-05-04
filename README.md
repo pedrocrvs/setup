@@ -24,10 +24,10 @@ Os comandos deste documento foram escritos para serem executados com o [PowerShe
   - [`brew`](#brew)
 - [`chrome`](#chrome)
 - [Manutenção dos _softwares_](#manutenção-dos-softwares)
-  - [`winget`](#winget-1)
-  - [`wsl`](#wsl-1)
   - [`apt`](#apt-1)
   - [`brew`](#brew-1)
+  - [`winget`](#winget-1)
+  - [`wsl`](#wsl-1)
 - [Atualizações do Windows](#atualizações-do-windows)
 
 ## _Softwares_
@@ -277,48 +277,6 @@ Habilite as _flags_ especificadas abaixo.
 
 ## Manutenção dos _softwares_
 
-### `winget`
-
-Execute `winget list` para listar os _softwares_ instalados.
-
-Utilize a _flag_ `--upgrade-available` para listar apenas os _softwares_ que possuam atualizações disponíveis.
-
-```powershell
-winget list --source "winget" --scope "machine"
-```
-
-Utilize a _flag_ `--upgrade-available` para listar apenas os _softwares_ que possuam atualizações disponíveis.
-
-```powershell
-winget list --source "winget" --scope "machine" --upgrade-available
-```
-
-Execute `winget upgrade` para atualizar _softwares_ especificados.
-
-```powershell
-winget upgrade --source "winget" --scope "machine" --id "Git.Git"
-```
-
-Utilize a _flag_ `--all` para atualizar todos os _softwares_ que possuam atualizações disponíveis.
-
-```powershell
-winget upgrade --source "winget" --scope "machine" --all
-```
-
-Execute `winget uninstall` para desinstalar um _software_ especificado.
-
-```powershell
-winget uninstall --id "Git.Git" --all-versions --purge
-```
-
-### `wsl`
-
-Execute `wsl --update` para atualizar o WSL.
-
-```powershell
-wsl --update
-```
-
 ### `apt`
 
 Os comandos desta seção foram escritos para serem executados com o [Bash](https://manpages.debian.org/stretch/bash/bash.1.en.html) na distribuição Debian no `wsl`.
@@ -397,6 +355,48 @@ Execute `brew uninstall` para remover um pacote especificado.
 
 ```bash
 brew uninstall --formula "git"
+```
+
+### `winget`
+
+Execute `winget list` para listar os _softwares_ instalados.
+
+Utilize a _flag_ `--upgrade-available` para listar apenas os _softwares_ que possuam atualizações disponíveis.
+
+```powershell
+winget list --source "winget" --scope "machine"
+```
+
+Utilize a _flag_ `--upgrade-available` para listar apenas os _softwares_ que possuam atualizações disponíveis.
+
+```powershell
+winget list --source "winget" --scope "machine" --upgrade-available
+```
+
+Execute `winget upgrade` para atualizar _softwares_ especificados.
+
+```powershell
+winget upgrade --source "winget" --scope "machine" --id "Git.Git"
+```
+
+Utilize a _flag_ `--all` para atualizar todos os _softwares_ que possuam atualizações disponíveis.
+
+```powershell
+winget upgrade --source "winget" --scope "machine" --all
+```
+
+Execute `winget uninstall` para desinstalar um _software_ especificado.
+
+```powershell
+winget uninstall --id "Git.Git" --all-versions --purge
+```
+
+### `wsl`
+
+Execute `wsl --update` para atualizar o WSL.
+
+```powershell
+wsl --update
 ```
 
 ## Atualizações do Windows
