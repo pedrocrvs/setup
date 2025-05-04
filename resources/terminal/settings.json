@@ -7,11 +7,9 @@
     "copyOnSelect": true,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "disableAnimations": true,
-    "initialCols": 140,
-    "initialPosition": "40,40",
-    "initialRows": 40,
+    "initialPosition": ",",
     "language": "en-US",
-    "launchMode": "default",
+    "launchMode": "fullscreen",
     "showTabsInTitlebar": false,
     "showTerminalTitleInTitlebar": false,
 
@@ -88,7 +86,7 @@
                 "face": "CommitMono Nerd Font",
                 "size": 12
             },
-            "padding": "5",
+            "padding": "10",
             "scrollbarState": "always"
         },
         "list": [
