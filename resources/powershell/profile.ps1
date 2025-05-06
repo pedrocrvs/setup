@@ -117,10 +117,7 @@ function Remove-Junk {
     $ErrorActionPreference = "SilentlyContinue"
 
     $JunkItems = @(
-        "$Env:APPDATA\Adobe"
         "$Env:APPDATA\VoiceAccess"
-        "$Env:LOCALAPPDATA\Activision\bootstrapper\crash_reports"
-        "$Env:LOCALAPPDATA\Activision\Call of Duty\crash_reports"
         "$Env:LOCALAPPDATA\cache"
         "$Env:LOCALAPPDATA\CEF"
         "$Env:LOCALAPPDATA\Comms"
@@ -142,7 +139,6 @@ function Remove-Junk {
         "$Env:USERPROFILE\Favorites"
         "$Env:USERPROFILE\Microsoft"
         "$Env:USERPROFILE\Saved Games"
-        "$Env:USERPROFILE\vscode-remote-wsl"
     )
 
     $JunkDirectoriesItems = @(
@@ -155,17 +151,9 @@ function Remove-Junk {
     ) | Get-ChildItem
 
     $CacheAndLogsParentDirectories = @(
-        "$Env:LOCALAPPDATA\app.yaak.desktop\"
-        "$Env:LOCALAPPDATA\Battle.net\"
-        "$Env:LOCALAPPDATA\Blizzard Entertainment\"
-        "$Env:LOCALAPPDATA\EADesktop\"
-        "$Env:LOCALAPPDATA\EALaunchHelper\"
-        "$Env:LOCALAPPDATA\Electronic Arts\"
         "$Env:LOCALAPPDATA\Microsoft\OneDrive\"
         "$Env:LOCALAPPDATA\Microsoft\Teams\"
         "$Env:LOCALAPPDATA\OneDrive\"
-        "$Env:LOCALAPPDATA\Origin\"
-        "$Env:LOCALAPPDATA\Steam\"
     )
 
     $CacheAndLogsDirectories = Get-ChildItem -Path $CacheAndLogsParentDirectories -Recurse -Directory | Where-Object { $_.Name -match 'cache|log' }
