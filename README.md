@@ -10,6 +10,8 @@ Este repositório contém instruções e recursos para configuração do Windows
 
 Os comandos deste documento foram escritos para serem executados com o [PowerShell](https://learn.microsoft.com/en-us/powershell/).
 
+Em sessões sobre `apt` e `brew`, os comandos foram escritos para serem executados com o [Bash](https://manpages.debian.org/stretch/bash/bash.1.en.html).
+
 ## Conteúdos
 
 - [Conteúdos](#conteúdos)
@@ -43,6 +45,7 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 - [`docker`](https://docs.docker.com/engine)
 - [`gcloud`](https://cloud.google.com/sdk/docs/install)
 - [`gh`](https://github.com/cli/cli)
+- [`git-lfs`](https://github.com/git-lfs/git-lfs)
 - [`git`](https://git-scm.com)
 - [`nushell`](https://github.com/nushell/nushell)
 - [`pwsh`](https://learn.microsoft.com/en-us/powershell)
@@ -59,7 +62,7 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 
 Certifique-se de que o `winget` está instalado.
 
-Caso necessário, baixe e instale o `winget` manualmente na [Microsoft Store](https://apps.microsoft.com/detail/9NBLGGH4NNS1).
+Caso necessário, baixe e instale o `winget` manualmente pela [Microsoft Store](https://apps.microsoft.com/detail/9NBLGGH4NNS1).
 
 ```powershell
 winget --version
@@ -67,7 +70,7 @@ winget --version
 
 Inicie o PowerShell como administrador e instale os _softwares_ especificados abaixo.
 
-> Os comandos abaixo foram escritos como estão para que seja possível executá-los individualmente.
+> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente se necessário.
 
 ```powershell
 winget install --source "winget" --scope "machine" --id "7zip.7zip"
@@ -128,7 +131,7 @@ Clone esse repositório.
 > Eu utilizo o diretório `$Env:USERPROFILE/shards/` para salvar repositórios no Windows 11.
 
 ```powershell
-New-Item -Path "$Env:USERPROFILE" -Name "shards" -ItemType "Directory" -Force
+New-Item -Path $Env:USERPROFILE -Name "shards" -ItemType "Directory" -Force
 
 git clone "https://github.com/pedrocrvs/setup.git" $PathRepository "$Env:USERPROFILE/shards/setup"
 
@@ -145,18 +148,18 @@ Por exemplo, o arquivo [`.gitconfig`](resources/git/.gitconfig) para o `git`.
 
 O diretório [`scripts/`](scripts/) contém _scripts_ que configuram os _softwares_.
 
-Alguns desses _scripts_ criam _symbolic links_ nos locais esperados pelos _softwares_, apontando para os arquivos em [`resources/`](resources/).
+Alguns desses _scripts_ criam _symbolic links_ apontando para os arquivos em [`resources/`](resources/).
 
 Inicie o PowerShell como administrador e execute o comando abaixo para ativar o _developer mode_ no Windows 11.
 
-O _developer mode_ é necessário para permitir a criação de _symbolic links_ sem permissões de administrador.
+O _developer mode_ é necessário para a criação de _symbolic links_ sem permissões de administrador.
 
 ```powershell
 New-ItemProperty `
     -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" `
     -Name "AllowDevelopmentWithoutDevLicense" `
     -Value 1 `
-    -PropertyType DWORD `
+    -PropertyType "DWORD" `
     -Force
 ```
 
@@ -168,8 +171,6 @@ O comando abaixo é um exemplo de como executar um dos _scripts_ individualmente
 
 ## Debian
 
-Os comandos desta seção foram escritos para serem executados com o [Bash](https://manpages.debian.org/stretch/bash/bash.1.en.html) na distribuição Debian no `wsl`.
-
 ### `apt`
 
 Utilizando o [`apt`](https://manpages.debian.org/stretch/apt/apt.8.en.html), sincronize os índices de pacotes e instale as atualizações disponíveis.
@@ -180,27 +181,26 @@ sudo apt update && sudo apt upgrade --assume-yes
 
 Instale os pacotes especificados abaixo.
 
+> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente se necessário.
+
 ```bash
-sudo apt install --assume-yes \
-  "apt-transport-https" \
-  "bat" \
-  "build-essential" \
-  "ca-certificates" \
-  "curl" \
-  "file" \
-  "git-lfs" \
-  "git" \
-  "gnupg" \
-  "procps" \
-  "unzip" \
-  "wget" \
-  "zip"
+sudo apt install --assume-yes "bat"
+sudo apt install --assume-yes "build-essential"
+sudo apt install --assume-yes "ca-certificates"
+sudo apt install --assume-yes "curl"
+sudo apt install --assume-yes "file"
+sudo apt install --assume-yes "git-lfs"
+sudo apt install --assume-yes "git"
+sudo apt install --assume-yes "gnupg"
+sudo apt install --assume-yes "unzip"
+sudo apt install --assume-yes "wget"
+sudo apt install --assume-yes "zip
 ```
 
 Crie o diretório `/etc/apt/keyrings/` com as permissões `0755`, para armazenar chaves GPG.
 
 ```bash
-sudo install --mode="0755" --directory "/etc/apt/keyrings/"
+sudo install --mode=0755 --directory "/etc/apt/keyrings/"
 ```
 
 Baixe e converta as chaves GPG especificadas abaixo, salvando-as no diretório `/etc/apt/keyrings/`.
@@ -250,13 +250,14 @@ bash -c "$(curl --fail --silent --show-error --location https://raw.githubuserco
 
 Instale os pacotes especificados abaixo.
 
+> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente se necessário.
+
 ```bash
-/home/linuxbrew/.linuxbrew/bin/brew install --formula \
-  "carapace" \
-  "gcc" \
-  "go-task" \
-  "starship" \
-  "uv"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "carapace"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "gcc"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "go-task"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "starship"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "uv"
 ```
 
 ## `chrome`
@@ -285,8 +286,6 @@ Habilite as _flags_ especificadas abaixo.
 
 ### `apt`
 
-Os comandos desta seção foram escritos para serem executados com o [Bash](https://manpages.debian.org/stretch/bash/bash.1.en.html) na distribuição Debian no `wsl`.
-
 Execute `apt list` para listar os pacotes instalados.
 
 ```bash
@@ -302,7 +301,7 @@ apt list --upgradable
 Execute `apt purge` para remover um pacote especificado.
 
 ```bash
-sudo apt purge "git" --assume-yes
+sudo apt purge --assume-yes "git"
 ```
 
 Execute `apt autoremove` para remover pacotes desnecessários.
@@ -312,8 +311,6 @@ sudo apt autoremove
 ```
 
 ### `brew`
-
-Os comandos desta seção foram escritos para serem executados com o [Bash](https://manpages.debian.org/stretch/bash/bash.1.en.html) na distribuição Debian no `wsl`.
 
 Execute `brew update` para atualizar o Homebrew.
 
@@ -345,7 +342,7 @@ Execute `brew upgrade` para atualizar _softwares_ especificados ou todos que pos
 brew upgrade --formula
 ```
 
-Execute `brew autoremove` para remover pacotes desnecessários.
+Execute `brew autoremove` para remover dependências desnecessários.
 
 ```bash
 brew autoremove
@@ -354,7 +351,7 @@ brew autoremove
 Execute `brew cleanup` para remover arquivos desnecessários.
 
 ```bash
-brew cleanup --prune=all
+brew cleanup --prune="all"
 ```
 
 Execute `brew uninstall` para remover um pacote especificado.
@@ -366,8 +363,6 @@ brew uninstall --formula "git"
 ### `winget`
 
 Execute `winget list` para listar os _softwares_ instalados.
-
-Utilize a _flag_ `--upgrade-available` para listar apenas os _softwares_ que possuam atualizações disponíveis.
 
 ```powershell
 winget list --source "winget" --scope "machine"
@@ -394,7 +389,7 @@ winget upgrade --source "winget" --scope "machine" --all
 Execute `winget uninstall` para desinstalar um _software_ especificado.
 
 ```powershell
-winget uninstall --id "Git.Git" --all-versions --purge
+winget uninstall --all-versions --purge --id "Git.Git"
 ```
 
 ### `wsl`
