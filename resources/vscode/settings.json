@@ -160,7 +160,7 @@
   "window.menuBarVisibility": "compact",
   "window.newWindowDimensions": "fullscreen",
   "window.restoreWindows": "none",
-  "window.title": "${dirty}${appName}${separator}${rootName}${separator}${activeEditorShort}",
+  "window.title": "${dirty}${rootName}${separator}${activeEditorShort}",
   "window.titleSeparator": " > ",
 
   // workbench
