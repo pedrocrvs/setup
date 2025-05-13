@@ -37,7 +37,6 @@ Em sessões sobre `apt` e `brew`, os comandos foram escritos para serem executad
 Os principais _softwares_ instalados com as instruções deste repositório são:
 
 - [`7z`](https://7-zip.org)
-- [`bat`](https://github.com/sharkdp/bat)
 - [`brew`](https://github.com/Homebrew/brew)
 - [`carapace`](https://github.com/carapace-sh/carapace)
 - [`chrome`](https://www.google.com/chrome)
@@ -184,7 +183,6 @@ Instale os pacotes especificados abaixo.
 > Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente se necessário.
 
 ```bash
-sudo apt install --assume-yes "bat"
 sudo apt install --assume-yes "build-essential"
 sudo apt install --assume-yes "ca-certificates"
 sudo apt install --assume-yes "curl"
