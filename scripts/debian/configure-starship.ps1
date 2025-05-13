@@ -1,11 +1,21 @@
 $ErrorActionPreference = "Stop"
 
 
-$LinuxUserName = "pedro"
+$ResourceConfigDirectory = "$PSScriptRoot\..\..\resources\starship\"
 
-Invoke-Expression "wsl --distribution Debian --exec /usr/bin/bash -c 'mkdir ~/.config 2> /dev/null'"
+
+$DebianUser = "pedro"
+
+$DebianBash = "wsl --distribution Debian --user $DebianUser --exec /usr/bin/bash -c"
+
+
+Invoke-Expression "$DebianBash 'mkdir ~/.config/ 2> /dev/null'"
+
+Invoke-Expression "$DebianBash 'rm --recursive ~/.config/starship/ 2> /dev/null'"
+
 
 Copy-Item `
-    -Path "$PSScriptRoot\..\..\resources\starship\starship.toml" `
-    -Destination "\\wsl$\Debian\home\$LinuxUserName\.config\" `
+    -Path $ResourceConfigDirectory `
+    -Destination "\\wsl$\Debian\home\$DebianUser\.config\" `
+    -Recurse `
     -Force

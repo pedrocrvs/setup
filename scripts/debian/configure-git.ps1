@@ -1,10 +1,14 @@
 $ErrorActionPreference = "Stop"
 
 
-$LinuxUserName = "pedro"
+$ResourceGitconfig = "$PSScriptRoot\..\..\resources\git\.gitconfig"
+
+
+$DebianUser = "pedro"
+
 
 Copy-Item `
-    -Path "$PSScriptRoot\..\..\resources\git\.gitconfig" `
-    -Destination "\\wsl$\Debian\home\$LinuxUserName\.gitconfig" `
+    -Path $ResourceGitconfig `
+    -Destination "\\wsl$\Debian\home\$DebianUser\.gitconfig" `
     -Recurse `
     -Force
