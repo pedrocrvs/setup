@@ -322,10 +322,6 @@
   { "command": "-extension.node-debug.startWithStopOnEntry", "key": "f11" },
   { "command": "-extension.node-debug.startWithStopOnEntry", "key": "f10" },
 
-  // remove default keybindings from the "TheNuProjectContributors.vscode-nushell-lang" extension, based on version 1.10.0
-  { "command": "-editor.action.insertSnippet", "key": "ctrl+alt+j" },
-  { "command": "-start https://www.nushell.sh/book/", "key": "ctrl+f1" },
-
   // remove default keybindings from the "yzhang.markdown-all-in-one" extension, based on version 3.6.3
   { "command": "-markdown.extension.checkTaskList", "key": "alt+c" },
   { "command": "-markdown.extension.closePreview", "key": "ctrl+k v" },
