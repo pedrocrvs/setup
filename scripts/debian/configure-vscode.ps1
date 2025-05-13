@@ -1,18 +1,25 @@
 $ErrorActionPreference = "Stop"
 
 
-$Bash = "wsl --distribution Debian --exec /usr/bin/bash -c"
+$ResourceExtensions = Get-Content -Path "$PSScriptRoot\..\..\resources\vscode\extensions-wsl.txt"
 
-$VisualStudioCode = "/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code"
 
-$Extensions = Get-Content -Path "$PSScriptRoot\..\..\resources\vscode\extensions-wsl.txt"
+$DebianUser = "pedro"
 
-Invoke-Expression -Command "$Bash 'rm --force ~/.vscode-server 2> /dev/null'"
+$DebianBash = "wsl --distribution Debian --user $DebianUser --exec /usr/bin/bash -c"
 
-Invoke-Expression -Command "$Bash '$VisualStudioCode --version'"
 
-foreach ($Extension in $Extensions) {
-    Invoke-Expression "$Bash '$VisualStudioCode --install-extension $Extension --force'"
+$BinaryVisualStudioCode = "/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code"
+
+
+Invoke-Expression -Command "$DebianBash 'rm --force ~/.vscode-server 2> /dev/null'"
+
+
+Invoke-Expression -Command "$DebianBash '$BinaryVisualStudioCode --version'"
+
+foreach ($Extension in $ResourceExtensions) {
+    Invoke-Expression "$DebianBash '$BinaryVisualStudioCode --install-extension $Extension --force'"
 }
 
-Remove-Item -Path "$Env:USERPROFILE\vscode-remote-wsl" -Recurse -Force -ErrorAction "SilentlyContinue"
+
+Remove-Item -Path "$Env:USERPROFILE\vscode-remote-wsl\" -Recurse -Force -ErrorAction "SilentlyContinue"

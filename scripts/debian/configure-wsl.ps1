@@ -1,15 +1,15 @@
 $ErrorActionPreference = "Stop"
 
 
-$LinuxUserName = "pedro"
+$ResourceWslconf = Get-Content "$PSScriptRoot\..\..\resources\wsl\wsl.conf" -Raw
 
-$FileContent = Get-Content "$PSScriptRoot\..\..\resources\wsl\wsl.conf" -Raw
 
-$Command = @"
-wsl --distribution Debian --user $LinuxUserName --exec /usr/bin/bash -c 'sudo tee /etc/wsl.conf <<< "$FileContent"'
-"@
+$DebianUser = "pedro"
 
-Invoke-Expression -Command $Command
+$DebianBash = "wsl --distribution Debian --user $DebianUser --exec /usr/bin/bash -c"
+
+
+Invoke-Expression -Command "$DebianBash 'sudo tee /etc/wsl.conf <<< ""$ResourceWslconf""'"
 
 
 Invoke-Expression -Command "wsl --shutdown"

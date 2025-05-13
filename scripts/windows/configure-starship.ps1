@@ -1,21 +1,20 @@
 $ErrorActionPreference = "Stop"
 
 
-$PathConfigurationDirectory = "$Env:APPDATA\starship"
-$PathConfigurationFile = Join-Path -Path $PathConfigurationDirectory -ChildPath "starship.toml"
+$ResourceStarship = "$PSScriptRoot\..\..\resources\starship\starship.toml"
+
+
+$ConfigurationDirectory = "$Env:APPDATA\starship\"
+
 
 New-Item `
-    -Path $PathConfigurationDirectory `
+    -Path $ConfigurationDirectory `
     -ItemType "Directory" `
     -Force
 
-Remove-Item `
-    -Path $PathConfigurationFile `
-    -Force `
-    -ErrorAction "SilentlyContinue"
 
 New-Item `
     -ItemType "SymbolicLink" `
-    -Path $PathConfigurationFile `
-    -Target "$PSScriptRoot\..\..\resources\starship\starship.toml" `
+    -Path "$ConfigurationDirectory\starship.toml" `
+    -Target $ResourceStarship `
     -Force
