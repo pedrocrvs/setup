@@ -199,6 +199,3 @@ def ll [glob: glob = "." ] {
 alias pp = echo $env.PATH
 
 alias rr = rm --force --recursive --trash --verbose
-
-# Completions
-source "/home/pedro/.config/nushell/completions-uv.nu"
