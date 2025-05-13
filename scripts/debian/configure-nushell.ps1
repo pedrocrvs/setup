@@ -1,19 +1,21 @@
 $ErrorActionPreference = "Stop"
 
 
-$LinuxUserName = "pedro"
+$ResourceConfigDirectory = "$PSScriptRoot\..\..\resources\nushell\"
 
-Invoke-Expression "wsl --distribution Debian --exec /usr/bin/bash -c 'mkdir --parents ~/.config/nushell'"
 
-Invoke-Expression "wsl --distribution Debian --exec /usr/bin/bash -c 'rm --recursive ~/.config/nushell/*'"
+$DebianUser = "pedro"
+
+$DebianBash = "wsl --distribution Debian --user $DebianUser --exec /usr/bin/bash -c"
+
+
+Invoke-Expression "$DebianBash 'mkdir ~/.config/ 2> /dev/null'"
+
+Invoke-Expression "$DebianBash 'rm --recursive ~/.config/nushell/ 2> /dev/null'"
+
 
 Copy-Item `
-    -Path "$PSScriptRoot\..\..\resources\nushell\*" `
-    -Destination "\\wsl$\Debian\home\$LinuxUserName\.config\nushell\" `
+    -Path $ResourceConfigDirectory `
+    -Destination "\\wsl$\Debian\home\$DebianUser\.config\" `
     -Recurse `
     -Force
-
-
-$Command = "/home/linuxbrew/.linuxbrew/bin/uv generate-shell-completion nushell > ~/.config/nushell/completions-uv.nu"
-
-Invoke-Expression -Command "wsl --distribution Debian --exec /usr/bin/bash -c '$Command'"

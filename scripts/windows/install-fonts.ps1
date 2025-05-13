@@ -1,9 +1,10 @@
 $ErrorActionPreference = "Stop"
 
 
-$Fonts = Get-ChildItem -Path "$PSScriptRoot\..\..\resources\fonts\" -Include "*.otf" -Recurse
+$ResourceFonts = Get-ChildItem -Path "$PSScriptRoot\..\..\resources\fonts\" -Include "*.otf" -Recurse
 
-foreach ($Font in $Fonts) {
+
+foreach ($Font in $ResourceFonts) {
     Copy-Item -Path $Font -Destination "C:\Windows\Fonts"
 
     New-ItemProperty `
