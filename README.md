@@ -184,15 +184,11 @@ Instale os pacotes especificados abaixo.
 
 ```bash
 sudo apt install --assume-yes "build-essential"
-sudo apt install --assume-yes "ca-certificates"
 sudo apt install --assume-yes "curl"
 sudo apt install --assume-yes "file"
 sudo apt install --assume-yes "git-lfs"
 sudo apt install --assume-yes "git"
-sudo apt install --assume-yes "gnupg"
-sudo apt install --assume-yes "unzip"
 sudo apt install --assume-yes "wget"
-sudo apt install --assume-yes "zip
 ```
 
 Crie o diretório `/etc/apt/keyrings/` com as permissões `0755`, para armazenar chaves GPG.
