@@ -47,6 +47,7 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 - [`git-lfs`](https://github.com/git-lfs/git-lfs)
 - [`git`](https://git-scm.com)
 - [`nushell`](https://github.com/nushell/nushell)
+- [`ouch`](https://github.com/ouch-org/ouch)
 - [`pwsh`](https://learn.microsoft.com/en-us/powershell)
 - [`screenbox`](https://github.com/huynhsontung/Screenbox)
 - [`starship`](https://github.com/starship/starship)
@@ -250,6 +251,7 @@ Instale os pacotes especificados abaixo.
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "carapace"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "gcc"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "go-task"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "ouch"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "starship"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "uv"
 ```
