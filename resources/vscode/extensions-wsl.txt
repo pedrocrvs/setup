@@ -1,4 +1,5 @@
 charliermarsh.ruff
+dbcode.dbcode
 esbenp.prettier-vscode
 ms-python.python
 ms-python.vscode-pylance
