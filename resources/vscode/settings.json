@@ -230,12 +230,6 @@
   "jupyter.disableJupyterAutoStart": true,
   "jupyter.notebookFileRoot": "${workspaceFolder}",
 
-  // ms-vscode.powershell
-  "powershell.integratedConsole.showOnStartup": false,
-  "powershell.integratedConsole.suppressStartupBanner": true,
-  "powershell.powerShellAdditionalExePaths": { "PowerShell 7": "C:\\Program Files\\PowerShell\\7\\pwsh.exe" },
-  "powershell.powerShellDefaultVersion": "PowerShell 7",
-
   // yzhang.markdown-all-in-one
   "markdown.extension.bold.indicator": "**",
   "markdown.extension.italic.indicator": "_",
