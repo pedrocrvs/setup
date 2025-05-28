@@ -192,8 +192,6 @@
     "terminal.foreground": "#FFFFFF",
     "terminal.selectionBackground": "#1E90FF",
     "terminal.selectionForeground": "#FFFFFF",
-    "terminalCursor.foreground": "#BBBBBB",
-    // "terminal.ansi"
     "terminal.ansiBlack": "#000000",
     "terminal.ansiBlue": "#337FFF",
     "terminal.ansiBrightBlack": "#1A1A1A",
@@ -209,7 +207,8 @@
     "terminal.ansiMagenta": "#FF44CC",
     "terminal.ansiRed": "#FF3344",
     "terminal.ansiWhite": "#F2F2F2",
-    "terminal.ansiYellow": "#FFFF33"
+    "terminal.ansiYellow": "#FFFF33",
+    "terminalCursor.foreground": "#BBBBBB"
   },
 
   // charliermarsh.ruff
