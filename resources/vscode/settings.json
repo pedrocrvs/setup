@@ -1,11 +1,11 @@
 {
-  // breadcumbs
+  // "breadcumbs"
   "breadcrumbs.enabled": false,
 
-  // chat
+  // "chat"
   "chat.commandCenter.enabled": false,
 
-  // editor
+  // "editor"
   "editor.acceptSuggestionOnEnter": "on",
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": false,
@@ -29,6 +29,7 @@
   "editor.rulers": [ 100 ],
   "editor.smoothScrolling": true,
   "editor.unicodeHighlight.nonBasicASCII": true,
+
   "editor.unicodeHighlight.allowedCharacters": {
     "á": true,
     "Á": true,
@@ -68,7 +69,16 @@
     "Û": true
   },
 
-  // explorer
+  // "editor.defaultFormatter"
+  "[json]": { "editor.defaultFormatter": "vscode.json-language-features" },
+
+  "[jsonc]": { "editor.defaultFormatter": "vscode.json-language-features" },
+
+  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  "[python]": { "editor.defaultFormatter": "charliermarsh.ruff" },
+
+  // "explorer"
   "explorer.autoOpenDroppedFile": false,
   "explorer.autoReveal": false,
   "explorer.compactFolders": true,
@@ -79,12 +89,12 @@
   "explorer.sortOrder": "type",
   "explorer.sortOrderLexicographicOptions": "upper",
 
-  // extensions
+  // "extensions"
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.closeExtensionDetailsOnViewChange": true,
   "extensions.ignoreRecommendations": true,
 
-  // files
+  // "files"
   "files.associations": { "*.json": "jsonc" },
   "files.autoSave": "off",
   "files.autoSaveWorkspaceFilesOnly": true,
@@ -94,10 +104,10 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
 
-  // json
+  // "json"
   "json.format.keepLines": true,
 
-  // notebook
+  // "notebook"
   "notebook.cellFocusIndicator": "gutter",
   "notebook.codeActionsOnSave": { "notebook.source.organizeImports": "explicit" },
   "notebook.compactView": true,
@@ -110,17 +120,17 @@
   "notebook.output.textLineLimit": 100,
   "notebook.output.wordWrap": false,
 
-  // remote
+  // "remote"
   "remote.autoForwardPortsSource": "hybrid",
 
-  // security
+  // "security"
   "security.allowedUNCHosts": [ "wsl.localhost" ],
   "security.workspace.trust.enabled": false,
 
-  // telemetry
+  // "telemetry"
   "telemetry.feedback.enabled": true,
 
-  // terminal
+  // "terminal"
   "terminal.integrated.confirmOnExit": "never",
   "terminal.integrated.confirmOnKill": "never",
   "terminal.integrated.copyOnSelection": true,
@@ -155,7 +165,7 @@
     }
   },
 
-  // window
+  // "window"
   "window.commandCenter": false,
   "window.menuBarVisibility": "compact",
   "window.newWindowDimensions": "fullscreen",
@@ -163,7 +173,7 @@
   "window.title": "${dirty}${rootName}${separator}${activeEditorShort}",
   "window.titleSeparator": " > ",
 
-  // workbench
+  // "workbench"
   "workbench.activityBar.location": "hidden",
   "workbench.colorTheme": "Default Dark Modern",
   "workbench.editor.navigationScope": "editor",
@@ -180,47 +190,26 @@
   "workbench.colorCustomizations": {
     "terminal.background": "#0D0D0D",
     "terminal.foreground": "#FFFFFF",
-
     "terminal.selectionBackground": "#1E90FF",
     "terminal.selectionForeground": "#FFFFFF",
-
     "terminalCursor.foreground": "#BBBBBB",
-
+    // "terminal.ansi"
     "terminal.ansiBlack": "#000000",
-    "terminal.ansiBrightBlack": "#1A1A1A",
-
     "terminal.ansiBlue": "#337FFF",
+    "terminal.ansiBrightBlack": "#1A1A1A",
     "terminal.ansiBrightBlue": "#649EFF",
-
-    "terminal.ansiCyan": "#33EEFF",
     "terminal.ansiBrightCyan": "#64F2FF",
-
-    "terminal.ansiGreen": "#33FF66",
     "terminal.ansiBrightGreen": "#64FF8B",
-
-    "terminal.ansiMagenta": "#FF44CC",
     "terminal.ansiBrightMagenta": "#FF78DA",
-
-    "terminal.ansiRed": "#FF3344",
     "terminal.ansiBrightRed": "#FF6471",
-
-    "terminal.ansiWhite": "#F2F2F2",
     "terminal.ansiBrightWhite": "#FFFFFF",
-
-    "terminal.ansiYellow": "#FFFF33",
-    "terminal.ansiBrightYellow": "#FFFF5E"
-  },
-
-  // languages
-  "[json]": { "editor.defaultFormatter": "vscode.json-language-features" },
-
-  "[jsonc]": { "editor.defaultFormatter": "vscode.json-language-features" },
-
-  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-
-  "[python]": {
-    "editor.codeActionsOnSave": { "source.organizeImports": "explicit" },
-    "editor.defaultFormatter": "charliermarsh.ruff"
+    "terminal.ansiBrightYellow": "#FFFF5E",
+    "terminal.ansiCyan": "#33EEFF",
+    "terminal.ansiGreen": "#33FF66",
+    "terminal.ansiMagenta": "#FF44CC",
+    "terminal.ansiRed": "#FF3344",
+    "terminal.ansiWhite": "#F2F2F2",
+    "terminal.ansiYellow": "#FFFF33"
   },
 
   // charliermarsh.ruff

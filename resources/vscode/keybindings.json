@@ -1,5 +1,5 @@
 [
-  // remove default "breadcrumbs" keybindings based on version 1.99.3
+  // remove default "breadcrumbs" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-breadcrumbs.focus", "key": "ctrl+shift+oem_1" },
   { "command": "-breadcrumbs.focusAndSelect", "key": "ctrl+shift+oem_period" },
   { "command": "-breadcrumbs.focusNext", "key": "ctrl+right" },
@@ -16,18 +16,18 @@
   { "command": "-breadcrumbs.selectFocused", "key": "enter" },
   { "command": "-breadcrumbs.toggleToOn", "key": "ctrl+shift+oem_period" },
 
-  // remove default "chat" keybindings based on version 1.99.3
+  // remove default "chat" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-chat.action.focus", "key": "ctrl+down" },
   { "command": "-chat.action.focus", "key": "ctrl+up" },
   { "command": "-chat.action.focus", "key": "ctrl+up" },
   { "command": "-chat.inlineResourceAnchor.copyResource", "key": "ctrl+c" },
   { "command": "-chat.inlineResourceAnchor.openToSide", "key": "ctrl+enter" },
 
-  // remove default "chatEditing" keybindings based on version 1.99.3
+  // remove default "chatEditing" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-chatEditing.acceptAllFiles", "key": "ctrl+enter" },
   { "command": "-chatEditing.discardAllFiles", "key": "ctrl+backspace" },
 
-  // remove default "chatEditor" keybindings based on version 1.99.3
+  // remove default "chatEditor" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-chatEditor.action.accept", "key": "ctrl+enter" },
   { "command": "-chatEditor.action.acceptHunk", "key": "ctrl+shift+enter" },
   { "command": "-chatEditor.action.navigateNext", "key": "alt+f5" },
@@ -37,7 +37,7 @@
   { "command": "-chatEditor.action.toggleDiff", "key": "shift+alt+f7" },
   { "command": "-chatEditor.action.undoHunk", "key": "ctrl+shift+backspace" },
 
-  // remove default "debug" keybindings based on version 1.99.3
+  // remove default "debug" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-debug.copyWatchExpression", "key": "ctrl+alt+c" },
   { "command": "-debug.openBreakpointToSide", "key": "alt+enter" },
   { "command": "-debug.openBreakpointToSide", "key": "ctrl+enter" },
@@ -49,13 +49,13 @@
   { "command": "-debug.setVariable", "key": "f2" },
   { "command": "-debug.toggleBreakpoint", "key": "space" },
 
-  // remove default "editor.debug.action" keybindings based on version 1.99.3
+  // remove default "editor.debug.action" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-editor.debug.action.closeExceptionWidget", "key": "escape" },
   { "command": "-editor.debug.action.showDebugHover", "key": "ctrl+k ctrl+i" },
   { "command": "-editor.debug.action.toggleBreakpoint", "key": "f9" },
   { "command": "-editor.debug.action.toggleInlineBreakpoint", "key": "shift+f9" },
 
-  // remove default "editor.fold" keybindings based on version 1.99.3
+  // remove default "editor.fold" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-editor.createFoldingRangeFromSelection", "key": "ctrl+k ctrl+oem_comma" },
   { "command": "-editor.fold", "key": "ctrl+shift+oem_4" },
   { "command": "-editor.foldAll", "key": "ctrl+k ctrl+0" },
@@ -79,12 +79,12 @@
   { "command": "-editor.unfoldAllMarkerRegions", "key": "ctrl+k ctrl+9" },
   { "command": "-editor.unfoldRecursively", "key": "ctrl+k ctrl+oem_6" },
 
-  // remove default "git" keybindings based on version 1.99.3
+  // remove default "git" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-git.revertSelectedRanges", "key": "ctrl+k ctrl+r" },
   { "command": "-git.stageSelectedRanges", "key": "ctrl+k ctrl+alt+s" },
   { "command": "-git.unstageSelectedRanges", "key": "ctrl+k ctrl+n" },
 
-  // remove default "inlineChat" keybindings based on version 1.99.3
+  // remove default "inlineChat" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-inlineChat.acceptChanges", "key": "ctrl+enter" },
   { "command": "-inlineChat.arrowOutDown", "key": "ctrl+down" },
   { "command": "-inlineChat.arrowOutUp", "key": "ctrl+up" },
@@ -103,12 +103,16 @@
   { "command": "-inlineChat.unstash", "key": "ctrl+z" },
   { "command": "-inlineChat.viewInChat", "key": "ctrl+down" },
 
-  // remove default "inlineChat2" keybindings based on version 1.99.3
+  // remove default "inlineChat2" keybindings observed in Visual Studio Code 1.99.3
+  { "command": "-inlineChat2.close", "key": "ctrl+i" },
+  { "command": "-inlineChat2.close", "key": "escape" },
+  { "command": "-inlineChat2.keep", "key": "ctrl+enter" },
   { "command": "-inlineChat2.reveal", "key": "ctrl+i" },
   { "command": "-inlineChat2.stop", "key": "ctrl+i" },
   { "command": "-inlineChat2.stop", "key": "escape" },
+  { "command": "-inlineChat2.undo", "key": "ctrl+backspace" },
 
-  // remove default "notebook.cell.chat" keybindings based on version 1.99.3
+  // remove default "notebook.cell.chat" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-notebook.cell.chat.accept", "key": "enter" },
   { "command": "-notebook.cell.chat.acceptChanges", "key": "ctrl+enter" },
   { "command": "-notebook.cell.chat.acceptChanges", "key": "ctrl+enter" },
@@ -125,13 +129,13 @@
   { "command": "-notebook.cell.chat.start", "key": "ctrl+i" },
   { "command": "-notebook.cell.chat.start", "key": "ctrl+k i" },
 
-  // remove default "notebook.fold" keybindings based on version 1.99.3
+  // remove default "notebook.fold" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-notebook.fold", "key": "ctrl+shift+oem_4" },
   { "command": "-notebook.fold", "key": "left" },
   { "command": "-notebook.unfold", "key": "ctrl+shift+oem_6" },
   { "command": "-notebook.unfold", "key": "right" },
 
-  // remove default "repl" keybindings based on version 1.99.3
+  // remove default "repl" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-repl.action.acceptInput", "key": "enter" },
   { "command": "-repl.action.filter", "key": "ctrl+f" },
   { "command": "-repl.action.find", "key": "ctrl+alt+f" },
@@ -142,7 +146,7 @@
   { "command": "-repl.input.focus", "key": "alt+home alt+home" },
   { "command": "-repl.input.focus", "key": "ctrl+down" },
 
-  // remove default "testing" keybindings based on version 1.99.3
+  // remove default "testing" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-testing.cancelRun", "key": "ctrl+oem_1 ctrl+x" },
   { "command": "-testing.coverageAll", "key": "ctrl+oem_1 ctrl+shift+a" },
   { "command": "-testing.coverageAtCursor", "key": "ctrl+oem_1 ctrl+shift+c" },
@@ -168,7 +172,7 @@
   { "command": "-testing.toggleInlineTestOutput", "key": "ctrl+oem_1 ctrl+i" },
   { "command": "-testing.toggleTestingPeekHistory", "key": "alt+h" },
 
-  // remove default "workbench.action.chat" keybindings based on version 1.99.3
+  // remove default "workbench.action.chat" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-workbench.action.chat.acceptTool", "key": "ctrl+enter" },
   { "command": "-workbench.action.chat.applyInEditor", "key": "ctrl+enter" },
   { "command": "-workbench.action.chat.attachContext", "key": "ctrl+oem_2" },
@@ -184,10 +188,15 @@
   { "command": "-workbench.action.chat.nextCodeBlock", "key": "ctrl+alt+pagedown" },
   { "command": "-workbench.action.chat.nextFileTree", "key": "ctrl+f9" },
   { "command": "-workbench.action.chat.open", "key": "ctrl+alt+i" },
+  { "command": "-workbench.action.chat.openAgent", "key": "ctrl+shift+i" },
   { "command": "-workbench.action.chat.openEditSession", "key": "ctrl+shift+i" },
+  { "command": "-workbench.action.chat.openModelPicker", "key": "ctrl+alt+oem_period" },
   { "command": "-workbench.action.chat.previousCodeBlock", "key": "ctrl+alt+pageup" },
   { "command": "-workbench.action.chat.previousFileTree", "key": "ctrl+shift+f9" },
   { "command": "-workbench.action.chat.remove", "key": "delete" },
+  { "command": "-workbench.action.chat.run-in-new-chat.prompt.current", "key": "ctrl+alt+win+oem_2" },
+  { "command": "-workbench.action.chat.run.prompt.current", "key": "alt+win+oem_2" },
+  { "command": "-workbench.action.chat.run.prompt", "key": "alt+win+oem_2" },
   { "command": "-workbench.action.chat.runInTerminal", "key": "ctrl+alt+enter" },
   { "command": "-workbench.action.chat.sendToChatEditing", "key": "ctrl+alt+enter" },
   { "command": "-workbench.action.chat.sendToNewChat", "key": "ctrl+shift+enter" },
@@ -202,7 +211,7 @@
   { "command": "-workbench.action.chat.toggleAgentMode", "key": "ctrl+oem_period" },
   { "command": "-workbench.action.chat.undoEdits", "key": "delete" },
 
-  // remove default "workbench.action.debug" keybindings based on version 1.99.3
+  // remove default "workbench.action.debug" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-workbench.action.debug.continue", "key": "f5" },
   { "command": "-workbench.action.debug.disconnect", "key": "shift+f5" },
   { "command": "-workbench.action.debug.nextConsole", "key": "ctrl+pagedown" },
@@ -217,18 +226,18 @@
   { "command": "-workbench.action.debug.stepOver", "key": "f10" },
   { "command": "-workbench.action.debug.stop", "key": "shift+f5" },
 
-  // remove default "workbench.action.editorDictation" keybindings based on version 1.99.3
+  // remove default "workbench.action.editorDictation" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-workbench.action.editorDictation.start", "key": "alt+oem_3" },
   { "command": "-workbench.action.editorDictation.start", "key": "ctrl+alt+v" },
   { "command": "-workbench.action.editorDictation.stop", "key": "escape" },
 
-  // remove default "workbench.action.interactivePlayground" keybindings based on version 1.99.3
+  // remove default "workbench.action.interactivePlayground" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-workbench.action.interactivePlayground.arrowDown", "key": "down" },
   { "command": "-workbench.action.interactivePlayground.arrowUp", "key": "up" },
   { "command": "-workbench.action.interactivePlayground.pageDown", "key": "pagedown" },
   { "command": "-workbench.action.interactivePlayground.pageUp", "key": "pageup" },
 
-  // remove default "workbench.action.quickOpen" keybindings based on version 1.99.3
+  // remove default "workbench.action.quickOpen" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-workbench.action.closeQuickOpen", "key": "escape" },
   { "command": "-workbench.action.closeQuickOpen", "key": "shift+escape" },
   { "command": "-workbench.action.quickInputBack", "key": "alt+left" },
@@ -248,11 +257,25 @@
   { "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup", "key": "ctrl+tab" },
   { "command": "-workbench.action.quickOpenView", "key": "ctrl+q" },
 
-  // remove default "workbench.action.tasks" keybindings based on version 1.99.3
-  { "key": "ctrl+shift+b", "command": "-workbench.action.tasks.build" },
-  { "key": "ctrl+shift+r", "command": "-workbench.action.tasks.rerunForActiveTerminal" },
+  // remove default "workbench.action.tasks" keybindings observed in Visual Studio Code 1.99.3
+  { "command": "-workbench.action.tasks.build", "key": "ctrl+shift+b" },
+  { "command": "-workbench.action.tasks.rerunForActiveTerminal", "key": "ctrl+shift+r" },
 
-  // remove default "workbench.action.terminal.chat" keybindings based on version 1.99.3
+  // remove default "workbench.action.terminal" keybindings observed in Visual Studio Code 1.99.3
+  { "command": "-workbench.action.terminal.copyAndClearSelection", "key": "ctrl+c" },
+  { "command": "-workbench.action.terminal.copySelection", "key": "ctrl+shift+c" },
+  { "command": "-workbench.action.terminal.killActiveTab", "key": "delete" },
+  { "command": "-workbench.action.terminal.killEditor", "key": "ctrl+f4" },
+  { "command": "-workbench.action.terminal.killEditor", "key": "ctrl+w" },
+  { "command": "-workbench.action.terminal.new", "key": "ctrl+shift+oem_3" },
+  { "command": "-workbench.action.terminal.openNativeConsole", "key": "ctrl+shift+c" },
+  { "command": "-workbench.action.terminal.paste", "key": "ctrl+shift+v" },
+  { "command": "-workbench.action.terminal.sendSequence", "key": "ctrl+v" },
+  { "command": "-workbench.action.terminal.split", "key": "ctrl+shift+5" },
+  { "command": "-workbench.action.terminal.splitActiveTab", "key": "ctrl+shift+5" },
+  { "command": "-workbench.action.terminal.toggleTerminal", "key": "ctrl+oem_3" },
+
+  // remove default "workbench.action.terminal.chat" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-workbench.action.terminal.chat.close", "key": "escape" },
   { "command": "-workbench.action.terminal.chat.insertCommand", "key": "alt+enter" },
   { "command": "-workbench.action.terminal.chat.insertCommand", "key": "ctrl+alt+enter" },
@@ -263,18 +286,18 @@
   { "command": "-workbench.action.terminal.chat.runFirstCommand", "key": "ctrl+enter" },
   { "command": "-workbench.action.terminal.chat.start", "key": "ctrl+i" },
 
-  // remove default "workbench.banner" keybindings based on version 1.99.3
+  // remove default "workbench.banner" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-workbench.banner.focusBanner", "key": "escape" },
   { "command": "-workbench.banner.focusNextAction", "key": "down" },
   { "command": "-workbench.banner.focusNextAction", "key": "right" },
   { "command": "-workbench.banner.focusPreviousAction", "key": "left" },
   { "command": "-workbench.banner.focusPreviousAction", "key": "up" },
 
-  // remove default "workbench.debug" keybindings based on version 1.99.3
+  // remove default "workbench.debug" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-workbench.debug.action.toggleRepl", "key": "ctrl+shift+y" },
   { "command": "-workbench.debug.viewlet.action.copyValue", "key": "ctrl+c" },
 
-  // remove default "workbench.statusBar" keybindings based on version 1.99.3
+  // remove default "workbench.statusBar" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-workbench.statusBar.clearFocus", "key": "escape" },
   { "command": "-workbench.statusBar.focusFirst", "key": "home" },
   { "command": "-workbench.statusBar.focusLast", "key": "end" },
@@ -283,12 +306,13 @@
   { "command": "-workbench.statusBar.focusPrevious", "key": "left" },
   { "command": "-workbench.statusBar.focusPrevious", "key": "up" },
 
-  // remove other miscellaneous keybindings based on version 1.99.3
+  // remove miscellaneous default keybindings observed in Visual Studio Code 1.99.3
   { "command": "-editor.action.toggleScreenReaderAccessibilityMode", "key": "ctrl+e" },
   { "command": "-notebook.cell.focusChatWidget", "key": "ctrl+up" },
   { "command": "-notebook.cell.focusNextChatWidget", "key": "ctrl+down" },
   { "command": "-workbench.action.quickchat.toggle", "key": "ctrl+shift+alt+l" },
   { "command": "-workbench.action.speech.stopReadAloud", "key": "escape" },
+  { "command": "-workbench.command.instructions.attach", "key": "ctrl+alt+oem_2" },
   { "command": "-workbench.command.prompts.use", "key": "ctrl+alt+oem_2" },
   { "command": "-workbench.files.action.compareWithSaved", "key": "ctrl+k d" },
   { "command": "-workbench.files.action.focusOpenEditorsView", "key": "ctrl+k e" },
@@ -312,17 +336,17 @@
   // remove default "workbench.action.closeWindow" keybindings based on version 1.99.3
   { "command": "-workbench.action.closeWindow", "key": "ctrl+shift+w" },
 
-  // remove default keybindings from the "ms-python.python" extension, based on version 2025.4.0
+  // remove default "ms-python.python" extension keybindings observed in version 2025.4.0
   { "command": "-python.execInInteractiveWindowEnter", "key": "enter" },
   { "command": "-python.execInREPL", "key": "shift+enter" },
   { "command": "-python.execInREPLEnter", "key": "enter" },
   { "command": "-python.execSelectionInTerminal", "key": "shift+enter" },
 
-  // remove default keybindings from the "ms-vscode.js-debug" extension
+  // remove default "ms-vscode.js-debug" extension keybindings
   { "command": "-extension.node-debug.startWithStopOnEntry", "key": "f11" },
   { "command": "-extension.node-debug.startWithStopOnEntry", "key": "f10" },
 
-  // remove default keybindings from the "yzhang.markdown-all-in-one" extension, based on version 3.6.3
+  // remove default "yzhang.markdown-all-in-one" extension keybindings observed in version 3.6.3
   { "command": "-markdown.extension.checkTaskList", "key": "alt+c" },
   { "command": "-markdown.extension.closePreview", "key": "ctrl+k v" },
   { "command": "-markdown.extension.closePreview", "key": "ctrl+shift+v" },
@@ -346,104 +370,106 @@
   { "command": "-markdown.extension.onShiftTabKey", "key": "shift+tab" },
   { "command": "-markdown.extension.onTabKey", "key": "tab" },
 
-  // add "cursorLineEnd"
-  { "key": "ctrl+l", "command": "-expandLineSelection" },
-  { "key": "ctrl+l", "command": "-notebook.centerActiveCell" },
-  { "key": "ctrl+shift+l", "command": "-addCursorsAtSearchResults" },
-  { "key": "ctrl+shift+l", "command": "-editor.action.selectHighlights" },
-  { "key": "ctrl+shift+l", "command": "-notebook.selectAllFindMatches" },
-  { "key": "ctrl+shift+l", "command": "-selectAllSearchEditorMatches" },
-  { "key": "ctrl+l", "command": "cursorLineEnd", "when": "editorTextFocus" },
-  { "key": "ctrl+shift+l", "command": "cursorLineEndSelect", "when": "editorTextFocus" },
+  // "cursorLineEnd"
+  { "command": "-addCursorsAtSearchResults", "key": "ctrl+shift+l" },
+  { "command": "-editor.action.selectHighlights", "key": "ctrl+shift+l" },
+  { "command": "-expandLineSelection", "key": "ctrl+l" },
+  { "command": "-notebook.centerActiveCell", "key": "ctrl+l" },
+  { "command": "-notebook.selectAllFindMatches", "key": "ctrl+shift+l" },
+  { "command": "-selectAllSearchEditorMatches", "key": "ctrl+shift+l" },
+  { "command": "cursorLineEnd", "key": "ctrl+l", "when": "editorTextFocus" },
+  { "command": "cursorLineEndSelect", "key": "ctrl+shift+l", "when": "editorTextFocus" },
 
-  // add "cursorLineStart"
-  { "key": "ctrl+h", "command": "-editor.action.startFindReplaceAction" },
-  { "key": "ctrl+shift+h", "command": "-workbench.action.replaceInFiles" },
-  { "key": "ctrl+h", "command": "cursorLineStart", "when": "editorTextFocus" },
-  { "key": "ctrl+shift+h", "command": "cursorLineStartSelect", "when": "editorTextFocus" },
+  // "cursorLineStart"
+  { "command": "-editor.action.startFindReplaceAction", "key": "ctrl+h" },
+  { "command": "-workbench.action.replaceInFiles", "key": "ctrl+shift+h" },
+  { "command": "cursorLineStart", "key": "ctrl+h", "when": "editorTextFocus" },
+  { "command": "cursorLineStartSelect", "key": "ctrl+shift+h", "when": "editorTextFocus" },
 
-  // add "cursorMove" keybindings
+  // "cursorMove"
   { "command": "cursorMove", "key": "ctrl+down", "args": { "to": "down", "by": "line", "value": 10 }, "when": "editorTextFocus" },
   { "command": "cursorMove", "key": "ctrl+up", "args": { "to": "up", "by": "line", "value": 10 }, "when": "editorTextFocus" },
-
   { "command": "cursorMove", "key": "ctrl+shift+down", "args": { "to": "down", "by": "line", "value": 10, "select": true }, "when": "editorTextFocus" },
   { "command": "cursorMove", "key": "ctrl+shift+up", "args": { "to": "up", "by": "line", "value": 10, "select": true }, "when": "editorTextFocus" },
 
-  // add "deleteFile" keybinding
+  // "deleteFile"
   { "command": "-deleteFile", "key": "delete" },
   { "command": "-deleteFile", "key": "shift+delete" },
   { "command": "deleteFile", "key": "d", "when": "filesExplorerFocus && !inputFocus" },
 
-  // add "renameFile" keybinding
+  // "renameFile"
   { "command": "-renameFile", "key": "f2" },
   { "command": "renameFile", "key": "r", "when": "filesExplorerFocus && !inputFocus" },
 
-  // add "editor.action.deleteLines" keybinding
+  // "editor.action.deleteLines"
   { "command": "-editor.action.deleteLines", "key": "ctrl+shift+k" },
   { "command": "editor.action.deleteLines", "key": "alt+d", "when": "editorTextFocus && !editorReadonly" },
 
-  // add "editor.action.replace"
-  { "key": "ctrl+r", "command": "-workbench.action.openRecent" },
-  { "key": "ctrl+shift+r", "command": "-editor.action.refactor" },
-  { "key": "ctrl+shift+r", "command": "-rerunSearchEditorSearch" },
-  { "key": "ctrl+r", "command": "editor.action.startFindReplaceAction", "when": "editorFocus || editorIsOpen" },
-  { "key": "ctrl+shift+r", "command": "workbench.action.replaceInFiles" },
+  // "editor.action.startFindReplaceAction"
+  { "command": "-workbench.action.openRecent", "key": "ctrl+r" },
+  { "command": "editor.action.startFindReplaceAction", "key": "ctrl+r", "when": "editorFocus || editorIsOpen" },
 
-  // add "editor.action.sortLinesAscending" keybinding
-  { "key": "alt+a", "command": "editor.action.sortLinesAscending", "when": "editorTextFocus && !editorReadonly" },
+  // "editor.action.sortLinesAscending"
+  { "command": "editor.action.sortLinesAscending", "key": "alt+a", "when": "editorTextFocus && !editorReadonly" },
 
-  // add "explorer.newFile" keybinding
+  // "explorer.newFile"
   { "command": "explorer.newFile", "key": "n", "when": "filesExplorerFocus && !inputFocus" },
 
-  // add "filesExplorer.copy" keybinding
+  // "filesExplorer.copy"
   { "command": "-filesExplorer.copy", "key": "ctrl+c" },
   { "command": "filesExplorer.copy", "key": "c", "when": "filesExplorerFocus && !inputFocus" },
 
-  // add "filesExplorer.cut" keybinding
+  // "filesExplorer.cut"
   { "command": "-filesExplorer.cut", "key": "ctrl+x" },
   { "command": "filesExplorer.cut", "key": "x", "when": "filesExplorerFocus && !inputFocus" },
 
-  // add "filesExplorer.paste" keybinding
+  // "filesExplorer.paste"
   { "command": "-filesExplorer.paste", "key": "ctrl+v" },
   { "command": "filesExplorer.paste", "key": "v", "when": "filesExplorerFocus && !inputFocus" },
 
-  // add "workbench.action.closeActiveEditor" keybinding
+  // "workbench.action.closeActiveEditor"
   { "command": "-workbench.action.closeActiveEditor", "key": "ctrl+w" },
   { "command": "workbench.action.closeActiveEditor", "key": "ctrl+w" },
 
-  // add "workbench.action.closeEditorsInGroup" keybinding
+  // "workbench.action.closeEditorsInGroup"
   { "command": "-workbench.action.closeAllEditors", "key": "ctrl+k ctrl+w" },
   { "command": "-workbench.action.closeAllGroups", "key": "ctrl+k ctrl+shift+w" },
   { "command": "-workbench.action.closeEditorsInGroup", "key": "ctrl+k w" },
+  { "command": "-workbench.action.closeWindow", "key": "ctrl+shift+w" },
   { "command": "workbench.action.closeEditorsInGroup", "key": "ctrl+shift+w" },
 
-  // add "workbench.action.open" keybindings
+  // "workbench.action.open"
   { "command": "-workbench.action.navigateBack", "key": "alt+left" },
   { "command": "-workbench.action.navigateForward", "key": "alt+right" },
   { "command": "workbench.action.openNextRecentlyUsedEditorInGroup", "key": "alt+right", "when": "editorFocus" },
   { "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup", "key": "alt+left", "when": "editorFocus" },
 
-  // add "workbench.action.quickOpen" keybindings
+  // "workbench.action.quickOpen"
   { "command": "workbench.action.quickOpen", "key": "ctrl+tab" },
   { "command": "workbench.action.quickOpenNavigateNext", "key": "ctrl+tab", "when": "inQuickOpen" },
 
-  // add "workbench.action.showCommands" keybinding
+  // "workbench.action.replaceInFiles"
+  { "command": "-editor.action.refactor", "key": "ctrl+shift+r" },
+  { "command": "-rerunSearchEditorSearch", "key": "ctrl+shift+r" },
+  { "command": "workbench.action.replaceInFiles", "key": "ctrl+shift+r" },
+
+  // "workbench.action.showCommands"
   { "command": "-workbench.action.showCommands", "key": "ctrl+shift+p" },
   { "command": "workbench.action.showCommands", "key": "ctrl+p" },
 
-  // add "workbench.action.terminal.scroll" keybindings
+  // "workbench.action.terminal.scroll"
   { "command": "-workbench.action.terminal.scrollDownPage", "key": "shift+pagedown" },
   { "command": "-workbench.action.terminal.scrollUpPage", "key": "shift+pageup" },
   { "command": "workbench.action.terminal.scrollDown", "key": "shift+down", "when": "terminalFocus" },
   { "command": "workbench.action.terminal.scrollUp", "key": "shift+up", "when": "terminalFocus" },
 
-  // add "workbench.action.terminal.split" keybinding
+  // "workbench.action.terminal.split"
   { "command": "workbench.action.terminal.split", "key": "ctrl+shift+j" },
 
-  // add "workbench.action.terminal.toggleTerminal" keybinding
+  // "workbench.action.terminal.toggleTerminal"
   { "command": "-workbench.action.togglePanel", "key": "ctrl+j" },
   { "command": "workbench.action.terminal.toggleTerminal", "key": "ctrl+j" },
 
-  // add "workbench.action.terminal.kill"
-  { "key": "ctrl+shift+w", "command": "workbench.action.terminal.kill", "when": "terminalFocus" }
+  // "workbench.action.terminal.kill"
+  { "command": "workbench.action.terminal.kill", "key": "ctrl+shift+w", "when": "terminalFocus" }
 ]
