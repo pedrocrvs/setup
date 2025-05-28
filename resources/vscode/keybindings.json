@@ -264,10 +264,12 @@
   // remove default "workbench.action.terminal" keybindings observed in Visual Studio Code 1.99.3
   { "command": "-workbench.action.terminal.copyAndClearSelection", "key": "ctrl+c" },
   { "command": "-workbench.action.terminal.copySelection", "key": "ctrl+shift+c" },
+  { "command": "-workbench.action.terminal.goToRecentDirectory", "key": "ctrl+g" },
   { "command": "-workbench.action.terminal.killActiveTab", "key": "delete" },
   { "command": "-workbench.action.terminal.killEditor", "key": "ctrl+f4" },
   { "command": "-workbench.action.terminal.killEditor", "key": "ctrl+w" },
   { "command": "-workbench.action.terminal.new", "key": "ctrl+shift+oem_3" },
+  { "command": "-workbench.action.terminal.openDetectedLink", "key": "ctrl+shift+g" },
   { "command": "-workbench.action.terminal.openNativeConsole", "key": "ctrl+shift+c" },
   { "command": "-workbench.action.terminal.paste", "key": "ctrl+shift+v" },
   { "command": "-workbench.action.terminal.sendSequence", "key": "ctrl+v" },
@@ -310,6 +312,7 @@
   { "command": "-editor.action.toggleScreenReaderAccessibilityMode", "key": "ctrl+e" },
   { "command": "-notebook.cell.focusChatWidget", "key": "ctrl+up" },
   { "command": "-notebook.cell.focusNextChatWidget", "key": "ctrl+down" },
+  { "command": "-workbench.action.gotoLine", "key": "ctrl+g" },
   { "command": "-workbench.action.quickchat.toggle", "key": "ctrl+shift+alt+l" },
   { "command": "-workbench.action.speech.stopReadAloud", "key": "escape" },
   { "command": "-workbench.command.instructions.attach", "key": "ctrl+alt+oem_2" },
@@ -359,6 +362,12 @@
   { "command": "-markdown.extension.onShiftTabKey", "key": "shift+tab" },
   { "command": "-markdown.extension.onTabKey", "key": "tab" },
 
+  // "cursorBottom"
+  { "command": "-cursorBottom", "key": "ctrl+end" },
+  { "command": "-cursorBottomSelect", "key": "ctrl+shift+end" },
+  { "command": "cursorBottom", "key": "ctrl+g e", "when": "textInputFocus" },
+  { "command": "cursorBottomSelect", "key": "ctrl+g shift+e", "when": "textInputFocus" },
+
   // "cursorLineEnd"
   { "command": "-addCursorsAtSearchResults", "key": "ctrl+shift+l" },
   { "command": "-editor.action.selectHighlights", "key": "ctrl+shift+l" },
@@ -380,6 +389,12 @@
   { "command": "cursorMove", "key": "ctrl+up", "args": { "to": "up", "by": "line", "value": 10 }, "when": "editorTextFocus" },
   { "command": "cursorMove", "key": "ctrl+shift+down", "args": { "to": "down", "by": "line", "value": 10, "select": true }, "when": "editorTextFocus" },
   { "command": "cursorMove", "key": "ctrl+shift+up", "args": { "to": "up", "by": "line", "value": 10, "select": true }, "when": "editorTextFocus" },
+
+  // "cursorTop"
+  { "command": "-cursorTop", "key": "ctrl+home" },
+  { "command": "-cursorTopSelect", "key": "ctrl+shift+home" },
+  { "command": "cursorTop", "key": "ctrl+g g", "when": "textInputFocus" },
+  { "command": "cursorTopSelect", "key": "ctrl+g shift+g", "when": "textInputFocus" },
 
   // "deleteFile"
   { "command": "-deleteFile", "key": "delete" },
