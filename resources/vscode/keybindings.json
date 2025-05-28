@@ -319,22 +319,11 @@
   { "command": "-workbench.panel.chat", "key": "ctrl+alt+i" },
   { "command": "-workbench.panel.chatEditing", "key": "ctrl+shift+i" },
 
-  // remove some default "workbench.action.terminal" keybindings based on version 1.99.3
-  { "command": "-workbench.action.terminal.copyAndClearSelection", "key": "ctrl+c" },
-  { "command": "-workbench.action.terminal.copySelection", "key": "ctrl+shift+c" },
-  { "command": "-workbench.action.terminal.killActiveTab", "key": "delete" },
-  { "command": "-workbench.action.terminal.killEditor", "key": "ctrl+f4" },
-  { "command": "-workbench.action.terminal.killEditor", "key": "ctrl+w" },
-  { "command": "-workbench.action.terminal.new", "key": "ctrl+shift+oem_3" },
-  { "command": "-workbench.action.terminal.openNativeConsole", "key": "ctrl+shift+c" },
-  { "command": "-workbench.action.terminal.paste", "key": "ctrl+shift+v" },
-  { "command": "-workbench.action.terminal.sendSequence", "key": "ctrl+v" },
-  { "command": "-workbench.action.terminal.split", "key": "ctrl+shift+5" },
-  { "command": "-workbench.action.terminal.splitActiveTab", "key": "ctrl+shift+5" },
-  { "command": "-workbench.action.terminal.toggleTerminal", "key": "ctrl+oem_3" },
-
-  // remove default "workbench.action.closeWindow" keybindings based on version 1.99.3
-  { "command": "-workbench.action.closeWindow", "key": "ctrl+shift+w" },
+  // remove default "dbcode.dbcode" extension keybindings observed in version 1.13.17
+  { "command": "-dbcode.connections.quickOpen", "key": "ctrl+unknown" },
+  { "command": "-dbcode.editor.apply", "key": "unknown" },
+  { "command": "-dbcode.connections.view.focus", "key": "ctrl+d ctrl+b" },
+  { "command": "-dbcode.editor.execute", "key": "unknown" },
 
   // remove default "ms-python.python" extension keybindings observed in version 2025.4.0
   { "command": "-python.execInInteractiveWindowEnter", "key": "enter" },
@@ -471,5 +460,12 @@
   { "command": "workbench.action.terminal.toggleTerminal", "key": "ctrl+j" },
 
   // "workbench.action.terminal.kill"
-  { "command": "workbench.action.terminal.kill", "key": "ctrl+shift+w", "when": "terminalFocus" }
+  { "command": "workbench.action.terminal.kill", "key": "ctrl+shift+w", "when": "terminalFocus" },
+
+  // "dbcode.connections.view.focus"
+  { "command": "-workbench.view.debug", "key": "ctrl+shift+d" },
+  { "command": "dbcode.connections.view.focus", "key": "ctrl+shift+d" },
+
+  // "dbcode.editor.execute"
+  { "command": "dbcode.editor.execute", "key": "ctrl+q", "when": "editorTextFocus && resourceLangId == 'sql'" }
 ]
