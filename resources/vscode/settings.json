@@ -1,8 +1,9 @@
-{
+ {
   // "breadcumbs"
   "breadcrumbs.enabled": false,
 
   // "chat"
+  "chat.agent.enabled": false,
   "chat.commandCenter.enabled": false,
 
   // "editor"
@@ -128,7 +129,7 @@
   "security.workspace.trust.enabled": false,
 
   // "telemetry"
-  "telemetry.feedback.enabled": true,
+  "telemetry.feedback.enabled": false,
 
   // "terminal"
   "terminal.integrated.confirmOnExit": "never",
@@ -231,6 +232,9 @@
   "ruff.lineLength": 100,
   "ruff.nativeServer": "on",
   "ruff.organizeImports": true,
+
+  // github.copilot
+  "github.copilot.enable": { "*": false },
 
   // ms-python.python
   "python.analysis.autoFormatStrings": true,
