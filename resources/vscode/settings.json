@@ -251,6 +251,9 @@
   "dbcode.resultLocation": "below",
   "dbcode.rowsToLoad": 1000,
 
+  // github.copilot
+  "github.copilot.enable": { "*": false },
+
   // ms-python.python
   "python.analysis.autoFormatStrings": true,
   "python.analysis.diagnosticMode": "openFilesOnly",

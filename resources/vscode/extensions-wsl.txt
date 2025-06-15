@@ -1,6 +1,7 @@
 charliermarsh.ruff
 dbcode.dbcode
 esbenp.prettier-vscode
+github.copilot
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
