@@ -89,6 +89,26 @@
   { "command": "-inlineChat2.reveal", "key": "ctrl+i" },
   { "command": "-inlineChat2.undo", "key": "ctrl+backspace" },
 
+  // "notebook.cell.chat" Visual Studio Code 1.100.3
+  { "command": "-notebook.cell.chat.accept", "key": "enter" },
+  { "command": "-notebook.cell.chat.acceptChanges", "key": "ctrl+enter" },
+  { "command": "-notebook.cell.chat.acceptChanges", "key": "escape" },
+  { "command": "-notebook.cell.chat.arrowOutDown", "key": "ctrl+down" },
+  { "command": "-notebook.cell.chat.arrowOutUp", "key": "ctrl+up" },
+  { "command": "-notebook.cell.chat.discard", "key": "escape" },
+  { "command": "-notebook.cell.chat.focus", "key": "ctrl+down" },
+  { "command": "-notebook.cell.chat.focus", "key": "ctrl+up" },
+  { "command": "-notebook.cell.chat.focusNextCell", "key": "ctrl+down" },
+  { "command": "-notebook.cell.chat.focusPreviousCell", "key": "ctrl+up" },
+  { "command": "-notebook.cell.chat.nextFromHistory", "key": "down" },
+  { "command": "-notebook.cell.chat.previousFromHistory", "key": "up" },
+  { "command": "-notebook.cell.chat.start", "key": "ctrl+i" },
+  { "command": "-notebook.cell.chat.start", "key": "ctrl+k i" },
+
+  // "notebook.cell.ChatWidget" Visual Studio Code 1.100.3
+  { "command": "-notebook.cell.focusChatWidget", "key": "ctrl+up" },
+  { "command": "-notebook.cell.focusNextChatWidget", "key": "ctrl+down" },
+
   // "notebook.fold" Visual Studio Code 1.100.2
   { "command": "-notebook.fold", "key": "ctrl+shift+oem_4" },
   { "command": "-notebook.fold", "key": "left" },
@@ -200,6 +220,13 @@
   { "command": "-dbcode.editor.apply", "key": "unknown" },
   { "command": "-dbcode.editor.execute", "key": "unknown" },
 
+  // "github.copilot" extension version 1.326.0
+  { "command": "-editor.action.inlineSuggest.trigger", "key": "alt+oem_5" },
+  { "command": "-github.copilot.acceptCursorPanelSolution", "key": "ctrl+oem_2" },
+  { "command": "-github.copilot.chat.rerunWithCopilotDebug", "key": "ctrl+alt+oem_period" },
+  { "command": "-github.copilot.nextPanelSolution", "key": "alt+oem_6" },
+  { "command": "-github.copilot.previousPanelSolution", "key": "alt+oem_4" },
+
   // "ms-python.python" extension version 2025.4.0
   { "command": "-python.execInInteractiveWindowEnter", "key": "enter" },
   { "command": "-python.execInREPL", "key": "shift+enter" },
@@ -298,6 +325,7 @@
   { "key": "ctrl+shift+w", "command": "-workbench.action.closeWindow" },
   { "key": "ctrl+w", "command": "-workbench.action.terminal.killEditor" },
 
+
   // "alt+left" Visual Studio Code 1.100.2
   { "key": "alt+left", "command": "-workbench.action.navigateBack" },
   { "key": "alt+left", "command": "-workbench.action.quickInputBack" },
@@ -309,8 +337,20 @@
   { "key": "ctrl+tab", "command": "-workbench.action.quickOpenNavigateNextInEditorPicker" },
   { "key": "ctrl+tab", "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup" },
 
+
+  // "ctrl+alt+b" Visual Studio Code 1.100.3
+  { "key": "ctrl+alt+b", "command": "-workbench.action.toggleAuxiliaryBar" },
+
+  // "ctrl+alt+i" Visual Studio Code 1.100.3
+  { "key": "ctrl+alt+i", "command": "-workbench.action.chat.open" },
+  { "key": "ctrl+alt+i", "command": "-workbench.panel.chat" },
+
   // "ctrl+shift+d" Visual Studio Code 1.100.3
   { "command": "-workbench.view.debug", "key": "ctrl+shift+d" },
+
+  // "ctrl+shift+i" Visual Studio Code 1.100.3
+  { "key": "ctrl+shift+i", "command": "-workbench.action.chat.openAgent" },
+  { "key": "ctrl+shift+i", "command": "-workbench.action.toggleDevTools" },
 
   // "ctrl+shift+tab" Visual Studio Code 1.100.2
   { "key": "ctrl+shift+tab", "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup" },
@@ -395,6 +435,12 @@
 
   // "workbench.action.terminal.kill"
   { "command": "workbench.action.terminal.kill", "key": "ctrl+shift+w", "when": "terminalFocus" },
+
+  // "workbench.action.toggleAuxiliaryBar"
+  { "key": "ctrl+shift+b", "command": "workbench.action.toggleAuxiliaryBar" },
+
+  // "workbench.panel.chat"
+  { "key": "ctrl+shift+i", "command": "workbench.panel.chat", "when": "workbench.panel.chat.view.copilot.active" },
 
 
   // "dbcode.connections.view.focus"
