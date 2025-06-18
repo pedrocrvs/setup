@@ -1,0 +1,72 @@
+[tool.ruff]
+indent-width = 4
+line-length = 100
+
+[tool.ruff.format]
+docstring-code-format = true
+indent-style = "space"
+line-ending = "lf"
+quote-style = "double"
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
+ignore = ["E501"]
+select = [
+    "A",
+    "ANN",
+    "ARG",
+    "ASYNC",
+    "B",
+    "BLE",
+    "C4",
+    "C90",
+    "DTZ",
+    "E",
+    "EM",
+    "F",
+    "FAST",
+    "FBT",
+    "FLY",
+    "FURB",
+    "G",
+    "I",
+    "INP",
+    "ISC",
+    "LOG",
+    "N",
+    "PERF",
+    "PIE",
+    "PL",
+    "PTH",
+    "RET",
+    "RSE",
+    "RUF",
+    "S",
+    "SIM",
+    "SLF",
+    "SLOT",
+    "T10",
+    "T20",
+    "TC",
+    "TRY",
+    "UP",
+    "W",
+
+    "D200",
+    "D201",
+    "D202",
+    "D204",
+    "D205",
+    "D209",
+    "D210",
+    "D211",
+    "D213",
+    "D301",
+    "D400",
+    "D401",
+    "D402",
+    "D403",
+    "D404",
+    "D418",
+    "D419",
+]
