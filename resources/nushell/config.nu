@@ -193,7 +193,11 @@ $env.BROWSER = "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
 alias code = ^"/mnt/c/Program Files/Microsoft VS Code/bin/code"
 
 def ll [glob: glob = "." ] {
-    ls --all --du $glob | upsert "name" {|row| if $row.type == "dir" { $"($row.name)/" } else { $row.name } } | insert "extension" { |row| $row.name | split row "." | last } | sort-by "type" "extension" "name" | select "name" "size" "modified"
+    ls --all --long $glob
+    | upsert "name" {|row| if $row.type == "dir" { $"($row.name)/" } else { $row.name } }
+    | insert "extension" { |row| $row.name | split row "." | last }
+    | sort-by "type" "extension" "name"
+    | select "name" "mode" "modified"
 }
 
 alias pp = echo $env.PATH
