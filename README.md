@@ -49,6 +49,7 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 - [`nushell`](https://github.com/nushell/nushell)
 - [`ouch`](https://github.com/ouch-org/ouch)
 - [`pwsh`](https://learn.microsoft.com/en-us/powershell)
+- [`ruff`](https://github.com/astral-sh/ruff)
 - [`screenbox`](https://github.com/huynhsontung/Screenbox)
 - [`starship`](https://github.com/starship/starship)
 - [`task`](https://github.com/go-task/task)
@@ -248,6 +249,7 @@ Instale os pacotes especificados abaixo.
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "gcc"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "go-task"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "ouch"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "ruff"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "starship"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "uv"
 ```

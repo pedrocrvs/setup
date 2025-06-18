@@ -232,8 +232,8 @@
 
 
   // charliermarsh.ruff
+  "ruff.configurationPreference": "filesystemFirst",
   "ruff.importStrategy": "useBundled",
-  "ruff.lineLength": 100,
   "ruff.nativeServer": "on",
   "ruff.organizeImports": true,
 
