@@ -250,7 +250,7 @@
   "dbcode.history.enabled": true,
   "dbcode.maxTabs": 0,
   "dbcode.resultLocation": "below",
-  "dbcode.rowsToLoad": 1000,
+  "dbcode.rowsToLoad": 500,
 
   // github.copilot
   "github.copilot.enable": { "*": false },
