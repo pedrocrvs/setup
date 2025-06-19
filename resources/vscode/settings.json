@@ -78,8 +78,6 @@
 
   "[python]": { "editor.defaultFormatter": "charliermarsh.ruff" },
 
-  "[sql]": { "editor.defaultFormatter": "dorzey.vscode-sqlfluff" },
-
   // explorer
   "explorer.autoOpenDroppedFile": false,
   "explorer.autoReveal": false,
@@ -128,7 +126,7 @@
 
   // scm
   "scm.defaultViewMode": "tree",
-  "scm.diffDecorations": "gutter",
+  "scm.diffDecorations": "all",
 
   // security
   "security.allowedUNCHosts": [ "wsl.localhost" ],
