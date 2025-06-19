@@ -21,6 +21,7 @@ Em sessões sobre `apt` e `brew`, os comandos foram escritos para serem executad
 - [Repositório](#repositório)
   - [_Resources_](#resources)
   - [_Scritps_](#scritps)
+    - [_Symbolic links_](#symbolic-links)
 - [Debian](#debian)
   - [`apt`](#apt)
   - [`brew`](#brew)
@@ -71,7 +72,7 @@ winget --version
 
 Inicie o PowerShell como administrador e instale os _softwares_ especificados abaixo.
 
-> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente se necessário.
+> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente.
 
 ```powershell
 winget install --source "winget" --scope "machine" --id "7zip.7zip"
@@ -139,17 +140,17 @@ Set-Location "$Env:USERPROFILE/setup"; git lfs pull
 
 O diretório [`resources/`](resources/) contém arquivos de configuração dos [_softwares_](#softwares).
 
-Por exemplo, o arquivo [`.gitconfig`](resources/git/.gitconfig) para o `git`.
-
 ### _Scritps_
 
 O diretório [`scripts/`](scripts/) contém _scripts_ que configuram os _softwares_.
 
+#### _Symbolic links_
+
 Alguns desses _scripts_ criam _symbolic links_ apontando para os arquivos em [`resources/`](resources/).
 
-Inicie o PowerShell como administrador e execute o comando abaixo para ativar o _developer mode_ no Windows 11.
+O _developer mode_ é necessário para a criação de _symbolic links_ sem permissões de administrador no Windows 11.
 
-O _developer mode_ é necessário para a criação de _symbolic links_ sem permissões de administrador.
+Inicie o PowerShell como administrador e execute o comando abaixo para ativar o _developer mode_.
 
 ```powershell
 New-ItemProperty `
@@ -160,12 +161,6 @@ New-ItemProperty `
     -Force
 ```
 
-O comando abaixo é um exemplo de como executar um dos _scripts_ individualmente.
-
-```powershell
-& ".\scripts\windows\configure-git.ps1"
-```
-
 ## Debian
 
 ### `apt`
@@ -173,20 +168,20 @@ O comando abaixo é um exemplo de como executar um dos _scripts_ individualmente
 Utilizando o [`apt`](https://manpages.debian.org/stretch/apt/apt.8.en.html), sincronize os índices de pacotes e instale as atualizações disponíveis.
 
 ```bash
-sudo apt update && sudo apt upgrade --assume-yes
+sudo apt update && sudo apt upgrade --yes
 ```
 
 Instale os pacotes especificados abaixo.
 
-> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente se necessário.
+> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente.
 
 ```bash
-sudo apt install --assume-yes "build-essential"
-sudo apt install --assume-yes "curl"
-sudo apt install --assume-yes "file"
-sudo apt install --assume-yes "git-lfs"
-sudo apt install --assume-yes "git"
-sudo apt install --assume-yes "wget"
+sudo apt install --yes "build-essential"
+sudo apt install --yes "curl"
+sudo apt install --yes "file"
+sudo apt install --yes "git-lfs"
+sudo apt install --yes "git"
+sudo apt install --yes "wget"
 ```
 
 Crie o diretório `/etc/apt/keyrings/` com as permissões `0755`, para armazenar chaves GPG.
@@ -220,13 +215,13 @@ sudo apt update
 Instale os pacotes especificados abaixo.
 
 ```bash
-sudo apt install --assume-yes "docker-ce" "docker-ce-cli" "containerd.io" "docker-buildx-plugin" "docker-compose-plugin"
-sudo apt install --assume-yes "google-cloud-cli"
-sudo apt install --assume-yes "gh"
-sudo apt install --assume-yes "nushell"
+sudo apt install --yes "docker-ce" "docker-ce-cli" "containerd.io" "docker-buildx-plugin" "docker-compose-plugin"
+sudo apt install --yes "google-cloud-cli"
+sudo apt install --yes "gh"
+sudo apt install --yes "nushell"
 ```
 
-Adiciona o usuário referenciado pela variável `$USER` ao grupo `"docker"`.
+Adicione o usuário referenciado pela variável `$USER` ao grupo `"docker"`.
 
 ```bash
 sudo usermod --append --groups "docker" "$USER"
@@ -242,7 +237,7 @@ bash -c "$(curl --fail --silent --show-error --location https://raw.githubuserco
 
 Instale os pacotes especificados abaixo.
 
-> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente se necessário.
+> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente.
 
 ```bash
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "carapace"
