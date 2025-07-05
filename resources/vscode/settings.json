@@ -5,6 +5,7 @@
   // chat
   "chat.agent.enabled": false,
   "chat.commandCenter.enabled": false,
+  "chat.mcp.enabled": false,
 
   // diffEditor
   "diffEditor.wordWrap": "off",
@@ -249,9 +250,6 @@
   "dbcode.maxTabs": 0,
   "dbcode.resultLocation": "below",
   "dbcode.rowsToLoad": 500,
-
-  // github.copilot
-  "github.copilot.enable": { "*": false },
 
   // ms-python.python
   "python.analysis.autoFormatStrings": true,

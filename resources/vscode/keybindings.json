@@ -16,6 +16,28 @@
   { "command": "-breadcrumbs.selectFocused", "key": "enter" },
   { "command": "-breadcrumbs.toggleToOn", "key": "ctrl+shift+oem_period" },
 
+  // "chat" Visual Studio Code 1.101.1
+  { "command": "-chat.action.focus", "key": "ctrl+down" },
+  { "command": "-chat.action.focus", "key": "ctrl+up" },
+  { "command": "-chat.action.focus", "key": "ctrl+up" },
+  { "command": "-chat.inlineResourceAnchor.copyResource", "key": "ctrl+c" },
+  { "command": "-chat.inlineResourceAnchor.openToSide", "key": "ctrl+enter" },
+
+  // "chatEditing" Visual Studio Code 1.101.1
+  { "command": "-chatEditing.acceptAllFiles", "key": "ctrl+enter" },
+  { "command": "-chatEditing.discardAllFiles", "key": "ctrl+backspace" },
+
+  // "chatEditor" Visual Studio Code 1.101.1
+  { "command": "-chatEditor.action.accept", "key": "ctrl+shift+y" },
+  { "command": "-chatEditor.action.acceptHunk", "key": "ctrl+y" },
+  { "command": "-chatEditor.action.navigateNext", "key": "alt+f5" },
+  { "command": "-chatEditor.action.navigatePrevious", "key": "shift+alt+f5" },
+  { "command": "-chatEditor.action.reject", "key": "ctrl+shift+n" },
+  { "command": "-chatEditor.action.showAccessibleDiffView", "key": "f7" },
+  { "command": "-chatEditor.action.toggleDiff", "key": "shift+alt+f7" },
+  { "command": "-chatEditor.action.undoHunk", "key": "ctrl+n" },
+
+
   // "debug" Visual Studio Code 1.100.3
   { "command": "-debug.copyWatchExpression", "key": "ctrl+alt+c" },
   { "command": "-debug.openBreakpointToSide", "key": "alt+enter" },
@@ -152,6 +174,40 @@
   { "command": "-testing.toggleInlineTestOutput", "key": "ctrl+oem_1 ctrl+i" },
   { "command": "-testing.toggleTestingPeekHistory", "key": "alt+h" },
 
+  // "workbench.action.chat" Visual Studio Code 1.101.1
+  { "command": "-workbench.action.chat.acceptTool", "key": "ctrl+enter" },
+  { "command": "-workbench.action.chat.applyInEditor", "key": "ctrl+enter" },
+  { "command": "-workbench.action.chat.attach.instructions", "key": "ctrl+alt+oem_2" },
+  { "command": "-workbench.action.chat.attachContext", "key": "ctrl+oem_2" },
+  { "command": "-workbench.action.chat.cancel", "key": "alt+backspace" },
+  { "command": "-workbench.action.chat.focusInput", "key": "ctrl+down" },
+  { "command": "-workbench.action.chat.focusInput", "key": "ctrl+up" },
+  { "command": "-workbench.action.chat.holdToVoiceChatInChatView", "key": "ctrl+i" },
+  { "command": "-workbench.action.chat.insertCodeBlock", "key": "ctrl+enter" },
+  { "command": "-workbench.action.chat.newChat", "key": "ctrl+l" },
+  { "command": "-workbench.action.chat.nextCodeBlock", "key": "ctrl+alt+pagedown" },
+  { "command": "-workbench.action.chat.nextFileTree", "key": "ctrl+f9" },
+  { "command": "-workbench.action.chat.open", "key": "ctrl+alt+i" },
+  { "command": "-workbench.action.chat.openAgent", "key": "ctrl+shift+i" },
+  { "command": "-workbench.action.chat.openModelPicker", "key": "ctrl+alt+oem_period" },
+  { "command": "-workbench.action.chat.previousCodeBlock", "key": "ctrl+alt+pageup" },
+  { "command": "-workbench.action.chat.previousFileTree", "key": "ctrl+shift+f9" },
+  { "command": "-workbench.action.chat.run-in-new-chat.prompt.current", "key": "ctrl+alt+win+oem_2" },
+  { "command": "-workbench.action.chat.run.prompt.current", "key": "alt+win+oem_2" },
+  { "command": "-workbench.action.chat.run.prompt", "key": "alt+win+oem_2" },
+  { "command": "-workbench.action.chat.runInTerminal", "key": "ctrl+alt+enter" },
+  { "command": "-workbench.action.chat.sendToNewChat", "key": "ctrl+shift+enter" },
+  { "command": "-workbench.action.chat.startVoiceChat", "key": "ctrl+i" },
+  { "command": "-workbench.action.chat.stopListening", "key": "escape" },
+  { "command": "-workbench.action.chat.stopListeningAndSubmit", "key": "ctrl+i" },
+  { "command": "-workbench.action.chat.stopReadChatItemAloud", "key": "escape" },
+  { "command": "-workbench.action.chat.submit", "key": "enter" },
+  { "command": "-workbench.action.chat.submitWithCodebase", "key": "ctrl+enter" },
+  { "command": "-workbench.action.chat.submitWithoutDispatching", "key": "shift+alt+enter" },
+  { "command": "-workbench.action.chat.toggleAgentMode", "key": "ctrl+oem_period" },
+  { "command": "-workbench.action.chat.undoEdits", "key": "delete" },
+  { "command": "-workbench.action.quickchat.toggle", "key": "ctrl+shift+alt+l" },
+
   // "workbench.action.debug" Visual Studio Code 1.100.3
   { "command": "-workbench.action.debug.continue", "key": "f5" },
   { "command": "-workbench.action.debug.disconnect", "key": "shift+f5" },
@@ -204,6 +260,9 @@
   { "command": "-workbench.debug.action.toggleRepl", "key": "ctrl+shift+y" },
   { "command": "-workbench.debug.viewlet.action.copyValue", "key": "ctrl+c" },
 
+  // "workbench.panel.chat" Visual Studio Code 1.101.1
+  { "command": "-workbench.panel.chat", "key": "ctrl+alt+i" },
+
   // "workbench.statusBar" Visual Studio Code 1.100.2
   { "command": "-workbench.statusBar.clearFocus", "key": "escape" },
   { "command": "-workbench.statusBar.focusFirst", "key": "home" },
@@ -219,13 +278,6 @@
   { "command": "-dbcode.connections.view.focus", "key": "ctrl+d ctrl+b" },
   { "command": "-dbcode.editor.apply", "key": "unknown" },
   { "command": "-dbcode.editor.execute", "key": "unknown" },
-
-  // "github.copilot" extension version 1.326.0
-  { "command": "-editor.action.inlineSuggest.trigger", "key": "alt+oem_5" },
-  { "command": "-github.copilot.acceptCursorPanelSolution", "key": "ctrl+oem_2" },
-  { "command": "-github.copilot.chat.rerunWithCopilotDebug", "key": "ctrl+alt+oem_period" },
-  { "command": "-github.copilot.nextPanelSolution", "key": "alt+oem_6" },
-  { "command": "-github.copilot.previousPanelSolution", "key": "alt+oem_4" },
 
   // "ms-python.python" extension version 2025.4.0
   { "command": "-python.execInInteractiveWindowEnter", "key": "enter" },
@@ -341,16 +393,8 @@
   // "ctrl+alt+b" Visual Studio Code 1.100.3
   { "key": "ctrl+alt+b", "command": "-workbench.action.toggleAuxiliaryBar" },
 
-  // "ctrl+alt+i" Visual Studio Code 1.100.3
-  { "key": "ctrl+alt+i", "command": "-workbench.action.chat.open" },
-  { "key": "ctrl+alt+i", "command": "-workbench.panel.chat" },
-
   // "ctrl+shift+d" Visual Studio Code 1.100.3
   { "command": "-workbench.view.debug", "key": "ctrl+shift+d" },
-
-  // "ctrl+shift+i" Visual Studio Code 1.100.3
-  { "key": "ctrl+shift+i", "command": "-workbench.action.chat.openAgent" },
-  { "key": "ctrl+shift+i", "command": "-workbench.action.toggleDevTools" },
 
   // "ctrl+shift+tab" Visual Studio Code 1.100.2
   { "key": "ctrl+shift+tab", "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup" },
@@ -440,10 +484,6 @@
   { "key": "ctrl+shift+b", "command": "workbench.action.toggleAuxiliaryBar" },
 
   // "workbench.panel.chat"
-  { "key": "ctrl+shift+i", "command": "workbench.panel.chat", "when": "workbench.panel.chat.view.copilot.active" },
-
-
-  // "dbcode.connections.view.focus"
   { "command": "dbcode.connections.view.focus", "key": "ctrl+shift+q" },
 
   // "dbcode.editor.execute"
