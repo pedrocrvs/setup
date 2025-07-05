@@ -1,5 +1,4 @@
 esbenp.prettier-vscode
-github.copilot
 ms-toolsai.jupyter-keymap
 ms-vscode-remote.remote-wsl
 tamasfe.even-better-toml
