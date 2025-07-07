@@ -190,16 +190,18 @@ $env.PROMPT_INDICATOR = ""
 
 # Aliases and custom commands
 
-alias code = ^"/mnt/c/Program Files/Microsoft VS Code/bin/code"
+def --wrapped code [...rest] {
+    ^"/mnt/c/Program Files/Microsoft VS Code/bin/code" ...$rest
+}
 
-def ll [glob: glob = "." ] {
-    ls --all --long $glob
-    | upsert "name" {|row| if $row.type == "dir" { $"($row.name)/" } else { $row.name } }
-    | insert "extension" { |row| $row.name | split row "." | last }
+def ll [pattern = "."] {
+    ls --all --long $pattern
+    | upsert "name" {|row| if $row.type == "dir" { $"($row.name)/" } else { $row.name }}
+    | insert "extension" {|row| if $row.type != "dir" { $row.name | split row "." | last }}
     | sort-by "type" "extension" "name"
     | select "name" "mode" "modified"
 }
 
-alias pp = echo $env.PATH
-
-alias rr = rm --force --recursive --trash --verbose
+def --wrapped rr [...rest] {
+    rm --force --recursive --trash --verbose ...$rest
+}
