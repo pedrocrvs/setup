@@ -64,8 +64,6 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 
 Certifique-se de que o `winget` está instalado.
 
-Caso necessário, baixe e instale o `winget` manualmente pela [Microsoft Store](https://apps.microsoft.com/detail/9NBLGGH4NNS1).
-
 ```powershell
 winget --version
 ```
@@ -255,21 +253,21 @@ A configuração do Google Chrome deve ser feita manualmente. Para isso, acesse 
 
 Desabilite as _flags_ especificadas abaixo.
 
-- `#autofill-enable-save-and-fill`
-- `#autofill-improved-labels`
-- `#enable-autofill-credit-card-upload`
-- `#fluent-overlay-scrollbars`
-- `#fluent-scrollbars`
-- `#overlay-scrollbars`
-- `#pwm-show-suggestions-on-autofocus`
-- `#show-autofill-type-predictions`
+- `autofill-enable-save-and-fill`
+- `autofill-improved-labels`
+- `enable-autofill-credit-card-upload`
+- `fluent-overlay-scrollbars`
+- `fluent-scrollbars`
+- `overlay-scrollbars`
+- `pwm-show-suggestions-on-autofocus`
+- `show-autofill-type-predictions`
 
 Habilite as _flags_ especificadas abaixo.
 
-- `#enable-gpu-rasterization`
-- `#enable-parallel-downloading`
-- `#enable-zero-copy`
-- `#smooth-scrolling`
+- `enable-gpu-rasterization`
+- `enable-parallel-downloading`
+- `enable-zero-copy`
+- `smooth-scrolling`
 
 ## Manutenção dos _softwares_
 
