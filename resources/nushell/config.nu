@@ -174,6 +174,25 @@ $env.config.color_config.range = "light_green"
 # Environment variables
 $env.BROWSER = "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
 
+$env.FZF_DEFAULT_OPTS = '
+  --color=bg:-1
+  --color=bg+:#314F79
+  --color=border:#262626
+  --color=fg:-1
+  --color=fg+:-1
+  --color=gutter:-1
+  --color=hl:#00CCB0
+  --color=hl+:#00CCB0
+  --color=info:11
+  --color=prompt:#00FFD7
+  --color=query:-1
+  --color=spinner:11
+  --pointer=" "
+  --prompt="> "
+  --scrollbar="|"
+  --separator="-"
+'
+
 $env.LESSHISTFILE = "/dev/null"
 
 $env.LS_COLORS = "bd=97:cd=97:di=97:ex=97:fi=97:ln=4;97:mi=4;91:or=4;91:ow=97:pi=97:sg=97:so=97:st=97:su=97:tw=97"

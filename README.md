@@ -43,6 +43,7 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 - [`chrome`](https://www.google.com/chrome)
 - [`code`](https://code.visualstudio.com)
 - [`docker`](https://docs.docker.com/engine)
+- [`fzf`](https://github.com/junegunn/fzf)
 - [`gcloud`](https://cloud.google.com/sdk/docs/install)
 - [`gh`](https://github.com/cli/cli)
 - [`git-lfs`](https://github.com/git-lfs/git-lfs)
@@ -239,6 +240,7 @@ Instale os pacotes especificados abaixo.
 
 ```bash
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "carapace"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "fzf"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "gcc"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "go-task"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "ouch"
