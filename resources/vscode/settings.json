@@ -208,7 +208,7 @@
   "workbench.colorCustomizations": {
     "terminal.background": "#0D0D0D",
     "terminal.foreground": "#FFFFFF",
-    "terminal.selectionBackground": "#1E90FF",
+    "terminal.selectionBackground": "#314F79",
     "terminal.selectionForeground": "#FFFFFF",
     "terminal.ansiBlack": "#000000",
     "terminal.ansiBlue": "#337FFF",
