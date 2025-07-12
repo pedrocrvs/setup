@@ -86,6 +86,18 @@ $env.config.render_right_prompt_on_last_line = false
 
 
 # Keybindings
+$env.config.keybindings ++= [
+    {
+        name: change_directory
+        modifier: Alt
+        keycode: Char_c
+        mode: Emacs
+        event: {
+            send: ExecuteHostCommand,
+            cmd: 'ls --all --short-names | where "type" == "dir" | get "name" | to text | fzf | if $in != "" { cd $in }'
+        }
+    }
+]
 
 
 # Menus
