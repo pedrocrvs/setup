@@ -52,7 +52,6 @@ Os principais _softwares_ instalados com as instruções deste repositório são
 - [`ouch`](https://github.com/ouch-org/ouch)
 - [`pwsh`](https://learn.microsoft.com/en-us/powershell)
 - [`ruff`](https://github.com/astral-sh/ruff)
-- [`screenbox`](https://github.com/huynhsontung/Screenbox)
 - [`starship`](https://github.com/starship/starship)
 - [`task`](https://github.com/go-task/task)
 - [`terminal`](https://github.com/microsoft/terminal)
@@ -95,7 +94,6 @@ Inicie o PowerShell sem permissões de administrador e instale os _softwares_ es
 
 ```powershell
 winget install --source "winget" --id "Microsoft.WindowsTerminal"
-winget install --source "winget" --id "Starpine.Screenbox"
 winget install --source "winget" --id "Yaak.app"
 ```
 
