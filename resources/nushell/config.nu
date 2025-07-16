@@ -99,6 +99,19 @@ $env.config.keybindings ++= [
     }
 ]
 
+$env.config.keybindings ++= [
+    {
+        name: open_project
+        modifier: Alt
+        keycode: Char_y
+        mode: Emacs
+        event: {
+            send: ExecuteHostCommand,
+            cmd: 'let projects = $env.HOME | path join "projects/"; let seletected = ls --short-names $projects | where "type" == "dir" | get "name" | to text | fzf | if $in != "" { let selected = [$projects $in] | path join; ^"/mnt/c/Program Files/Microsoft VS Code/bin/code" $selected }'
+        }
+    }
+]
+
 
 # Menus
 
