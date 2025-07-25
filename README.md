@@ -294,7 +294,13 @@ sudo apt purge --assume-yes "git"
 Execute `apt autoremove` para remover pacotes desnecessários.
 
 ```bash
-sudo apt autoremove
+sudo apt autoremove --purge
+```
+
+Execute `apt clean` para remover arquivos em `/var/cache/apt/archives/`.
+
+```bash
+sudo apt clean
 ```
 
 ### `brew`
@@ -338,7 +344,7 @@ brew autoremove
 Execute `brew cleanup` para remover arquivos desnecessários.
 
 ```bash
-brew cleanup --prune="all"
+brew cleanup --scrub --prune="all"
 ```
 
 Execute `brew uninstall` para remover um pacote especificado.
