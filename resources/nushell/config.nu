@@ -238,8 +238,8 @@ def --wrapped code [...rest] {
     ^"/mnt/c/Program Files/Microsoft VS Code/bin/code" ...$rest
 }
 
-def ll [pattern = "."] {
-    ls --all --long $pattern
+def ll [] {
+    ls --all --long
     | upsert "name" {|row| if $row.type == "dir" { $"($row.name)/" } else { $row.name }}
     | insert "extension" {|row| if $row.type != "dir" { $row.name | split row "." | last }}
     | sort-by "type" "extension" "name"
