@@ -247,7 +247,6 @@
   "dbcode.format.dateLocalTimezone": true,
   "dbcode.format.dateStyle": "ISO 9075",
   "dbcode.history.enabled": true,
-  "dbcode.maxTabs": 0,
   "dbcode.resultLocation": "below",
   "dbcode.rowsToLoad": 500,
 
