@@ -165,7 +165,7 @@ New-ItemProperty `
 Utilizando o [`apt`](https://manpages.debian.org/stretch/apt/apt.8.en.html), sincronize os índices de pacotes e instale as atualizações disponíveis.
 
 ```bash
-sudo apt update && sudo apt upgrade --yes
+sudo apt update && sudo apt full-upgrade --yes
 ```
 
 Instale os pacotes especificados abaixo.
@@ -288,13 +288,19 @@ apt list --upgradable
 Execute `apt purge` para remover um pacote especificado.
 
 ```bash
-sudo apt purge --assume-yes "git"
+sudo apt purge --yes "git"
 ```
 
 Execute `apt autoremove` para remover pacotes desnecessários.
 
 ```bash
-sudo apt autoremove
+sudo apt autoremove --purge --yes
+```
+
+Execute `apt clean` para remover arquivos em `/var/cache/apt/archives/`.
+
+```bash
+sudo apt clean
 ```
 
 ### `brew`
@@ -338,7 +344,7 @@ brew autoremove
 Execute `brew cleanup` para remover arquivos desnecessários.
 
 ```bash
-brew cleanup --prune="all"
+brew cleanup --prune="all" --scrub
 ```
 
 Execute `brew uninstall` para remover um pacote especificado.
