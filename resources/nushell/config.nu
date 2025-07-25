@@ -238,6 +238,21 @@ def --wrapped code [...rest] {
     ^"/mnt/c/Program Files/Microsoft VS Code/bin/code" ...$rest
 }
 
+def junk [] {
+    sudo apt update
+    sudo apt full-upgrade --assume-yes
+    sudo apt autoremove --purge
+    sudo apt clean
+
+    brew update
+    brew upgrade --formula
+    brew autoremove
+    brew cleanup --scrub --prune="all"
+
+    rm --force --permanent --recursive /home/pedro/.cache/
+    rm --force --permanent --recursive /home/pedro/.local/share/trash/
+}
+
 def ll [] {
     ls --all --long
     | upsert "name" {|row| if $row.type == "dir" { $"($row.name)/" } else { $row.name }}
