@@ -1,24 +1,3 @@
-function Enter-WSLDebian {
-    param (
-        [Parameter(Mandatory = $false)]
-        [string]$ShellPath = "/usr/bin/bash"
-    )
-
-    $Arguments = @("--distribution", "Debian")
-
-    if ($PWD.Path -eq $Env:USERPROFILE) {
-        $Arguments += @("--cd", "~")
-    }
-
-    $Arguments += @("--exec", $ShellPath)
-
-    & "wsl" $Arguments
-}
-
-function Enter-WSLDebianNushell {
-    Enter-WSLDebian -ShellPath "/usr/bin/nu"
-}
-
 function Get-IPAddress {
     param (
         [Parameter(Mandatory = $false)]
@@ -231,7 +210,6 @@ function Start-MouseMovement {
 }
 
 
-Set-Alias -Name "deb" -Value Enter-WSLDebianNushell
 Set-Alias -Name "ip" -Value Set-ClipboardToIPAddress
 Set-Alias -Name "isudo" -Value Get-ImAdministrator
 Set-Alias -Name "junk" -Value Remove-Junk
