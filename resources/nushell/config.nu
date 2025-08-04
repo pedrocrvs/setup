@@ -83,6 +83,13 @@ $env.config.render_right_prompt_on_last_line = false
 
 
 # Hooks
+$env.config.hooks = {
+    env_change: {
+        PWD: [
+            {|before: string, after: string| print $"(ansi escape_right)9;9;(/usr/bin/wslpath -w $after)(ansi escape)\\"}
+        ]
+    }
+}
 
 
 # Keybindings
