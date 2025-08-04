@@ -5,7 +5,7 @@
     "confirmCloseAllTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": true,
-    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "defaultProfile": "{00000000-0000-0000-0000-000000000001}",
     "disableAnimations": true,
     "initialPosition": ",",
     "language": "en-US",
@@ -81,8 +81,8 @@
         { "id": "User.scroll.0", "keys": "shift+up" },
         { "id": "User.scroll.1", "keys": "shift+down" },
         { "id": "User.scrollToMark.0", "keys": "ctrl+up" },
-        { "id": "User.scrollToMark.1", "keys": "ctrl+down" }
-
+        { "id": "User.scrollToMark.1", "keys": "ctrl+down" },
+        { "id": "User.openNewWindow", "keys": "ctrl+shift+n" }
     ],
 
     "profiles": {
@@ -99,11 +99,20 @@
         },
         "list": [
             {
-                "commandline": "pwsh.exe -Interactive -NoLogo",
-                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "commandline": "wsl.exe --distribution Debian --exec /usr/bin/nu",
+                "guid": "{00000000-0000-0000-0000-000000000001}",
                 "hidden": false,
                 "icon": "\ue756",
-                "name": "PowerShell"
+                "name": "Debian",
+                "startingDirectory": "~"
+            },
+            {
+                "commandline": "pwsh.exe -Interactive -NoLogo",
+                "guid": "{00000000-0000-0000-0000-000000000002}",
+                "hidden": false,
+                "icon": "\ue756",
+                "name": "PowerShell",
+                "startingDirectory": "%USERPROFILE%"
             }
         ]
     },
