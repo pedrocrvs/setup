@@ -95,6 +95,30 @@ $env.config.hooks = {
 # Keybindings
 $env.config.keybindings ++= [
     {
+        modifier: Shift
+        keycode: Left
+        mode: [emacs, vi_normal, vi_insert]
+        event: null
+    }
+    {
+        modifier: Shift
+        keycode: Right
+        mode: [emacs, vi_normal, vi_insert]
+        event: null
+    }
+    {
+        modifier: Control_shift
+        keycode: Left
+        mode: [emacs, vi_normal, vi_insert]
+        event: null
+    }
+    {
+        modifier: Control_shift
+        keycode: Right
+        mode: [emacs, vi_normal, vi_insert]
+        event: null
+    }
+    {
         name: change_directory
         modifier: Alt
         keycode: Char_c
@@ -104,9 +128,6 @@ $env.config.keybindings ++= [
             cmd: 'ls --all --short-names | where "type" == "dir" | get "name" | to text | fzf | if $in != "" { cd $in }'
         }
     }
-]
-
-$env.config.keybindings ++= [
     {
         name: open_project
         modifier: Alt
