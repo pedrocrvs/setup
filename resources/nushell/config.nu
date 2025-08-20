@@ -239,6 +239,8 @@ $env.config.color_config.range = "light_green"
 # Environment variables
 $env.BROWSER = "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
 
+$env.COLORTERM = "truecolor"
+
 $env.FZF_DEFAULT_OPTS = '
   --color=bg:-1
   --color=bg+:#314F79
