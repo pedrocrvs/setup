@@ -12,19 +12,21 @@ Os comandos deste documento foram escritos para serem executados com o [PowerShe
 
 Em sessões sobre `apt` e `brew`, os comandos foram escritos para serem executados com o [Bash](https://manpages.debian.org/stretch/bash/bash.1.en.html).
 
+Os comandos para instalação de _softwares_ estão repetidos para que seja possível copiar e executá-los individualmente.
+
 ## Conteúdos
 
 - [Conteúdos](#conteúdos)
 - [_Softwares_](#softwares)
 - [`winget`](#winget)
 - [`wsl`](#wsl)
+- [Debian](#debian)
+  - [`apt`](#apt)
+  - [`brew`](#brew)
 - [Repositório](#repositório)
   - [_Resources_](#resources)
   - [_Scritps_](#scritps)
     - [_Symbolic links_](#symbolic-links)
-- [Debian](#debian)
-  - [`apt`](#apt)
-  - [`brew`](#brew)
 - [`chrome`](#chrome)
 - [Manutenção dos _softwares_](#manutenção-dos-softwares)
   - [`apt`](#apt-1)
@@ -35,7 +37,7 @@ Em sessões sobre `apt` e `brew`, os comandos foram escritos para serem executad
 
 ## _Softwares_
 
-Os principais _softwares_ instalados com as instruções deste repositório são:
+Os principais _softwares_ instalados com as instruções neste repositório são:
 
 - [`7z`](https://7-zip.org)
 - [`brew`](https://github.com/Homebrew/brew)
@@ -70,8 +72,6 @@ winget --version
 
 Inicie o PowerShell como administrador e instale os _softwares_ especificados abaixo.
 
-> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente.
-
 ```powershell
 winget install --source "winget" --scope "machine" --id "7zip.7zip"
 winget install --source "winget" --scope "machine" --id "Git.Git" --override '/VERYSILENT /NODESKTOPICON /NOEXPLORER /COMPONENTS="icons,gitlfs" /NOASSOC /NOSCALAR /PATH'
@@ -79,6 +79,9 @@ winget install --source "winget" --scope "machine" --id "GitHub.cli"
 winget install --source "winget" --scope "machine" --id "Google.Chrome"
 winget install --source "winget" --scope "machine" --id "Microsoft.PowerShell"
 winget install --source "winget" --scope "machine" --id "Microsoft.VisualStudioCode" --override '/VERYSILENT /MERGETASKS="!runcode,!desktopicon,addcontextmenufiles,addcontextmenufolders,associatefiles,path"'
+
+winget install --source "winget" --id "Microsoft.WindowsTerminal"
+winget install --source "winget" --id "Yaak.app"
 ```
 
 > Os _softwares_ especificados abaixo são utilizados apenas em meu trabalho profissional.
@@ -86,14 +89,8 @@ winget install --source "winget" --scope "machine" --id "Microsoft.VisualStudioC
 ```powershell
 winget install --source "winget" --scope "machine" --id "Microsoft.OneDrive"
 winget install --source "winget" --scope "machine" --id "Microsoft.PowerBI"
-winget install --source "winget" --scope "user" --id "Microsoft.Teams"
-```
 
-Inicie o PowerShell sem permissões de administrador e instale os _softwares_ especificados abaixo.
-
-```powershell
-winget install --source "winget" --id "Microsoft.WindowsTerminal"
-winget install --source "winget" --id "Yaak.app"
+winget install --source "winget" --id "Microsoft.Teams"
 ```
 
 ## `wsl`
@@ -114,6 +111,103 @@ Configure a distribuição Debian como padrão do `wsl`.
 
 ```powershell
 wsl --set-default "Debian"
+```
+
+## Debian
+
+### `apt`
+
+Utilizando o [`apt`](https://manpages.debian.org/stretch/apt/apt.8.en.html), sincronize os índices de pacotes e instale as atualizações disponíveis.
+
+```bash
+sudo apt update && sudo apt full-upgrade --yes
+```
+
+Instale os pacotes especificados abaixo.
+
+```bash
+sudo apt install --yes "build-essential"
+sudo apt install --yes "curl"
+sudo apt install --yes "file"
+sudo apt install --yes "git-lfs"
+sudo apt install --yes "git"
+sudo apt install --yes "gnupg"
+sudo apt install --yes "wget"
+```
+
+Crie o diretório `/etc/apt/keyrings/` com as permissões `0755`, para armazenar chaves GPG.
+
+```bash
+sudo install --mode=0755 --directory "/etc/apt/keyrings/"
+```
+
+Baixe e converta as chaves GPG especificadas abaixo, salvando-as no diretório `/etc/apt/keyrings/`.
+
+```bash
+sudo curl --fail "https://download.docker.com/linux/debian/gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/docker.gpg"
+sudo curl --fail "https://cli.github.com/packages/githubcli-archive-keyring.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/gh.gpg"
+sudo curl --fail "https://apt.fury.io/nushell/gpg.key" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/nushell.gpg"
+```
+
+Adicione os repositórios especificados abaixo como fontes de pacotes para o `apt`.
+
+Em seguida, com as novas fontes, sincronize os índices de pacotes.
+
+```bash
+printf "Types: deb\nURIs: https://download.docker.com/linux/debian/\nSuites: trixie\nComponents: stable\nSigned-By: /etc/apt/keyrings/docker.gpg\n" | sudo tee "/etc/apt/sources.list.d/docker.sources"
+printf "Types: deb\nURIs: https://cli.github.com/packages/\nSuites: stable\nComponents: main\nSigned-By: /etc/apt/keyrings/gh.gpg\n" | sudo tee "/etc/apt/sources.list.d/github-cli.sources"
+printf "Types: deb\nURIs: https://apt.fury.io/nushell/\nSuites: /\nComponents:\nSigned-By: /etc/apt/keyrings/nushell.gpg\n" | sudo tee "/etc/apt/sources.list.d/nushell.sources"
+
+sudo apt update
+```
+
+Instale os pacotes especificados abaixo.
+
+```bash
+sudo apt install --yes "docker-ce" "docker-ce-cli" "containerd.io" "docker-buildx-plugin" "docker-compose-plugin"
+sudo apt install --yes "gh"
+sudo apt install --yes "nushell"
+```
+
+Adicione o usuário referenciado pela variável `$USER` ao grupo `"docker"`.
+
+```bash
+sudo usermod --append --groups "docker" "$USER"
+```
+
+> Os pacotes especificados abaixo são utilizados apenas em meu trabalho profissional.
+
+```bash
+sudo curl --fail "https://packages.cloud.google.com/apt/doc/apt-key.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/gcloud.gpg"
+
+printf "Types: deb\nURIs: https://packages.cloud.google.com/apt/\nSuites: cloud-sdk\nComponents: main\nSigned-By: /etc/apt/keyrings/gcloud.gpg\n"  | sudo tee "/etc/apt/sources.list.d/google-cloud-sdk.sources"
+
+sudo apt update
+
+sudo apt install --yes "google-cloud-cli"
+```
+
+### `brew`
+
+Baixe e execute o _script_ de instalação do `brew`.
+
+```bash
+bash -c "$(curl --fail --silent --show-error --location https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Instale os pacotes especificados abaixo.
+
+> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente.
+
+```bash
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "carapace"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "fzf"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "gcc"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "go-task"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "ouch"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "ruff"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "starship"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "uv"
 ```
 
 ## Repositório
@@ -146,106 +240,6 @@ Alguns desses _scripts_ criam _symbolic links_ apontando para os arquivos em [`r
 
 O _developer mode_ é necessário para a criação de _symbolic links_ sem permissões de administrador no Windows 11.
 
-Inicie o PowerShell como administrador e execute o comando abaixo para ativar o _developer mode_.
-
-```powershell
-New-ItemProperty `
-    -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" `
-    -Name "AllowDevelopmentWithoutDevLicense" `
-    -Value 1 `
-    -PropertyType "DWORD" `
-    -Force
-```
-
-## Debian
-
-### `apt`
-
-Utilizando o [`apt`](https://manpages.debian.org/stretch/apt/apt.8.en.html), sincronize os índices de pacotes e instale as atualizações disponíveis.
-
-```bash
-sudo apt update && sudo apt full-upgrade --yes
-```
-
-Instale os pacotes especificados abaixo.
-
-> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente.
-
-```bash
-sudo apt install --yes "build-essential"
-sudo apt install --yes "curl"
-sudo apt install --yes "file"
-sudo apt install --yes "git-lfs"
-sudo apt install --yes "git"
-sudo apt install --yes "wget"
-```
-
-Crie o diretório `/etc/apt/keyrings/` com as permissões `0755`, para armazenar chaves GPG.
-
-```bash
-sudo install --mode=0755 --directory "/etc/apt/keyrings/"
-```
-
-Baixe e converta as chaves GPG especificadas abaixo, salvando-as no diretório `/etc/apt/keyrings/`.
-
-```bash
-sudo curl --fail "https://download.docker.com/linux/debian/gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/docker.gpg"
-sudo curl --fail "https://packages.cloud.google.com/apt/doc/apt-key.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/gcloud.gpg"
-sudo curl --fail "https://cli.github.com/packages/githubcli-archive-keyring.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/gh.gpg"
-sudo curl --fail "https://apt.fury.io/nushell/gpg.key" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/nushell.gpg"
-```
-
-Adicione os repositórios especificados abaixo como fontes de pacotes para o `apt`.
-
-Em seguida, com as novas fontes, sincronize os índices de pacotes.
-
-```bash
-echo "deb [signed-by=/etc/apt/keyrings/docker.gpg arch=amd64] https://download.docker.com/linux/debian bookworm stable" | sudo tee "/etc/apt/sources.list.d/docker.list" > /dev/null
-echo "deb [signed-by=/etc/apt/keyrings/gcloud.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee "/etc/apt/sources.list.d/google-cloud-sdk.list" > /dev/null
-echo "deb [signed-by=/etc/apt/keyrings/gh.gpg arch=amd64] https://cli.github.com/packages stable main" | sudo tee "/etc/apt/sources.list.d/github-cli.list" > /dev/null
-echo "deb [signed-by=/etc/apt/keyrings/nushell.gpg] https://apt.fury.io/nushell/ /" | sudo tee "/etc/apt/sources.list.d/nushell.list" > /dev/null
-
-sudo apt update
-```
-
-Instale os pacotes especificados abaixo.
-
-```bash
-sudo apt install --yes "docker-ce" "docker-ce-cli" "containerd.io" "docker-buildx-plugin" "docker-compose-plugin"
-sudo apt install --yes "google-cloud-cli"
-sudo apt install --yes "gh"
-sudo apt install --yes "nushell"
-```
-
-Adicione o usuário referenciado pela variável `$USER` ao grupo `"docker"`.
-
-```bash
-sudo usermod --append --groups "docker" "$USER"
-```
-
-### `brew`
-
-Baixe e execute o _script_ de instalação do Homebrew.
-
-```bash
-bash -c "$(curl --fail --silent --show-error --location https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-Instale os pacotes especificados abaixo.
-
-> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente.
-
-```bash
-/home/linuxbrew/.linuxbrew/bin/brew install --formula "carapace"
-/home/linuxbrew/.linuxbrew/bin/brew install --formula "fzf"
-/home/linuxbrew/.linuxbrew/bin/brew install --formula "gcc"
-/home/linuxbrew/.linuxbrew/bin/brew install --formula "go-task"
-/home/linuxbrew/.linuxbrew/bin/brew install --formula "ouch"
-/home/linuxbrew/.linuxbrew/bin/brew install --formula "ruff"
-/home/linuxbrew/.linuxbrew/bin/brew install --formula "starship"
-/home/linuxbrew/.linuxbrew/bin/brew install --formula "uv"
-```
-
 ## `chrome`
 
 A configuração do Google Chrome deve ser feita manualmente. Para isso, acesse `chrome://flags`.
@@ -257,7 +251,6 @@ Desabilite as _flags_ especificadas abaixo.
 - `enable-autofill-credit-card-upload`
 - `fluent-overlay-scrollbars`
 - `fluent-scrollbars`
-- `overlay-scrollbars`
 - `pwm-show-suggestions-on-autofocus`
 - `show-autofill-type-predictions`
 
