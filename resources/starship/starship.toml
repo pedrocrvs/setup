@@ -1,5 +1,3 @@
-"$schema" = "https://starship.rs/config-schema.json"
-
 format = "[$os$directory$git_branch$character](fg:#00FFD7)"
 
 add_newline = false
