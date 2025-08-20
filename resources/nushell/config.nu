@@ -35,7 +35,7 @@ $env.config.completions.external.max_results = 10
 
 # Terminal integration
 $env.config.bracketed_paste = true
-$env.config.shell_integration.osc133 = false
+$env.config.shell_integration.osc133 = true
 $env.config.shell_integration.osc2 = false
 $env.config.shell_integration.osc633 = true
 $env.config.shell_integration.osc7 = false
