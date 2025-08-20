@@ -47,7 +47,7 @@ $env.config.shell_integration.osc2 = false
 $env.config.shell_integration.osc633 = true
 $env.config.shell_integration.osc7 = false
 $env.config.shell_integration.osc8 = false
-$env.config.shell_integration.osc9_9 = false
+$env.config.shell_integration.osc9_9 = true
 $env.config.shell_integration.reset_application_mode = false
 $env.config.use_ansi_coloring = true
 $env.config.use_kitty_protocol = false
@@ -96,13 +96,6 @@ $env.config.render_right_prompt_on_last_line = false
 
 
 # Hooks
-$env.config.hooks = {
-    env_change: {
-        PWD: [
-            {|before: string, after: string| print $"(ansi escape_right)9;9;(/usr/bin/wslpath -w $after)(ansi escape)\\"}
-        ]
-    }
-}
 
 
 
