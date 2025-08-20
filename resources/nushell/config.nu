@@ -284,6 +284,7 @@ def "list long" [] {
 }
 
 def "remove junk" [] {
+    rm --force --permanent --verbose /home/pedro/.bash_history
     rm --force --permanent --verbose /home/pedro/.sudo_as_admin_successful
 
     rm --force --permanent --recursive --verbose /home/pedro/.cache/
