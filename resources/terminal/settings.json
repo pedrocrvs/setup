@@ -1,12 +1,10 @@
 {
-    "$help": "https://aka.ms/terminal-documentation",
-    "$schema": "https://aka.ms/terminal-profiles-schema",
     "alwaysShowTabs": false,
     "confirmCloseAllTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": true,
     "defaultProfile": "{00000000-0000-0000-0000-000000000001}",
-    "disableAnimations": true,
+    "disableAnimations": false,
     "initialPosition": ",",
     "language": "en-US",
     "launchMode": "fullscreen",
@@ -93,7 +91,7 @@
         },
         "list": [
             {
-                "commandline": "wsl.exe --distribution Debian --exec /usr/bin/nu",
+                "commandline": "wsl.exe --distribution Debian --exec /usr/bin/nu --interactive",
                 "guid": "{00000000-0000-0000-0000-000000000001}",
                 "hidden": false,
                 "icon": "\ue756",
