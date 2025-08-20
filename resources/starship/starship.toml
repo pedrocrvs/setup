@@ -1,6 +1,6 @@
 format = "[$os$directory$git_branch$character](fg:#00FFD7)"
 
-add_newline = false
+add_newline = true
 
 palette = "ansi"
 
