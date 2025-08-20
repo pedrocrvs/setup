@@ -280,25 +280,27 @@ $env.PROMPT_INDICATOR = ""
 
 
 
-# Aliases and custom commands
+# Custom commands
 
-def --wrapped code [...rest] {
-    ^"/mnt/c/Program Files/Microsoft VS Code/bin/code" ...$rest
+def "remove junk" [] {
+    rm --force --permanent --verbose /home/pedro/.sudo_as_admin_successful
+
+    rm --force --permanent --recursive --verbose /home/pedro/.cache/
+    rm --force --permanent --recursive --verbose /home/pedro/.local/share/trash/
 }
 
-def junk [] {
-    sudo apt update
-    sudo apt full-upgrade --yes
-    sudo apt autoremove --purge --yes
-    sudo apt clean
+def "update apt" [] {
+    /usr/bin/sudo apt update
+    /usr/bin/sudo apt full-upgrade --yes
+    /usr/bin/sudo apt autoremove --purge --yes
+    /usr/bin/sudo apt clean
+}
 
-    brew update
-    brew upgrade --formula
-    brew autoremove
-    brew cleanup --prune="all" --scrub
-
-    rm --force --permanent --recursive /home/pedro/.cache/
-    rm --force --permanent --recursive /home/pedro/.local/share/trash/
+def "update brew" [] {
+    /home/linuxbrew/.linuxbrew/bin/brew update
+    /home/linuxbrew/.linuxbrew/bin/brew upgrade --formula
+    /home/linuxbrew/.linuxbrew/bin/brew autoremove
+    /home/linuxbrew/.linuxbrew/bin/brew cleanup --prune="all" --scrub
 }
 
 def ll [] {
@@ -309,6 +311,9 @@ def ll [] {
     | select "name" "mode" "modified"
 }
 
-def --wrapped rr [...rest] {
-    rm --force --recursive --trash --verbose ...$rest
-}
+
+# Aliases
+
+alias code = ^"/mnt/c/Program Files/Microsoft VS Code/bin/code"
+
+alias rr = rm --force --recursive --trash --verbose
