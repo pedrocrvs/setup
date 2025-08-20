@@ -275,6 +275,14 @@ $env.PROMPT_INDICATOR = ""
 
 # Custom commands
 
+def "list long" [] {
+    ls --all --long
+    | upsert "name" {|row| if $row.type == "dir" { $"($row.name)/" } else { $row.name }}
+    | insert "extension" {|row| if $row.type != "dir" { $row.name | split row "." | last }}
+    | sort-by "type" "extension" "name"
+    | select "name" "mode" "modified"
+}
+
 def "remove junk" [] {
     rm --force --permanent --verbose /home/pedro/.sudo_as_admin_successful
 
@@ -283,10 +291,10 @@ def "remove junk" [] {
 }
 
 def "update apt" [] {
-    /usr/bin/sudo apt update
-    /usr/bin/sudo apt full-upgrade --yes
-    /usr/bin/sudo apt autoremove --purge --yes
-    /usr/bin/sudo apt clean
+    /usr/bin/sudo /usr/bin/apt update
+    /usr/bin/sudo /usr/bin/apt full-upgrade --yes
+    /usr/bin/sudo /usr/bin/apt autoremove --purge --yes
+    /usr/bin/sudo /usr/bin/apt clean
 }
 
 def "update brew" [] {
@@ -296,17 +304,12 @@ def "update brew" [] {
     /home/linuxbrew/.linuxbrew/bin/brew cleanup --prune="all" --scrub
 }
 
-def ll [] {
-    ls --all --long
-    | upsert "name" {|row| if $row.type == "dir" { $"($row.name)/" } else { $row.name }}
-    | insert "extension" {|row| if $row.type != "dir" { $row.name | split row "." | last }}
-    | sort-by "type" "extension" "name"
-    | select "name" "mode" "modified"
-}
 
 
 # Aliases
 
 alias code = ^"/mnt/c/Program Files/Microsoft VS Code/bin/code"
+
+alias ll = list long
 
 alias rr = rm --force --recursive --trash --verbose
