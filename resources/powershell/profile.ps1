@@ -70,23 +70,7 @@ function Invoke-CustomGetChildItem {
     Select-Object -Property Name, Size, LastWriteTime
 }
 
-function Invoke-Starship {
-    param (
-        [Parameter(Mandatory = $false)]
-        [string]$PathConfig
-    )
 
-    if ($PathConfig) {
-        if (Test-Path -Path $PathConfig) {
-            $Env:STARSHIP_CONFIG = $PathConfig
-        }
-        else {
-            Write-Host "$PathConfig was not found" -ForegroundColor "Red"
-        }
-    }
-
-    & "starship" @("init", "powershell", "--print-full-init") | Out-String | Invoke-Expression
-}
 
 function Get-PathEntries {
     return $Env:PATH -split ";" | Where-Object { $_.Trim() -ne "" }
@@ -241,9 +225,3 @@ else {
 
 
 $env:LESSHISTFILE = "-"
-
-
-$Env:STARSHIP_CACHE = "$Env:APPDATA\starship\"
-
-
-Invoke-Starship -PathConfig "$Env:APPDATA\starship\starship.toml"

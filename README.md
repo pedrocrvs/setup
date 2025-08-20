@@ -79,7 +79,6 @@ winget install --source "winget" --scope "machine" --id "GitHub.cli"
 winget install --source "winget" --scope "machine" --id "Google.Chrome"
 winget install --source "winget" --scope "machine" --id "Microsoft.PowerShell"
 winget install --source "winget" --scope "machine" --id "Microsoft.VisualStudioCode" --override '/VERYSILENT /MERGETASKS="!runcode,!desktopicon,addcontextmenufiles,addcontextmenufolders,associatefiles,path"'
-winget install --source "winget" --scope "machine" --id "Starship.Starship"
 ```
 
 > Os _softwares_ especificados abaixo são utilizados apenas em meu trabalho profissional.
