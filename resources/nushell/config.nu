@@ -1,9 +1,12 @@
 # This configuration file was written to match the order of sections in `config nu --doc` as of version 0.103.0.
 
+
+
 # History-related settings
 $env.config.history.file_format = "sqlite"
 $env.config.history.isolation = true
 $env.config.history.max_size = 5_000_000
+
 
 
 # Miscellaneous settings
@@ -12,10 +15,12 @@ $env.config.rm.always_trash = true
 $env.config.show_banner = false
 
 
+
 # Command editor settings
 $env.config.buffer_editor = "/mnt/c/Program Files/Microsoft VS Code/bin/code"
 $env.config.cursor_shape.emacs = "inherit"
 $env.config.edit_mode = "emacs"
+
 
 
 # Completions behavior
@@ -27,10 +32,12 @@ $env.config.completions.sort = "smart"
 $env.config.completions.use_ls_colors = false
 
 
+
 # External completions
 $env.config.completions.external.completer = {|spans: list<string>| carapace $spans.0 nushell ...$spans | from json | if ($in | default [] | where value =~ '^-.*ERR$' | is-empty) { $in } else { null }}
 $env.config.completions.external.enable = true
 $env.config.completions.external.max_results = 10
+
 
 
 # Terminal integration
@@ -46,10 +53,12 @@ $env.config.use_ansi_coloring = true
 $env.config.use_kitty_protocol = false
 
 
+
 # Error display settings
 $env.config.display_errors.exit_code = false
 $env.config.display_errors.termination_signal = true
 $env.config.error_style = "fancy"
+
 
 
 # Table display
@@ -65,9 +74,11 @@ $env.config.table.show_empty = true
 $env.config.table.trim = { methodology: "truncating" truncating_suffix: "..." }
 
 
+
 # Datetime display
 $env.config.datetime_format.normal = "%Y-%m-%d %H:%M:%S"
 $env.config.datetime_format.table = "%Y-%m-%d %H:%M:%S"
+
 
 
 # Filesize display
@@ -76,10 +87,12 @@ $env.config.filesize.show_unit = true
 $env.config.filesize.unit = 'metric'
 
 
+
 # Miscellaneous display
 $env.config.float_precision = 2
 $env.config.ls.use_ls_colors = true
 $env.config.render_right_prompt_on_last_line = false
+
 
 
 # Hooks
@@ -90,6 +103,7 @@ $env.config.hooks = {
         ]
     }
 }
+
 
 
 # Keybindings
@@ -141,10 +155,13 @@ $env.config.keybindings ++= [
 ]
 
 
+
 # Menus
 
 
+
 # Plugin behavior
+
 
 
 # Themes/colors and syntax highlighting
@@ -221,7 +238,9 @@ $env.config.color_config.int = "light_green"
 $env.config.color_config.range = "light_green"
 
 
+
 # `explore` command colors
+
 
 
 # Environment variables
@@ -258,6 +277,7 @@ $env.PATH = [ "/home/linuxbrew/.linuxbrew/bin", "/home/linuxbrew/.linuxbrew/sbin
 $env.PROMPT_COMMAND = { || starship prompt }
 $env.PROMPT_COMMAND_RIGHT = ""
 $env.PROMPT_INDICATOR = ""
+
 
 
 # Aliases and custom commands
