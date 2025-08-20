@@ -1,21 +1,8 @@
 $ErrorActionPreference = "Stop"
 
 
-$ResourceConfigDirectory = "$PSScriptRoot\..\..\resources\ruff\"
+$ResourceConfigDirectory = wsl --distribution "Debian" --exec "wslpath" "$PSScriptRoot\..\..\resources\ruff\"
 
+wsl --distribution "Debian" --exec "mkdir" "/home/pedro/.config/" 2> $null
 
-$DebianUser = "pedro"
-
-$DebianBash = "wsl --distribution Debian --user $DebianUser --exec /usr/bin/bash -c"
-
-
-Invoke-Expression "$DebianBash 'mkdir ~/.config/ 2> /dev/null'"
-
-Invoke-Expression "$DebianBash 'rm --recursive ~/.config/ruff/ 2> /dev/null'"
-
-
-Copy-Item `
-    -Path $ResourceConfigDirectory `
-    -Destination "\\wsl$\Debian\home\$DebianUser\.config\" `
-    -Recurse `
-    -Force
+wsl --distribution "Debian" --exec "cp" "--no-preserve=mode" "--recursive" $ResourceConfigDirectory "/home/pedro/.config/"

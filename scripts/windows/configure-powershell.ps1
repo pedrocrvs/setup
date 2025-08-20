@@ -1,19 +1,21 @@
 $ErrorActionPreference = "Stop"
 
 
-$ResourceProfile = "$PSScriptRoot\..\..\resources\powershell\profile.ps1"
+$ResourceConfigFile = "$PSScriptRoot\..\..\resources\powershell\profile.ps1"
 
 
-$ConfigurationDirectory = Split-Path -Path $PROFILE.CurrentUserAllHosts -Parent
+$DestinationFile = $PROFILE.CurrentUserAllHosts
+
+$DestinationDirectory = Split-Path -Path $DestinationFile -Parent
 
 
 New-Item `
-    -Path $ConfigurationDirectory `
+    -Force `
     -ItemType "Directory" `
-    -Force
+    -Path $DestinationDirectory
 
 New-Item `
+    -Force `
     -ItemType "SymbolicLink" `
-    -Path "$ConfigurationDirectory/profile.ps1" `
-    -Target $ResourceProfile `
-    -Force
+    -Path $DestinationFile `
+    -Target $ResourceConfigFile

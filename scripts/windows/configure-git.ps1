@@ -1,11 +1,11 @@
 $ErrorActionPreference = "Stop"
 
 
-$ResourceGitconfig = "$PSScriptRoot\..\..\resources\git\.gitconfig"
+$ResourceConfigFile = "$PSScriptRoot\..\..\resources\git\.gitconfig"
 
 
 New-Item `
+    -Force `
     -ItemType "SymbolicLink" `
     -Path "$Env:USERPROFILE\.gitconfig" `
-    -Target $ResourceGitconfig `
-    -Force
+    -Target $ResourceConfigFile

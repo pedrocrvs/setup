@@ -1,19 +1,8 @@
 $ErrorActionPreference = "Stop"
 
 
-$ResourceStarshiptoml = "$PSScriptRoot\..\..\resources\starship\starship.toml"
+$ResourceConfigFile = wsl --distribution "Debian" --exec "wslpath" "$PSScriptRoot\..\..\resources\starship\starship.toml"
 
+wsl --distribution "Debian" --exec "mkdir" "/home/pedro/.config/" 2> $null
 
-$DebianUser = "pedro"
-
-$DebianBash = "wsl --distribution Debian --user $DebianUser --exec /usr/bin/bash -c"
-
-
-Invoke-Expression "$DebianBash 'mkdir ~/.config/ 2> /dev/null'"
-
-
-Copy-Item `
-    -Path $ResourceStarshiptoml `
-    -Destination "\\wsl$\Debian\home\$DebianUser\.config\" `
-    -Recurse `
-    -Force
+wsl --distribution "Debian" --exec "cp" "--no-preserve=mode" $ResourceConfigFile "/home/pedro/.config/"

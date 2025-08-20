@@ -1,19 +1,18 @@
 $ErrorActionPreference = "Stop"
 
 
-$ResourceSettings = "$PSScriptRoot\..\..\resources\terminal\settings.json"
+$ResourceConfigFile = "$PSScriptRoot\..\..\resources\terminal\settings.json"
 
 
-$ConfigurationDirectory = "$Env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\"
+$DestinationDirectory = "$Env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\"
 
 
 New-Item `
-    -Path $ConfigurationDirectory `
+    -Force `
     -ItemType "Directory" `
-    -Force
-
+    -Path $DestinationDirectory
 
 Copy-Item `
-    -Path $ResourceSettings `
-    -Destination $ConfigurationDirectory `
-    -Force
+    -Destination $DestinationDirectory `
+    -Force `
+    -Path $ResourceConfigFile

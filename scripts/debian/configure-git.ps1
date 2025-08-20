@@ -1,14 +1,6 @@
 $ErrorActionPreference = "Stop"
 
 
-$ResourceGitconfig = "$PSScriptRoot\..\..\resources\git\.gitconfig"
+$ResourceConfigFile = wsl --distribution "Debian" --exec "wslpath" "$PSScriptRoot\..\..\resources\git\.gitconfig"
 
-
-$DebianUser = "pedro"
-
-
-Copy-Item `
-    -Path $ResourceGitconfig `
-    -Destination "\\wsl$\Debian\home\$DebianUser\.gitconfig" `
-    -Recurse `
-    -Force
+wsl --distribution "Debian" --exec "cp" "--no-preserve=mode" $ResourceConfigFile "/home/pedro/"

@@ -1,11 +1,6 @@
 $ErrorActionPreference = "Stop"
 
 
-$DebianUser = "pedro"
+wsl --distribution "Debian" --exec "gcloud" "init" "--no-launch-browser"
 
-$DebianBash = "wsl --distribution Debian --user $DebianUser --exec /usr/bin/bash -c"
-
-
-Invoke-Expression "$DebianBash 'gcloud init --no-launch-browser'"
-
-Invoke-Expression "$DebianBash 'gcloud auth configure-docker southamerica-east1-docker.pkg.dev' "
+wsl --distribution "Debian" --exec "gcloud" "auth" "configure-docker" "southamerica-east1-docker.pkg.dev"

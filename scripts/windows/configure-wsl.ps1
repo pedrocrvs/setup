@@ -1,16 +1,16 @@
 $ErrorActionPreference = "Stop"
 
 
-$ResourceWslconfig = "$PSScriptRoot\..\..\resources\wsl\.wslconfig"
+$ResourceConfigFile = "$PSScriptRoot\..\..\resources\wsl\.wslconfig"
 
 
 New-Item `
     -ItemType "SymbolicLink" `
     -Path "$Env:USERPROFILE\.wslconfig" `
-    -Target $ResourceWslconfig `
+    -Target $ResourceConfigFile `
     -Force
 
 
-Invoke-Expression -Command "wsl --shutdown"
+wsl --shutdown
 
 Start-Sleep -Seconds 10

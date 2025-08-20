@@ -1,42 +1,41 @@
 $ErrorActionPreference = "Stop"
 
 
-$ResourceSettings = "$PSScriptRoot\..\..\resources\vscode\settings.json"
+$ResourceConfigFile1 = "$PSScriptRoot\..\..\resources\vscode\settings.json"
 
-$ResourceKeybindings = "$PSScriptRoot\..\..\resources\vscode\keybindings.json"
+$ResourceConfigFile2 = "$PSScriptRoot\..\..\resources\vscode\keybindings.json"
 
 $ResourceExtensions = Get-Content -Path "$PSScriptRoot\..\..\resources\vscode\extensions-windows.txt"
 
 
-$ConfigurationDirectory = "$Env:APPDATA\Code\User\"
+$DestinationDirectory = "$Env:APPDATA\Code\User\"
 
 
 New-Item `
-    -Path $ConfigurationDirectory `
+    -Force `
     -ItemType "Directory" `
-    -Force
+    -Path $DestinationDirectory
 
 Remove-Item `
-    -Path "$Env:USERPROFILE\.vscode" `
-    -Recurse `
+    -ErrorAction "SilentlyContinue" `
     -Force `
-    -ErrorAction "SilentlyContinue"
-
-
-New-Item `
-    -ItemType "SymbolicLink" `
-    -Path "$ConfigurationDirectory\settings.json" `
-    -Target $ResourceSettings `
-    -Force
+    -Path "$Env:USERPROFILE\.vscode\" `
+    -Recurse
 
 New-Item `
+    -Force `
     -ItemType "SymbolicLink" `
-    -Path "$ConfigurationDirectory\keybindings.json" `
-    -Target $ResourceKeybindings `
-    -Force
+    -Path "$DestinationDirectory\settings.json" `
+    -Target $ResourceConfigFile1
+
+New-Item `
+    -Force `
+    -ItemType "SymbolicLink" `
+    -Path "$DestinationDirectory\keybindings.json" `
+    -Target $ResourceConfigFile2
 
 foreach ($Extension in $ResourceExtensions) {
-    Invoke-Expression "code --install-extension $Extension --force"
+    code --install-extension $Extension --force
 }
 
 
