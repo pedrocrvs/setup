@@ -13,6 +13,8 @@ function Get-IPAddress {
     }
 }
 
+
+
 function Set-ClipboardToIPAddress {
     try {
         $IPAddress = Get-IPAddress
@@ -23,6 +25,8 @@ function Set-ClipboardToIPAddress {
         Write-Host "Failed to copy the IP address" -ForegroundColor "Red"
     }
 }
+
+
 
 function Format-ByteSize {
     param (
@@ -46,6 +50,8 @@ function Format-ByteSize {
 
     return "$SizeRounded $($Units[$Index])"
 }
+
+
 
 function Invoke-CustomGetChildItem {
     param (
@@ -75,6 +81,8 @@ function Invoke-CustomGetChildItem {
 function Get-PathEntries {
     return $Env:PATH -split ";" | Where-Object { $_.Trim() -ne "" }
 }
+
+
 
 function Remove-Junk {
     $ErrorActionPreference = "SilentlyContinue"
@@ -137,6 +145,8 @@ function Remove-Junk {
     }
 }
 
+
+
 function Start-MouseMovement {
     param (
         [Parameter(Mandatory = $false)]
@@ -194,6 +204,7 @@ function Start-MouseMovement {
 }
 
 
+
 Set-Alias -Name "ip" -Value Set-ClipboardToIPAddress
 Set-Alias -Name "isudo" -Value Get-ImAdministrator
 Set-Alias -Name "junk" -Value Remove-Junk
@@ -202,26 +213,23 @@ Set-Alias -Name "mouse" -Value Start-MouseMovement
 Set-Alias -Name "pp" -Value Get-PathEntries
 
 
-if (Get-Module -Name "PSReadLine") {
-    Set-PSReadLineOption -Colors @{
-        Command          = "`e[97m" # ANSI white bright
-        Comment          = "`e[2;32m" # ANSI green dimmed
-        Default          = "`e[97m" # ANSI white bright
-        Error            = "`e[91m" # ANSI red bright
-        InlinePrediction = "`e[2;37m" # ANSI white dimmed
-        Keyword          = "`e[95m" # ANSI magenta bright
-        Member           = "`e[97m" # ANSI white bright
-        Number           = "`e[92m" # ANSI green bright
-        Operator         = "`e[95m" # ANSI magenta bright
-        Parameter        = "`e[97m" # ANSI white bright
-        String           = "`e[32m" # ANSI green
-        Type             = "`e[97m" # ANSI white bright
-        Variable         = "`e[96m" # ANSI cyan bright
-    }
+
+Set-PSReadLineOption -Colors @{
+    Command          = "`e[97m" # ANSI white bright
+    Comment          = "`e[2;32m" # ANSI green dimmed
+    Default          = "`e[97m" # ANSI white bright
+    Error            = "`e[91m" # ANSI red bright
+    InlinePrediction = "`e[2;37m" # ANSI white dimmed
+    Keyword          = "`e[95m" # ANSI magenta bright
+    Member           = "`e[97m" # ANSI white bright
+    Number           = "`e[92m" # ANSI green bright
+    Operator         = "`e[95m" # ANSI magenta bright
+    Parameter        = "`e[97m" # ANSI white bright
+    String           = "`e[32m" # ANSI green
+    Type             = "`e[97m" # ANSI white bright
+    Variable         = "`e[96m" # ANSI cyan bright
 }
-else {
-    Write-Host "PSReadLine was not found" -BackgroundColor "Red"
-}
+
 
 
 $env:LESSHISTFILE = "-"
