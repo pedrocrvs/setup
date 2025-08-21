@@ -313,6 +313,8 @@ def "update brew" [] {
 
 alias code = ^"/mnt/c/Program Files/Microsoft VS Code/bin/code"
 
+alias explorer = ^"/mnt/c/Windows/explorer.exe"
+
 alias ll = list long
 
 alias rr = rm --force --recursive --trash --verbose
