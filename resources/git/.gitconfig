@@ -1,6 +1,7 @@
 [alias]
-    l = log --format=\"%C(brightmagenta)%h %C(brightgreen)%ad %C(white)%s %C(brightblue)<%ae> %C(brightyellow)%d\" --date=format:\"%Y-%m-%d %H:%M\"
-    s = status --short
+    l = "log --abbrev-commit --color=always --format='%C(green)%h %C(#D0D0D0)%ae %C(brightcyan)%ai %C(brightmagenta)%D%C(white)%n%n%w(80,0,2)%s%C(reset)%n%n' --graph"
+
+    s = "status"
 
 [commit]
     verbose = true
@@ -19,6 +20,9 @@
 
 [init]
     defaultBranch = main
+
+[log]
+    graphColors = normal
 
 [pull]
     ff = only
