@@ -197,8 +197,6 @@ bash -c "$(curl --fail --silent --show-error --location https://raw.githubuserco
 
 Instale os pacotes especificados abaixo.
 
-> Os comandos de instalação estão repetidos para que seja possível copiar e executá-los individualmente.
-
 ```bash
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "carapace"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "fzf"
