@@ -54,6 +54,7 @@ Os principais _softwares_ instalados com as instruções neste repositório são
 - [`ouch`](https://github.com/ouch-org/ouch)
 - [`pwsh`](https://learn.microsoft.com/en-us/powershell)
 - [`ruff`](https://github.com/astral-sh/ruff)
+- [`sqlfluff`](https://github.com/sqlfluff/sqlfluff)
 - [`starship`](https://github.com/starship/starship)
 - [`task`](https://github.com/go-task/task)
 - [`terminal`](https://github.com/microsoft/terminal)
@@ -204,6 +205,7 @@ Instale os pacotes especificados abaixo.
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "go-task"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "ouch"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "ruff"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "sqlfluff"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "starship"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "uv"
 ```
