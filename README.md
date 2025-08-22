@@ -210,6 +210,12 @@ Instale os pacotes especificados abaixo.
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "uv"
 ```
 
+> Os pacotes especificados abaixo são utilizados apenas em meu trabalho profissional.
+
+```bash
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "ariga/tap/atlas"
+```
+
 ## Repositório
 
 Configure o `gh` para autenticação com o GitHub.
