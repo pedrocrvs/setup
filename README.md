@@ -51,6 +51,7 @@ Os principais _softwares_ instalados com as instruções neste repositório são
 - [`gh`](https://github.com/cli/cli)
 - [`git-lfs`](https://github.com/git-lfs/git-lfs)
 - [`git`](https://git-scm.com)
+- [`lazygit`](https://github.com/jesseduffield/lazygit)
 - [`nushell`](https://github.com/nushell/nushell)
 - [`ouch`](https://github.com/ouch-org/ouch)
 - [`pwsh`](https://learn.microsoft.com/en-us/powershell)
