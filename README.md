@@ -44,6 +44,7 @@ Os principais _softwares_ instalados com as instruções neste repositório são
 - [`carapace`](https://github.com/carapace-sh/carapace)
 - [`chrome`](https://www.google.com/chrome)
 - [`code`](https://code.visualstudio.com)
+- [`difft`](https://github.com/Wilfred/difftastic)
 - [`docker`](https://docs.docker.com/engine)
 - [`fzf`](https://github.com/junegunn/fzf)
 - [`gcloud`](https://cloud.google.com/sdk/docs/install)
@@ -200,6 +201,7 @@ Instale os pacotes especificados abaixo.
 
 ```bash
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "carapace"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "difftastic"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "fzf"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "gcc"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "go-task"
