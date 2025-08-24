@@ -1,7 +1,10 @@
 [alias]
-    l = "log --abbrev-commit --color=always --format='%C(green)%h %C(#D0D0D0)%ae %C(brightcyan)%ai %C(brightmagenta)%D%C(white)%n%n%w(80,0,2)%s%C(reset)%n%n' --graph"
+    l = "log --abbrev-commit --color=always --graph"
 
     s = "status"
+
+[format]
+    pretty = "format:%C(green)%h %C(#D0D0D0)%ae %C(brightcyan)%ai %C(brightmagenta)%D%C(white)%n%n%w(80,0,2)%s%C(reset)%n%n"
 
 [commit]
     verbose = true
@@ -10,6 +13,16 @@
     compression = 9
     editor = code --wait
     eol = lf
+
+[diff]
+    algorithm = histogram
+    colorMoved = zebra
+    compactionHeuristic = true
+    context = 2
+    indentHeuristic = true
+    interHunkContext = 1
+    mnemonicPrefix = true
+    renames = true
 
 [fetch]
     prune = true
@@ -24,13 +37,19 @@
 [log]
     graphColors = normal
 
+[merge]
+    conflictStyle = zdiff3
+
 [pull]
-    ff = only
     rebase = true
 
 [push]
     autoSetupRemote = true
     default = current
+
+[rebase]
+    autoStash = true
+    updateRefs = true
 
 [status]
     branch = true
