@@ -84,7 +84,7 @@
             "font": {
                 "cellHeight": "1.25",
                 "face": "CommitMono Nerd Font",
-                "size": 12
+                "size": 11
             },
             "padding": "10",
             "scrollbarState": "hidden"
