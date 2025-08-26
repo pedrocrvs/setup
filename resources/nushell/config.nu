@@ -288,19 +288,30 @@ def "list long" [] {
     | select "name" "mode" "modified"
 }
 
-def "remove junk" [] {
-    rm --force --permanent --verbose /home/pedro/.bash_history
-    rm --force --permanent --verbose /home/pedro/.sudo_as_admin_successful
+def "clean docker" [] {
+    docker system prune --all --force
+}
 
-    rm --force --permanent --recursive --verbose /home/pedro/.cache/
-    rm --force --permanent --recursive --verbose /home/pedro/.local/share/trash/
+def "clean junk" [] {
+    rm --force --permanent --verbose ~/.bash_history
+    rm --force --permanent --verbose ~/.sudo_as_admin_successful
+    rm --force --permanent --verbose ~/.wget-hsts
+
+    rm --force --permanent --recursive --verbose ~/.cache/
+    rm --force --permanent --recursive --verbose ~/.dotnet/
+
+    rm --force --permanent --recursive --verbose ~/.local/share/trash/
+}
+
+def "start docker" [] {
+    job spawn { sudo dockerd out+err> /dev/null }
 }
 
 def "update apt" [] {
-    /usr/bin/sudo /usr/bin/apt update
-    /usr/bin/sudo /usr/bin/apt full-upgrade --yes
-    /usr/bin/sudo /usr/bin/apt autoremove --purge --yes
-    /usr/bin/sudo /usr/bin/apt clean
+    sudo apt update
+    sudo apt full-upgrade --yes
+    sudo apt autoremove --purge --yes
+    sudo apt clean
 }
 
 def "update brew" [] {
@@ -309,8 +320,6 @@ def "update brew" [] {
     /home/linuxbrew/.linuxbrew/bin/brew autoremove
     /home/linuxbrew/.linuxbrew/bin/brew cleanup --prune="all" --scrub
 }
-
-
 
 # Aliases
 
