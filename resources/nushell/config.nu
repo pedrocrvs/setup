@@ -304,7 +304,9 @@ def "clean junk" [] {
 }
 
 def "start docker" [] {
-    job spawn { sudo dockerd out+err> /dev/null }
+    sudo --validate
+
+    job spawn { sudo --non-interactive dockerd out+err> /dev/null }
 }
 
 def "update apt" [] {
