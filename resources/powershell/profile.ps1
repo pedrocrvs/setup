@@ -1,33 +1,3 @@
-function Get-IPAddress {
-    param (
-        [Parameter(Mandatory = $false)]
-        [string]$Uri = "http://ipinfo.io/ip"
-    )
-    try {
-        $ResponseContent = Invoke-WebRequest -Uri $Uri | Select-Object -ExpandProperty "Content"
-        $IPAddress = $ResponseContent.Trim()
-        return $IPAddress
-    }
-    catch {
-        Write-Host "Failed to fetch the IP address" -ForegroundColor "Red"
-    }
-}
-
-
-
-function Set-ClipboardToIPAddress {
-    try {
-        $IPAddress = Get-IPAddress
-        Set-Clipboard -Value $IPAddress
-        Write-Host "$IPAddress has been copied to the clipboard" -ForegroundColor "Green"
-    }
-    catch {
-        Write-Host "Failed to copy the IP address" -ForegroundColor "Red"
-    }
-}
-
-
-
 function Format-ByteSize {
     param (
         [Parameter(Mandatory)]
@@ -53,6 +23,29 @@ function Format-ByteSize {
 
 
 
+function Get-IPAddress {
+    param (
+        [Parameter(Mandatory = $false)]
+        [string]$Uri = "http://ipinfo.io/ip"
+    )
+    try {
+        $ResponseContent = Invoke-WebRequest -Uri $Uri | Select-Object -ExpandProperty "Content"
+        $IPAddress = $ResponseContent.Trim()
+        return $IPAddress
+    }
+    catch {
+        Write-Host "Failed to fetch the IP address" -ForegroundColor "Red"
+    }
+}
+
+
+
+function Get-PathEntries {
+    return $Env:PATH -split ";" | Where-Object { $_.Trim() -ne "" }
+}
+
+
+
 function Invoke-CustomGetChildItem {
     param (
         [Parameter(Mandatory = $false)]
@@ -74,12 +67,6 @@ function Invoke-CustomGetChildItem {
     } |
     Sort-Object -Property IsNotDirectory, Extension, Name |
     Select-Object -Property Name, Size, LastWriteTime
-}
-
-
-
-function Get-PathEntries {
-    return $Env:PATH -split ";" | Where-Object { $_.Trim() -ne "" }
 }
 
 
@@ -142,6 +129,19 @@ function Remove-Junk {
                 Write-Host "Removed $Item" -ForegroundColor "Green"
             }
         }
+    }
+}
+
+
+
+function Set-ClipboardToIPAddress {
+    try {
+        $IPAddress = Get-IPAddress
+        Set-Clipboard -Value $IPAddress
+        Write-Host "$IPAddress has been copied to the clipboard" -ForegroundColor "Green"
+    }
+    catch {
+        Write-Host "Failed to copy the IP address" -ForegroundColor "Red"
     }
 }
 
