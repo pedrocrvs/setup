@@ -1,15 +1,17 @@
 {
-    "alwaysShowTabs": false,
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+
     "confirmCloseAllTabs": false,
-    "copyFormatting": "none",
     "copyOnSelect": true,
     "defaultProfile": "{00000000-0000-0000-0000-000000000001}",
-    "disableAnimations": false,
-    "initialPosition": ",",
+    "disableAnimations": true,
+    "disabledProfileSources": [ "Windows.Terminal.Azure", "Windows.Terminal.PowershellCore", "Windows.Terminal.VisualStudio", "Windows.Terminal.Wsl" ],
     "language": "en-US",
     "launchMode": "fullscreen",
-    "showTabsInTitlebar": false,
+    "multiLinePasteWarning": false,
     "showTerminalTitleInTitlebar": false,
+    "theme": "dark",
 
     "actions": [
         { "id": "User.scrollToMark.0", "command": { "action": "scrollToMark", "direction": "previous" } },
@@ -58,10 +60,8 @@
         { "id": "unbound", "keys": "ctrl+shift+pgup" },
         { "id": "unbound", "keys": "ctrl+shift+space" },
         { "id": "unbound", "keys": "ctrl+shift+t" },
-        { "id": "unbound", "keys": "ctrl+shift+tab" },
         { "id": "unbound", "keys": "ctrl+shift+up" },
         { "id": "unbound", "keys": "ctrl+shift+v" },
-        { "id": "unbound", "keys": "ctrl+tab" },
         { "id": "unbound", "keys": "enter" },
         { "id": "unbound", "keys": "menu" },
         { "id": "unbound", "keys": "shift+insert" },
@@ -79,6 +79,7 @@
 
     "profiles": {
         "defaults": {
+            "altGrAliasing": false,
             "autoMarkPrompts": true,
             "colorScheme": "Oblivion",
             "font": {
@@ -86,15 +87,17 @@
                 "face": "CommitMono Nerd Font",
                 "size": 11
             },
-            "padding": "10",
-            "scrollbarState": "hidden"
+            "icon": "\ue756",
+            "padding": "2,0",
+            "scrollbarState": "hidden",
+            "suppressApplicationTitle": true
         },
+
         "list": [
             {
                 "commandline": "wsl.exe --distribution Debian --exec /usr/bin/nu --interactive",
                 "guid": "{00000000-0000-0000-0000-000000000001}",
                 "hidden": false,
-                "icon": "\ue756",
                 "name": "Debian",
                 "startingDirectory": "~"
             },
@@ -102,7 +105,6 @@
                 "commandline": "pwsh.exe -Interactive -NoLogo",
                 "guid": "{00000000-0000-0000-0000-000000000002}",
                 "hidden": false,
-                "icon": "\ue756",
                 "name": "PowerShell",
                 "startingDirectory": "%USERPROFILE%"
             }
