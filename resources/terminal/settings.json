@@ -88,7 +88,7 @@
                 "size": 11
             },
             "icon": "\ue756",
-            "padding": "2,0",
+            "padding": "5,0",
             "scrollbarState": "hidden",
             "suppressApplicationTitle": true
         },
