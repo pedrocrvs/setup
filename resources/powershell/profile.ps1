@@ -233,3 +233,9 @@ Set-PSReadLineOption -Colors @{
 
 
 $env:LESSHISTFILE = "-"
+
+
+
+function prompt {
+    return "`n$PWD`n> "
+}
