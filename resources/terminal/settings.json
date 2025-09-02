@@ -83,7 +83,7 @@
             "autoMarkPrompts": true,
             "colorScheme": "Oblivion",
             "font": {
-                "cellHeight": "1.25",
+                "cellHeight": "1.5",
                 "face": "CommitMono Nerd Font",
                 "size": 11
             },
