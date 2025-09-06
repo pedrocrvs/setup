@@ -2,6 +2,7 @@
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
 
+    "alwaysShowTabs": false,
     "confirmCloseAllTabs": false,
     "copyOnSelect": true,
     "defaultProfile": "{00000000-0000-0000-0000-000000000001}",
@@ -11,6 +12,7 @@
     "launchMode": "fullscreen",
     "multiLinePasteWarning": false,
     "showTerminalTitleInTitlebar": false,
+    "tabSwitcherMode": "mru",
     "theme": "dark",
 
     "actions": [
