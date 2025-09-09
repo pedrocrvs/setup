@@ -52,6 +52,7 @@ Os principais _softwares_ instalados com as instruções neste repositório são
 - [`git`](https://git-scm.com)
 - [`nushell`](https://github.com/nushell/nushell)
 - [`ouch`](https://github.com/ouch-org/ouch)
+- [`psql`](https://www.postgresql.org/docs/current/app-psql.html)
 - [`pwsh`](https://learn.microsoft.com/en-us/powershell)
 - [`ruff`](https://github.com/astral-sh/ruff)
 - [`sqlfluff`](https://github.com/sqlfluff/sqlfluff)
@@ -133,6 +134,7 @@ sudo apt install --yes "file"
 sudo apt install --yes "git-lfs"
 sudo apt install --yes "git"
 sudo apt install --yes "gnupg"
+sudo apt install --yes "postgres-client"
 sudo apt install --yes "wget"
 ```
 
