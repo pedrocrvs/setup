@@ -262,6 +262,9 @@
   "jupyter.disableJupyterAutoStart": true,
   "jupyter.notebookFileRoot": "${workspaceFolder}",
 
+  // ms-vscode-remote.remote-wsl
+  "remote.autoForwardPorts": false,
+
   // tamasfe.even-better-toml
   "evenBetterToml.formatter.allowedBlankLines": 1,
   "evenBetterToml.formatter.arrayAutoCollapse": false,
