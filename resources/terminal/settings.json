@@ -83,7 +83,7 @@
         "defaults": {
             "altGrAliasing": false,
             "autoMarkPrompts": true,
-            "colorScheme": "Oblivion",
+            "colorScheme": "Midnight Ride",
             "font": {
                 "cellHeight": "1.5",
                 "face": "CommitMono Nerd Font",
@@ -114,17 +114,17 @@
 
     "schemes": [
         {
-            "name": "Oblivion",
+            "name": "Midnight Ride",
 
-            "background": "#0D0D0D",
+            "background": "#141414",
             "foreground": "#FFFFFF",
 
-            "cursorColor": "#BBBBBB",
+            "cursorColor": "#DDDDDD",
 
             "selectionBackground": "#314F79",
 
             "black": "#000000",
-            "brightBlack": "#1A1A1A",
+            "brightBlack": "#4D4D4D",
 
             "blue": "#337FFF",
             "brightBlue": "#649EFF",
@@ -141,8 +141,8 @@
             "red": "#FF3344",
             "brightRed": "#FF6471",
 
-            "white": "#F2F2F2",
-            "brightWhite": "#FFFFFF",
+            "white": "#FFFFFF",
+            "brightWhite": "#F2F2F2",
 
             "yellow": "#FFFF33",
             "brightYellow": "#FFFF5E"
