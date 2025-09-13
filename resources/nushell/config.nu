@@ -293,7 +293,7 @@ def "prune docker" [] {
     docker system prune --all --force
 }
 
-def "clean junk" [] {
+def "remove junk" [] {
     rm --force --permanent --verbose ~/.bash_history
     rm --force --permanent --verbose ~/.sudo_as_admin_successful
     rm --force --permanent --verbose ~/.wget-hsts
