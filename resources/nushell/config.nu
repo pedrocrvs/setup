@@ -289,7 +289,7 @@ def "list long" [] {
     | select "name" "mode" "modified"
 }
 
-def "clean docker" [] {
+def "prune docker" [] {
     docker system prune --all --force
 }
 
