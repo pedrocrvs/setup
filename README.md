@@ -136,6 +136,7 @@ sudo apt install --yes "file"
 sudo apt install --yes "git-lfs"
 sudo apt install --yes "git"
 sudo apt install --yes "gnupg"
+sudo apt install --yes "man-db"
 sudo apt install --yes "postgres-client"
 sudo apt install --yes "wget"
 ```
