@@ -260,7 +260,7 @@ $env.FZF_DEFAULT_OPTS = '
   --separator="-"
 '
 
-$env.LESS = "--ignore-case --mouse --squeeze-blank-lines --wheel-lines=3 --window=-5 --wordwrap --wordwrap"
+$env.LESS = "--ignore-case --squeeze-blank-lines --window=-5 --wordwrap --wordwrap"
 $env.LESSHISTFILE = "/dev/null"
 
 $env.LS_COLORS = "bd=97:cd=97:di=97:ex=97:fi=97:ln=4;97:mi=4;91:or=4;91:ow=97:pi=97:sg=97:so=97:st=97:su=97:tw=97"
@@ -268,6 +268,9 @@ $env.LS_COLORS = "bd=97:cd=97:di=97:ex=97:fi=97:ln=4;97:mi=4;91:or=4;91:ow=97:pi
 $env.HOMEBREW_CELLAR = "/home/linuxbrew/.linuxbrew/Cellar"
 $env.HOMEBREW_PREFIX = "/home/linuxbrew/.linuxbrew"
 $env.HOMEBREW_REPOSITORY =  "/home/linuxbrew/.linuxbrew/Homebrew"
+
+$env.MANPAGER = "sh -c 'col --no-backspaces --spaces | batcat --language=man --plain --theme=base16'"
+$env.MANROFFOPT = '-c'
 
 $env.PATH = [ "/home/linuxbrew/.linuxbrew/bin", "/home/linuxbrew/.linuxbrew/sbin" ] ++ $env.PATH
 
