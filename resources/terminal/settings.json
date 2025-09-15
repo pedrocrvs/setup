@@ -87,7 +87,7 @@
             "font": {
                 "cellHeight": "1.5",
                 "face": "CommitMono Nerd Font",
-                "size": 11
+                "size": 10
             },
             "icon": "\ue756",
             "padding": "5,0",
