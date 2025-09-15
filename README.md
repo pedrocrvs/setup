@@ -40,6 +40,7 @@ Os comandos para instalação de _softwares_ estão repetidos para que seja poss
 Os principais _softwares_ instalados com as instruções neste repositório são:
 
 - [`7z`](https://7-zip.org)
+- [`bat`](https://github.com/sharkdp/bat)
 - [`brew`](https://github.com/Homebrew/brew)
 - [`carapace`](https://github.com/carapace-sh/carapace)
 - [`chrome`](https://www.google.com/chrome)
@@ -128,6 +129,7 @@ sudo apt update && sudo apt full-upgrade --yes
 Instale os pacotes especificados abaixo.
 
 ```bash
+sudo apt install --yes "bat"
 sudo apt install --yes "build-essential"
 sudo apt install --yes "curl"
 sudo apt install --yes "file"
