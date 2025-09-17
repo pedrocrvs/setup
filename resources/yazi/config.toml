@@ -1,0 +1,13 @@
+[input]
+cursor_blink = true
+
+[mgr]
+linemode = "none"
+mouse_events = []
+ratio = [0, 1, 2]
+scrolloff = 5
+show_hidden = true
+show_symlink = true
+sort_by = "extension"
+sort_dir_first = true
+sort_sensitive = false

@@ -1,0 +1,31 @@
+theme = "dark_plus"
+
+[editor]
+bufferline = "always"
+color-modes = true
+cursorline = true
+default-line-ending = "lf"
+line-number = "relative"
+mouse = false
+rulers = [100]
+shell = ["nu", "--commands"]
+text-width = 100
+trim-final-newlines = true
+trim-trailing-whitespace = true
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.whitespace.render]
+nbsp = "all"
+newline = "none"
+nnbsp = "all"
+space = "all"
+tab = "all"
+
+[editor.indent-guides]
+render = true
+skip-levels=1

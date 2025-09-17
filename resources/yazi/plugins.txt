@@ -1,0 +1,8 @@
+https://github.com/boydaihungst/restore.yazi
+https://github.com/ktunprasert/git-files.yazi
+https://github.com/MasouShizuka/close-and-restore-tab.yazi
+https://github.com/ndtoan96/ouch.yazi
+https://github.com/uhs-robert/sshfs.yazi
+https://github.com/yazi-rs/plugins/tree/main/git.yazi
+https://github.com/yazi-rs/plugins/tree/main/no-status.yazi
+https://github.com/yazi-rs/plugins/tree/main/smart-enter.yazi

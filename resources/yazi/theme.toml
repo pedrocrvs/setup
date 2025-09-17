@@ -1,0 +1,32 @@
+[filetype]
+rules = [
+    { name = "*", fg = "white" },
+    { name = "*/", fg = "lightblue" },
+]
+
+[which]
+cand = { fg = "cyan" }
+cols = 1
+desc = { fg = "white" }
+mask = { bg = "#141414" }
+separator = "   "
+
+[icon]
+dirs = []
+exts = []
+files = []
+
+prepend_conds = [
+    { if = "!dir", text = "\uea7b" },
+    { if = "dir", text = "\uea83" },
+]
+
+[mgr]
+cwd = { fg = "#00FFD7" }
+hovered = { fg = "white", bg = "#314F79" }
+
+[tabs]
+active = { bg = "blue", fg = "white" }
+inactive = { bg = "#141414", fg = "lightblack" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }

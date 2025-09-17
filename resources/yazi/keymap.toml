@@ -1,0 +1,7 @@
+[mgr]
+prepend_keymap = [
+    { on = ["Z"], run = "noop" },
+    { on = ["d", "g"], run = "noop" },
+
+    { on = ["e", "g"], run = "arrow bot", desc = "Go to the bottom" },
+]
