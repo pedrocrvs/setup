@@ -260,7 +260,6 @@ $env.FZF_DEFAULT_OPTS = '
   --separator="-"
 '
 
-$env.LESS = "--ignore-case --squeeze-blank-lines --window=-5 --wordwrap"
 $env.LESSHISTFILE = "/dev/null"
 
 $env.LS_COLORS = "bd=97:cd=97:di=97:ex=97:fi=97:ln=4;97:mi=4;91:or=4;91:ow=97:pi=97:sg=97:so=97:st=97:su=97:tw=97"
