@@ -151,9 +151,9 @@
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.fontFamily": "'CommitMono Nerd Font'",
-  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.gpuAcceleration": "off",
-  "terminal.integrated.lineHeight": 1.5,
+  "terminal.integrated.lineHeight": 1.25,
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.tabs.enabled": false,
 
