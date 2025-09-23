@@ -205,6 +205,13 @@ function Start-MouseMovement {
 
 
 
+function Update-Winget {
+    winget upgrade --source "winget" --scope "user" --all
+    winget upgrade --source "winget" --scope "machine" --all
+}
+
+
+
 Set-Alias -Name "ip" -Value Set-ClipboardToIPAddress
 Set-Alias -Name "isudo" -Value Get-ImAdministrator
 Set-Alias -Name "junk" -Value Remove-Junk

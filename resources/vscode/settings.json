@@ -5,7 +5,7 @@
   // chat
   "chat.agent.enabled": false,
   "chat.commandCenter.enabled": false,
-  "chat.mcp.enabled": false,
+  "chat.mcp.access": "none",
 
   // diffEditor
   "diffEditor.wordWrap": "off",
@@ -264,6 +264,7 @@
 
   // ms-vscode-remote.remote-wsl
   "remote.autoForwardPorts": false,
+  "remote.autoForwardPortsFallback": 0,
 
   // tamasfe.even-better-toml
   "evenBetterToml.formatter.allowedBlankLines": 1,
