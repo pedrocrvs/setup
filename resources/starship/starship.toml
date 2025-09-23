@@ -1,7 +1,5 @@
-format = "[$os$directory$git_branch$character](fg:#00FFD7)"
-
 add_newline = true
-
+format = "[$os$directory$git_branch$character](fg:#00FFD7)"
 palette = "ansi"
 
 [palettes.ansi]
@@ -44,7 +42,7 @@ use_os_path_sep = false
 
 [git_branch]
 disabled = false
-format = "[$symbol $branch](fg:#F69A8A) "
+format = "[$symbol $branch](fg:#F89278) "
 symbol = "\ue725"
 
 [character]
