@@ -268,7 +268,7 @@
 
   // tamasfe.even-better-toml
   "evenBetterToml.formatter.allowedBlankLines": 1,
-  "evenBetterToml.formatter.reorderArrays": true,
+  "evenBetterToml.formatter.columnWidth": 100,
   "evenBetterToml.formatter.reorderInlineTables": true,
   "evenBetterToml.formatter.reorderKeys": true,
 
