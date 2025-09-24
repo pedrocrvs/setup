@@ -3,15 +3,15 @@ $ErrorActionPreference = "Stop"
 
 $ResourceExtensions = Get-Content -Path "$PSScriptRoot\..\..\resources\vscode\extensions-wsl.txt"
 
-$VisualStudioCodeExecutable = "/mnt/c/Program Files/Microsoft VS Code/bin/code"
+$ExecutableVisualStudioCode = "/mnt/c/Program Files/Microsoft VS Code/bin/code"
 
 
 wsl --distribution "Debian" --exec "rm" "--force" "recursive" "/home/pedro/.vscode-server" 2> $null
 
-wsl --distribution "Debian" --exec $VisualStudioCodeExecutable "--version"
+wsl --distribution "Debian" --exec $ExecutableVisualStudioCode "--version"
 
 foreach ($Extension in $ResourceExtensions) {
-    wsl --distribution "Debian" --exec $VisualStudioCodeExecutable "--install-extension" $Extension "--force"
+    wsl --distribution "Debian" --exec $ExecutableVisualStudioCode "--install-extension" $Extension "--force"
 }
 
 
