@@ -1,0 +1,49 @@
+leardisableStartupPopups: true
+
+gui:
+  commitHashLength: 5
+  expandedSidePanelWeight: 5
+  expandFocusedSidePanel: true
+  language: 'en'
+  mainPanelSplitMode: 'horizontal'
+  mouseEvents: false
+  scrollOffMargin: 4
+  shortTimeFormat: '15:04'
+  showBottomLine: false
+  showCommandLog: false
+  showListFooter: false
+  showPanelJumps: false
+  showRandomTip: false
+  showRootItemInFileTree: false
+  statusPanelView: 'allBranchesLog'
+  timeFormat: '2006-01-02 15:04:05'
+
+  authorColors:
+    "*": '#D0D0D0'
+
+  theme:
+    selectedLineBgColor:
+      - '#314F79'
+
+    activeBorderColor:
+      - 'blue'
+
+git:
+  autoFetch: false
+  autoRefresh: false
+  branchLogCmd: 'git l {{branchName}} --'
+  localBranchSortOrder: 'alphabetical'
+
+  allBranchesLogCmds:
+    - 'git l'
+
+  paging:
+    externalDiffCommand: 'difft --color=always'
+
+os:
+  copyToClipboardCmd: bash -c 'printf "\033]52;c;$(printf {{text}} | base64 --wrap=0)\a" > /dev/tty'
+  editPreset: 'vscode'
+  shellFunctionsFile: ~/.config/nushell/config.nu
+
+update:
+  method: 'never'

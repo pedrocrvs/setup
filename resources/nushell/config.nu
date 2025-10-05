@@ -125,26 +125,6 @@ $env.config.keybindings ++= [
         mode: [emacs, vi_normal, vi_insert]
         event: null
     }
-    {
-        name: change_directory
-        modifier: Alt
-        keycode: Char_c
-        mode: Emacs
-        event: {
-            send: ExecuteHostCommand,
-            cmd: 'ls --all --short-names | where "type" == "dir" | get "name" | to text | fzf | if $in != "" { cd $in }'
-        }
-    }
-    {
-        name: open_project
-        modifier: Alt
-        keycode: Char_y
-        mode: Emacs
-        event: {
-            send: ExecuteHostCommand,
-            cmd: 'let projects = $env.HOME | path join "projects/"; let seletected = ls --short-names $projects | where "type" == "dir" | get "name" | to text | fzf | if $in != "" { let selected = [$projects $in] | path join; ^"/mnt/c/Program Files/Microsoft VS Code/bin/code" $selected }'
-        }
-    }
 ]
 
 
@@ -239,26 +219,9 @@ $env.config.color_config.range = "light_green"
 # Environment variables
 $env.BROWSER = "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
 
-$env.COLORTERM = "truecolor"
+$env.BR_INSTALL = "no"
 
-$env.FZF_DEFAULT_OPTS = '
-  --color=bg:-1
-  --color=bg+:#314F79
-  --color=border:#262626
-  --color=fg:-1
-  --color=fg+:-1
-  --color=gutter:-1
-  --color=hl:#00CCB0
-  --color=hl+:#00CCB0
-  --color=info:11
-  --color=prompt:#00FFD7
-  --color=query:-1
-  --color=spinner:11
-  --pointer=" "
-  --prompt="> "
-  --scrollbar="|"
-  --separator="-"
-'
+$env.COLORTERM = "truecolor"
 
 $env.LESSHISTFILE = "/dev/null"
 
@@ -283,19 +246,13 @@ $env.SHELL = "/usr/bin/nu"
 
 # Custom commands
 
-def "list long" [] {
-    ls --all --long
-    | upsert "name" {|row| if $row.type == "dir" { $"($row.name)/" } else { $row.name }}
-    | insert "extension" {|row| if $row.type != "dir" { $row.name | split row "." | last }}
-    | sort-by "type" "extension" "name"
-    | select "name" "mode" "modified"
+def "prune docker" []: nothing -> nothing {
+    ^docker system prune --all --force
+
+    null
 }
 
-def "prune docker" [] {
-    docker system prune --all --force
-}
-
-def "remove junk" [] {
+def "prune junk" []: nothing -> nothing {
     rm --force --permanent --verbose ~/.bash_history
     rm --force --permanent --verbose ~/.sudo_as_admin_successful
     rm --force --permanent --verbose ~/.wget-hsts
@@ -307,24 +264,30 @@ def "remove junk" [] {
 }
 
 def "start docker" [] {
-    sudo --validate
+    ^sudo --validate
 
     job spawn { sudo --non-interactive dockerd out+err> /dev/null }
 }
 
-def "update apt" [] {
-    sudo apt update
-    sudo apt full-upgrade --yes
-    sudo apt autoremove --purge --yes
-    sudo apt clean
+def "update apt" []: nothing -> nothing {
+    ^sudo apt update
+    ^sudo apt full-upgrade --yes
+    ^sudo apt autoremove --purge --yes
+    ^sudo apt clean
+
+    null
 }
 
-def "update brew" [] {
-    /home/linuxbrew/.linuxbrew/bin/brew update
-    /home/linuxbrew/.linuxbrew/bin/brew upgrade --formula
-    /home/linuxbrew/.linuxbrew/bin/brew autoremove
-    /home/linuxbrew/.linuxbrew/bin/brew cleanup --prune="all" --scrub
+def "update brew" []: nothing -> nothing {
+    ^brew update
+    ^brew upgrade --formula
+    ^brew autoremove
+    ^brew cleanup --prune="all" --scrub
+
+    null
 }
+
+
 
 # Aliases
 
@@ -332,6 +295,11 @@ alias code = ^"/mnt/c/Program Files/Microsoft VS Code/bin/code"
 
 alias explorer = ^"/mnt/c/Windows/explorer.exe"
 
-alias ll = list long
-
 alias rr = rm --force --recursive --trash --verbose
+
+
+
+# Modules conditionally imported
+const module_broot: string = "~/.config/broot/nushell_broot.nu"
+
+use (if $nu.is-interactive and ($module_broot | path exists) { $module_broot } ) *

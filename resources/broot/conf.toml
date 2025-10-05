@@ -1,0 +1,132 @@
+capture_mouse = false
+default_flags = "--no-dates --no-git-ignored --no-hidden --no-only-folders --no-permissions --no-sizes --show-git-info --sort-by-type-dirs-first"
+show_matching_characters_on_path_searches = false
+
+[special-paths]
+".env" = { list = "always", show = "always" }
+
+[skin]
+default = "ansi(15)"
+directory = "ansi(12)"
+file = "ansi(15)"
+file_error = "ansi(1)"
+flag_label = "gray(15)"
+flag_value = "gray(15)"
+input = "ansi(15)"
+link = "ansi(14)"
+scrollbar_thumb = "gray(20)"
+scrollbar_track = "gray(5)"
+selected_line = "None #314F79"
+tree = "gray(5)"
+
+count = "gray(15)"
+dates = "gray(15)"
+group = "gray(15)"
+owner = "gray(15)"
+perm__ = "gray(5)"
+perm_r = "gray(15)"
+perm_w = "gray(15)"
+perm_x = "gray(15)"
+
+git_branch = "#F89278"
+git_deletions = "ansi(9)"
+git_insertions = "ansi(10)"
+git_status_conflicted = "ansi(1)"
+git_status_ignored = "gray(15)"
+git_status_modified = "#F89278"
+git_status_new = "ansi(10)"
+
+help_bold = "ansi(12) None Bold"
+help_code = "gray(20) gray(3)"
+help_headers = "ansi(4) Underlined"
+help_italic = "ansi(12) None Italic"
+help_paragraph = "ansi(15)"
+help_table_border = "gray(5)"
+
+status_bold = "ansi(12) gray(3) italic"
+status_code = "gray(20) gray(3)"
+status_ellipsis = "gray(20) gray(3)"
+status_error = "ansi(1) gray(3)"
+status_italic = "ansi(12) gray(3) italic"
+status_normal = "gray(20) gray(3)"
+
+# I do not use these or know what they are
+# char_match
+# content_extract
+# content_match
+# device_id_major
+# device_id_minor
+# device_id_sep
+# exe
+# git_status_current
+# git_status_other
+# good_to_bad_0
+# good_to_bad_1
+# good_to_bad_2
+# good_to_bad_3
+# good_to_bad_4
+# good_to_bad_5
+# good_to_bad_6
+# good_to_bad_7
+# good_to_bad_8
+# good_to_bad_9
+# hex_ascii_graphic
+# hex_ascii_other
+# hex_ascii_whitespace
+# hex_non_ascii
+# hex_null
+# mode_command_mark
+# parent
+# preview
+# preview_line_number
+# preview_match
+# preview_separator
+# preview_title
+# pruning
+# purpose_bold
+# purpose_ellipsis
+# purpose_italic
+# purpose_normal
+# sparse
+# staging_area_title
+# status_job
+
+[[verbs]]
+internal = ":line_up"
+key = "ctrl-k"
+
+[[verbs]]
+internal = ":line_down"
+key = "ctrl-j"
+
+[[verbs]]
+internal = ":input_go_to_start"
+key = "ctrl-a"
+
+[[verbs]]
+internal = ":input_go_to_end"
+key = "ctrl-e"
+
+[[verbs]]
+internal = ":input_del_word_left"
+key = "ctrl-w"
+
+[[verbs]]
+internal = ":input_clear"
+key = "ctrl-c"
+
+[[verbs]]
+internal = ":toggle_hidden"
+key = "ctrl-h"
+
+[[verbs]]
+internal = ":select_last"
+key = "ctrl-g"
+
+[[verbs]]
+auto_exec = false
+external = ["nu", "~/.config/broot/mkdir_or_touch.nu", "{directory}/{subpath}"]
+invocation = "new {subpath}"
+key = "ctrl-n"
+leave_broot = false
+working_dir = "{directory}"
