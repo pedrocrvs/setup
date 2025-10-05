@@ -206,7 +206,7 @@
   "workbench.statusBar.visible": false,
 
   "workbench.colorCustomizations": {
-    "terminal.background": "#141414",
+    "terminal.background": "#1A1A1A",
     "terminal.foreground": "#FFFFFF",
     "terminal.selectionBackground": "#314F79",
     "terminal.selectionForeground": "#FFFFFF",
