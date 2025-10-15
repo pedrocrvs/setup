@@ -87,7 +87,7 @@
             "font": {
                 "cellHeight": "1.5",
                 "face": "CommitMono Nerd Font",
-                "size": 10
+                "size": 11
             },
             "icon": "\ue756",
             "padding": "5,0",
@@ -116,36 +116,36 @@
         {
             "name": "Midnight Ride",
 
-            "background": "#1A1A1A",
-            "foreground": "#FFFFFF",
+            "background": "#14171A",
+            "foreground": "#E6E6E6",
 
-            "cursorColor": "#DDDDDD",
+            "cursorColor": "#E6E6E6",
 
-            "selectionBackground": "#314F79",
+            "selectionBackground": "#294266",
 
             "black": "#000000",
-            "brightBlack": "#4D4D4D",
+            "brightBlack": "#666666",
 
-            "blue": "#337FFF",
-            "brightBlue": "#649EFF",
+            "blue": "#2E6BE6",
+            "brightBlue": "#79A1F2",
 
-            "cyan": "#33EEFF",
-            "brightCyan": "#64F2FF",
+            "cyan": "#45E6E6",
+            "brightCyan": "#73E6E6",
 
-            "green": "#33FF66",
-            "brightGreen": "#64FF8B",
+            "green": "#60E645",
+            "brightGreen": "#86E673",
 
-            "purple": "#FF44CC",
-            "brightPurple": "#FF78DA",
+            "purple": "#E62E8A",
+            "brightPurple": "#E65CA1",
 
-            "red": "#FF3344",
-            "brightRed": "#FF6471",
+            "red": "#E64545",
+            "brightRed": "#E67373",
 
-            "white": "#FFFFFF",
-            "brightWhite": "#F2F2F2",
+            "white": "#E6E6E6",
+            "brightWhite": "#D9D9D9",
 
-            "yellow": "#FFFF33",
-            "brightYellow": "#FFFF5E"
+            "yellow": "#E6E65C",
+            "brightYellow": "#E6E68A"
         }
     ]
 }

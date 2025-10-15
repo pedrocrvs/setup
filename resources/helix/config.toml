@@ -1,0 +1,47 @@
+theme = "dark_plus"
+
+[editor]
+bufferline = "always"
+color-modes = true
+cursorline = true
+default-line-ending = "lf"
+line-number = "relative"
+mouse = true
+rulers = [100]
+shell = ["nu", "--commands"]
+text-width = 100
+trim-final-newlines = true
+trim-trailing-whitespace = true
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.whitespace.render]
+nbsp = "all"
+newline = "none"
+nnbsp = "all"
+space = "all"
+tab = "all"
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
+[keys.normal]
+A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+C-a = [":pipe ^sort | ^grep --invert-match '^$'"]
+
+C-n = [":new"]
+
+C-s = [":write"]
+
+H = "move_prev_sub_word_start"
+L = "move_next_sub_word_end"
+
+X = "select_line_above"
+x = "select_line_below"

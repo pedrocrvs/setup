@@ -1,0 +1,18 @@
+[mgr]
+mouse_events = []
+ratio = [0, 1, 0]
+show_hidden = true
+sort_by = "extension"
+sort_dir_first = true
+sort_sensitive=true
+title_format = "{cwd}"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"

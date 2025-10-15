@@ -1,0 +1,45 @@
+leardisableStartupPopups: true
+
+gui:
+  commitHashLength: 5
+  expandedSidePanelWeight: 5
+  expandFocusedSidePanel: true
+  language: "en"
+  mainPanelSplitMode: "horizontal"
+  mouseEvents: false
+  scrollOffMargin: 4
+  shortTimeFormat: "15:04"
+  showBottomLine: false
+  showCommandLog: false
+  showListFooter: false
+  showPanelJumps: false
+  showRandomTip: false
+  showRootItemInFileTree: false
+  statusPanelView: "allBranchesLog"
+  timeFormat: "2006-01-02 15:04:05"
+
+  authorColors:
+    "*": "#999999"
+
+  theme:
+    selectedLineBgColor:
+      - "#294266"
+
+    activeBorderColor:
+      - "blue"
+
+git:
+  autoFetch: false
+  autoRefresh: false
+  branchLogCmd: "git l {{branchName}} --"
+  localBranchSortOrder: "alphabetical"
+
+  allBranchesLogCmds:
+    - "git l"
+
+os:
+  copyToClipboardCmd: bash -c 'printf "\033]52;c;$(printf {{text}} | base64 --wrap=0)\a" > /dev/tty' # TODO: substituir essa função por Nushell
+  # editPreset: 'vscode'
+
+update:
+  method: "never"

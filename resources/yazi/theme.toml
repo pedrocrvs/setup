@@ -1,0 +1,20 @@
+[mgr]
+cwd = { fg = "#00FFD7"}
+hovered = {bg = "#314F79", fg = "#FFFFFF"}
+
+[filetype]
+rules = [
+  { name = "*", fg = "#FFFFFF" },
+  { name = "*/", fg = "lightblue" },
+]
+
+[icon]
+dirs = []
+exts = []
+files = []
+globs = []
+
+conds = [
+  { if = "!dir", text = "\uea7b" },
+  { if = "dir", text = "\uea83" },
+]

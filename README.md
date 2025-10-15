@@ -46,11 +46,12 @@ Os principais _softwares_ instalados com as instruções neste repositório são
 - [`chrome`](https://www.google.com/chrome)
 - [`code`](https://code.visualstudio.com)
 - [`docker`](https://docs.docker.com/engine)
-- [`fzf`](https://github.com/junegunn/fzf)
 - [`gcloud`](https://cloud.google.com/sdk/docs/install)
 - [`gh`](https://github.com/cli/cli)
 - [`git-lfs`](https://github.com/git-lfs/git-lfs)
 - [`git`](https://git-scm.com)
+- [`helix`](https://github.com/helix-editor/helix)
+- [`lazygit`](https://github.com/jesseduffield/lazygit)
 - [`nushell`](https://github.com/nushell/nushell)
 - [`ouch`](https://github.com/ouch-org/ouch)
 - [`psql`](https://www.postgresql.org/docs/current/app-psql.html)
@@ -58,12 +59,14 @@ Os principais _softwares_ instalados com as instruções neste repositório são
 - [`ruff`](https://github.com/astral-sh/ruff)
 - [`sqlfluff`](https://github.com/sqlfluff/sqlfluff)
 - [`starship`](https://github.com/starship/starship)
+- [`taplo`](https://github.com/tamasfe/taplo)
 - [`task`](https://github.com/go-task/task)
 - [`terminal`](https://github.com/microsoft/terminal)
 - [`uv`](https://github.com/astral-sh/uv)
 - [`winget`](https://github.com/microsoft/winget-cli)
 - [`wsl`](https://learn.microsoft.com/en-us/windows/wsl)
 - [`yaak`](https://github.com/mountain-loop/yaak)
+- [`yazi`](https://github.com/sxyazi/yazi)
 
 ## `winget`
 
@@ -205,14 +208,17 @@ Instale os pacotes especificados abaixo.
 
 ```bash
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "carapace"
-/home/linuxbrew/.linuxbrew/bin/brew install --formula "fzf"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "gcc"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "go-task"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "helix"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "lazygit"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "ouch"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "ruff"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "sqlfluff"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "starship"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "taplo"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "uv"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "yazi"
 ```
 
 > Os pacotes especificados abaixo são utilizados apenas em meu trabalho profissional.
