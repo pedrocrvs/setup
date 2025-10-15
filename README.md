@@ -123,7 +123,7 @@ wsl --set-default "Debian"
 Utilizando o [`apt`](https://manpages.debian.org/stretch/apt/apt.8.en.html), sincronize os índices de pacotes e instale as atualizações disponíveis.
 
 ```bash
-sudo apt update && sudo apt full-upgrade --yes
+sudo apt update && sudo apt upgrade --yes
 ```
 
 Instale os pacotes especificados abaixo.

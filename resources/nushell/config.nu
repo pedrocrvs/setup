@@ -314,7 +314,7 @@ def "start docker" [] {
 
 def "update apt" [] {
     sudo apt update
-    sudo apt full-upgrade --yes
+    sudo apt upgrade --yes
     sudo apt autoremove --purge --yes
     sudo apt clean
 }
