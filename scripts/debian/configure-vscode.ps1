@@ -10,6 +10,7 @@ wsl --distribution "Debian" --exec "rm" "--force" "recursive" "/home/pedro/.vsco
 
 wsl --distribution "Debian" --exec $ExecutableVisualStudioCode "--version"
 
+
 foreach ($Extension in $ResourceExtensions) {
     wsl --distribution "Debian" --exec $ExecutableVisualStudioCode "--install-extension" $Extension "--force"
 }
