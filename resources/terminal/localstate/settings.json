@@ -2,7 +2,7 @@
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
 
-    "alwaysShowTabs": false,
+    "alwaysShowTabs": true,
     "confirmCloseAllTabs": false,
     "copyOnSelect": true,
     "defaultProfile": "{00000000-0000-0000-0000-000000000001}",
@@ -11,8 +11,10 @@
     "language": "en-US",
     "launchMode": "fullscreen",
     "multiLinePasteWarning": false,
+    "showTabsFullscreen": true,
     "showTerminalTitleInTitlebar": false,
     "tabSwitcherMode": "mru",
+    "tabWidthMode": "titleLength",
     "theme": "dark",
 
     "actions": [
@@ -87,7 +89,7 @@
             "font": {
                 "cellHeight": "1.5",
                 "face": "CommitMono Nerd Font",
-                "size": 10
+                "size": 11
             },
             "icon": "\ue756",
             "padding": "5,0",
@@ -99,15 +101,19 @@
                 "commandline": "wsl.exe --distribution Debian --exec /usr/bin/nu --interactive",
                 "guid": "{00000000-0000-0000-0000-000000000001}",
                 "hidden": false,
+                "icon": "ms-appdata:///roaming/logo-tux.ico",
                 "name": "Debian",
-                "startingDirectory": "~"
+                "startingDirectory": "~",
+                "tabTitle": "\u200B"
             },
             {
                 "commandline": "pwsh.exe -Interactive -NoLogo",
                 "guid": "{00000000-0000-0000-0000-000000000002}",
                 "hidden": false,
+                "icon": "ms-appdata:///roaming/logo-powershell.ico",
                 "name": "PowerShell",
-                "startingDirectory": "%USERPROFILE%"
+                "startingDirectory": "%USERPROFILE%",
+                "tabTitle": "\u200B"
             }
         ]
     },
@@ -117,35 +123,35 @@
             "name": "Midnight Ride",
 
             "background": "#1A1A1A",
-            "foreground": "#FFFFFF",
+            "foreground": "#E6E6E6",
 
-            "cursorColor": "#DDDDDD",
+            "cursorColor": "#E6E6E6",
 
-            "selectionBackground": "#314F79",
+            "selectionBackground": "#294266",
 
             "black": "#000000",
-            "brightBlack": "#4D4D4D",
+            "brightBlack": "#828282",
 
-            "blue": "#337FFF",
-            "brightBlue": "#649EFF",
+            "blue": "#4981F2",
+            "brightBlue": "#80AAFF",
 
-            "cyan": "#33EEFF",
-            "brightCyan": "#64F2FF",
+            "cyan": "#73E6E6",
+            "brightCyan": "#B3FFFF",
 
-            "green": "#33FF66",
-            "brightGreen": "#64FF8B",
+            "green": "#86E673",
+            "brightGreen": "#BFFFB3",
 
-            "purple": "#FF44CC",
-            "brightPurple": "#FF78DA",
+            "purple": "#E667A6",
+            "brightPurple": "#FFA6D2",
 
-            "red": "#FF3344",
-            "brightRed": "#FF6471",
+            "red": "#E65C5C",
+            "brightRed": "#FF9999",
 
-            "white": "#FFFFFF",
-            "brightWhite": "#F2F2F2",
+            "white": "#E6E6E6",
+            "brightWhite": "#FFFFFF",
 
-            "yellow": "#FFFF33",
-            "brightYellow": "#FFFF5E"
+            "yellow": "#E6E673",
+            "brightYellow": "#FFFFB3"
         }
     ]
 }
