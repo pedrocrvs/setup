@@ -16,11 +16,6 @@ New-Item `
     -ItemType "Directory" `
     -Path $DestinationDirectory
 
-Remove-Item `
-    -ErrorAction "SilentlyContinue" `
-    -Force `
-    -Path "$Env:USERPROFILE\.vscode\" `
-    -Recurse
 
 New-Item `
     -Force `
@@ -33,6 +28,13 @@ New-Item `
     -ItemType "SymbolicLink" `
     -Path "$DestinationDirectory\keybindings.json" `
     -Target $ResourceConfigFile2
+
+
+Remove-Item `
+    -ErrorAction "SilentlyContinue" `
+    -Force `
+    -Path "$Env:USERPROFILE\.vscode\" `
+    -Recurse
 
 foreach ($Extension in $ResourceExtensions) {
     code --install-extension $Extension --force
