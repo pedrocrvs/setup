@@ -1,10 +1,12 @@
 $ErrorActionPreference = "Stop"
 
 
-$ResourceConfigFile = "$PSScriptRoot\..\..\resources\terminal\settings.json"
+$ResourceConfigDirectory1 = "$PSScriptRoot\..\..\resources\terminal\localstate"
+
+$ResourceConfigDirectory2 = "$PSScriptRoot\..\..\resources\terminal\roamingstate"
 
 
-$DestinationDirectory = "$Env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\"
+$DestinationDirectory = "$Env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\"
 
 
 New-Item `
@@ -15,4 +17,11 @@ New-Item `
 Copy-Item `
     -Destination $DestinationDirectory `
     -Force `
-    -Path $ResourceConfigFile
+    -Path $ResourceConfigDirectory1 `
+    -Recurse
+
+Copy-Item `
+    -Destination $DestinationDirectory `
+    -Force `
+    -Path $ResourceConfigDirectory2 `
+    -Recurse
