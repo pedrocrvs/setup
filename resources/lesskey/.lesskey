@@ -1,8 +1,3 @@
-ge goto-end
-gg goto-line
-^d forw-scroll
-^u back-scroll
-
 \r noaction
 \n noaction
 e noaction
@@ -115,7 +110,11 @@ V noaction
 7 noaction
 8 noaction
 9 noaction
-q noaction
-Q noaction
-:Q noaction
 ZZ noaction
+
+\e clear-search
+^d forw-scroll
+^u back-scroll
+e goto-end
+g goto-line
+p reverse-search
