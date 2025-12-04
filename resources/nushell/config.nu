@@ -283,19 +283,15 @@ $env.SHELL = "/usr/bin/nu"
 
 # Custom commands
 
-def "list long" [] {
-    ls --all --long
-    | upsert "name" {|row| if $row.type == "dir" { $"($row.name)/" } else { $row.name }}
-    | insert "extension" {|row| if $row.type != "dir" { $row.name | split row "." | last }}
-    | sort-by "type" "extension" "name"
-    | select "name" "mode" "modified"
+def "prune docker" []: nothing -> nothing {
+    try { ^docker info } catch { start docker }
+
+    ^docker system prune --all --force
+
+    null
 }
 
-def "prune docker" [] {
-    docker system prune --all --force
-}
-
-def "remove junk" [] {
+def "remove junk" []: nothing -> nothing {
     rm --force --permanent --verbose ~/.bash_history
     rm --force --permanent --verbose ~/.sudo_as_admin_successful
     rm --force --permanent --verbose ~/.wget-hsts
@@ -304,27 +300,34 @@ def "remove junk" [] {
     rm --force --permanent --recursive --verbose ~/.dotnet/
 
     rm --force --permanent --recursive --verbose ~/.local/share/trash/
+
+    null
 }
 
-def "start docker" [] {
-    sudo --validate
+def "start docker" []: nothing -> int {
+    ^sudo --validate
 
     job spawn { sudo --non-interactive dockerd out+err> /dev/null }
 }
 
-def "update apt" [] {
+def "update apt" []: nothing -> nothing {
     sudo apt update
     sudo apt upgrade --yes
     sudo apt autoremove --purge --yes
     sudo apt clean
+
+    null
 }
 
-def "update brew" [] {
-    /home/linuxbrew/.linuxbrew/bin/brew update
-    /home/linuxbrew/.linuxbrew/bin/brew upgrade --formula
-    /home/linuxbrew/.linuxbrew/bin/brew autoremove
-    /home/linuxbrew/.linuxbrew/bin/brew cleanup --prune="all" --scrub
+def "update brew" []: nothing -> nothing {
+    ^brew update
+    ^brew upgrade --formula
+    ^brew autoremove
+    ^brew cleanup --prune="all" --scrub
+
+    null
 }
+
 
 # Aliases
 
@@ -332,6 +335,6 @@ alias code = ^"/mnt/c/Program Files/Microsoft VS Code/bin/code"
 
 alias explorer = ^"/mnt/c/Windows/explorer.exe"
 
-alias ll = list long
+alias ll = ls --all --long
 
 alias rr = rm --force --recursive --trash --verbose
