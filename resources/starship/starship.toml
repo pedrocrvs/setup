@@ -1,5 +1,5 @@
 add_newline = true
-format = "[$os$directory$git_branch$character](fg:#00FFD7)"
+format = "[$directory$git_branch$character](fg:#00FFD7)"
 palette = "ansi"
 
 [palettes.ansi]
@@ -24,10 +24,6 @@ bryellow = "11"
 [os]
 disabled = false
 format = "$symbol "
-
-[os.symbols]
-Debian = "\uf306"
-Windows = "\ue70f"
 
 [directory]
 disabled = false
