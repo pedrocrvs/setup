@@ -159,8 +159,8 @@ $env.config.keybindings ++= [
 
 # Themes/colors and syntax highlighting
 ## Structures
-$env.config.color_config.shape_keyword = null # Not current used
-$env.config.color_config.shape_literal = null # Not currently used
+$env.config.color_config.shape_keyword = null
+$env.config.color_config.shape_literal = null
 
 $env.config.color_config.shape_block = "white"
 $env.config.color_config.shape_closure = "white"
@@ -169,26 +169,26 @@ $env.config.color_config.shape_record = "white"
 $env.config.color_config.shape_signature = "white"
 $env.config.color_config.shape_table = "white"
 
-$env.config.color_config.shape_vardecl = "light_cyan"
-$env.config.color_config.shape_variable = "light_cyan"
+$env.config.color_config.shape_vardecl = "cyan"
+$env.config.color_config.shape_variable = "cyan"
 
-$env.config.color_config.shape_operator = "light_magenta"
-$env.config.color_config.shape_pipe = "light_magenta"
-$env.config.color_config.shape_redirection = "light_magenta_italic"
+$env.config.color_config.shape_operator = "magenta"
+$env.config.color_config.shape_pipe = "magenta"
+$env.config.color_config.shape_redirection = "magenta_italic"
 
 $env.config.color_config.hints = "white_dimmed"
 $env.config.color_config.search_result = "green_underline"
-$env.config.color_config.shape_garbage = "light_red"
-$env.config.color_config.shape_match_pattern = "light_green_italic"
-$env.config.color_config.shape_matching_brackets = "light_yellow"
+$env.config.color_config.shape_garbage = "red"
+$env.config.color_config.shape_match_pattern = "green_italic"
+$env.config.color_config.shape_matching_brackets = "yellow"
 
 $env.config.color_config.shape_flag = "bright_white"
 $env.config.color_config.shape_internalcall = "bright_white"
 
 $env.config.highlight_resolved_externals = true
-$env.config.color_config.shape_external = "light_red"
-$env.config.color_config.shape_external_resolved = "bright_white"
-$env.config.color_config.shape_externalarg = "bright_white"
+$env.config.color_config.shape_external = "white"
+$env.config.color_config.shape_external_resolved = "white"
+$env.config.color_config.shape_externalarg = "white"
 
 ## Tables
 $env.config.color_config.header = "green_bold"
@@ -219,7 +219,7 @@ $env.config.color_config.shape_range = "light_green"
 $env.config.color_config.string = "white"
 $env.config.color_config.date = "white"
 
-$env.config.color_config.bool = {|| if $in { "light_green" } else { "light_green_dimmed" }}
+$env.config.color_config.bool = {|| if $in { "green" } else { "green_dimmed" }}
 
 $env.config.color_config.binary = "light_green"
 $env.config.color_config.custom = "light_green"
