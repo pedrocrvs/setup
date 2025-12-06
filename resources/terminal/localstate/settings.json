@@ -56,7 +56,6 @@
         { "id": "unbound", "keys": "ctrl+shift+d" },
         { "id": "unbound", "keys": "ctrl+shift+down" },
         { "id": "unbound", "keys": "ctrl+shift+end" },
-        { "id": "unbound", "keys": "ctrl+shift+f" },
         { "id": "unbound", "keys": "ctrl+shift+home" },
         { "id": "unbound", "keys": "ctrl+shift+n" },
         { "id": "unbound", "keys": "ctrl+shift+period" },
