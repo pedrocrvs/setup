@@ -102,48 +102,45 @@ $env.config.render_right_prompt_on_last_line = false
 # Keybindings
 $env.config.keybindings ++= [
     {
-        modifier: Shift
+        event: null
         keycode: Left
         mode: [emacs, vi_normal, vi_insert]
-        event: null
+        modifier: Shift
     }
     {
-        modifier: Shift
+        event: null
         keycode: Right
         mode: [emacs, vi_normal, vi_insert]
-        event: null
+        modifier: Shift
     }
     {
-        modifier: Control_shift
+        event: null
         keycode: Left
         mode: [emacs, vi_normal, vi_insert]
-        event: null
+        modifier: Control_shift
     }
     {
-        modifier: Control_shift
+        event: null
         keycode: Right
         mode: [emacs, vi_normal, vi_insert]
-        event: null
+        modifier: Control_shift
     }
     {
-        name: change_directory
-        modifier: Alt
-        keycode: Char_c
-        mode: Emacs
-        event: {
-            send: ExecuteHostCommand,
-            cmd: 'ls --all --short-names | where "type" == "dir" | get "name" | to text | fzf | if $in != "" { cd $in }'
-        }
-    }
-    {
-        name: open_project
-        modifier: Alt
-        keycode: Char_y
-        mode: Emacs
         event: {
             send: ExecuteHostCommand,
             cmd: 'let projects = $env.HOME | path join "projects/"; let seletected = ls --short-names $projects | where "type" == "dir" | get "name" | to text | fzf | if $in != "" { let selected = [$projects $in] | path join; ^"/mnt/c/Program Files/Microsoft VS Code/bin/code" $selected }'
         }
+        keycode: Char_y
+        mode: Emacs
+        modifier: Alt
+        name: open_project
+    }
+    {
+        event: { send: executehostcommand, cmd: "job unfreeze" },
+        keycode: "char_z",
+        mode: emacs
+        modifier: control,
+        name: "unfreeze",
     }
 ]
 
