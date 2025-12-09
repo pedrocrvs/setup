@@ -273,11 +273,14 @@
   { "command": "-workbench.statusBar.focusPrevious", "key": "up" },
 
 
-  // "dbcode.dbcode" extension version 1.13.17
+  // "dbcode.dbcode" extension version 1.20.01
   { "command": "-dbcode.connections.quickOpen", "key": "ctrl+unknown" },
+  { "command": "-dbcode.connections.select", "key": "ctrl+shift+unknown" },
   { "command": "-dbcode.connections.view.focus", "key": "ctrl+d ctrl+b" },
   { "command": "-dbcode.editor.apply", "key": "unknown" },
+  { "command": "-dbcode.editor.copyQuery", "key": "ctrl+alt+c" },
   { "command": "-dbcode.editor.execute", "key": "unknown" },
+  { "command": "-dbcode.editor.expandStar", "key": "ctrl+shift+e" },
 
   // "ms-python.python" extension version 2025.4.0
   { "command": "-python.execInInteractiveWindowEnter", "key": "enter" },
