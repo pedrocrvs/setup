@@ -1,12 +1,14 @@
 $ErrorActionPreference = "Stop"
 
 
-$ResourceConfigDirectory1 = "$PSScriptRoot\..\..\resources\terminal\localstate"
+$ResourcesDirectory = Join-Path -Path $PSScriptRoot -ChildPath "..\..\resources\terminal\"
 
-$ResourceConfigDirectory2 = "$PSScriptRoot\..\..\resources\terminal\roamingstate"
+$ResourceConfigDirectory1 = "LocalState"
+
+$ResourceConfigDirectory2 = "RoamingState"
 
 
-$DestinationDirectory = "$Env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\"
+$DestinationDirectory = Join-Path -Path $env:LOCALAPPDATA -ChildPath "Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\"
 
 
 New-Item `
@@ -14,14 +16,15 @@ New-Item `
     -ItemType "Directory" `
     -Path $DestinationDirectory
 
+
 Copy-Item `
     -Destination $DestinationDirectory `
     -Force `
-    -Path $ResourceConfigDirectory1 `
+    -Path (Join-Path -Path $ResourcesDirectory -ChildPath $ResourceConfigDirectory1) `
     -Recurse
 
 Copy-Item `
     -Destination $DestinationDirectory `
     -Force `
-    -Path $ResourceConfigDirectory2 `
+    -Path (Join-Path -Path $ResourcesDirectory -ChildPath $ResourceConfigDirectory2) `
     -Recurse

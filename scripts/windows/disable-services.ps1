@@ -1,20 +1,19 @@
 $ErrorActionPreference = "Stop"
 
 
-$Services = @(
-    "DiagTrack",
-    "CDPSvc",
-    "RmSvc",
+$ServicesToDisable = @(
+    "CDPSvc"
+    "CDPUserSvc"
+    "edgeupdate"
+    "iphlpsvc"
+    "lfsvc"
     "lmhosts"
+    "MapsBroker"
+    "Spooler"
+    "SysMain"
+    "TrkWks"
 )
 
-foreach ($Service in $Services) {
-    try {
-        Stop-Service -Name $Service -Force
-        Set-Service -Name $Service -StartupType "Disabled"
-        Write-Host "Disabled $Service" -ForegroundColor "Green"
-    }
-    catch {
-        Write-Host "Failed to disable $Service" -ForegroundColor "Red"
-    }
+foreach ($Service in $ServicesToDisable) {
+    Set-Service -Name $Service -StartupType "Disabled"
 }

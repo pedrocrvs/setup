@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 
 
-$ResourceConfigContent = Get-Content "$PSScriptRoot\..\..\resources\wsl\wsl.conf" -Raw
+$ResourceConfigContent = Get-Content -Raw (Join-Path -Path $PSScriptRoot -ChildPath "..\..\resources\wsl\wsl.conf")
 
 
 wsl --distribution "Debian" --exec "bash" "-c" "sudo tee /etc/wsl.conf <<< '$ResourceConfigContent'"

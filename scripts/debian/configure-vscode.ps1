@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 
 
-$ResourceExtensions = Get-Content -Path "$PSScriptRoot\..\..\resources\vscode\extensions-wsl.txt"
+$ResourceExtensions = Get-Content -Path (Join-Path -Path $PSScriptRoot -ChildPath "..\..\resources\vscode\extensions-wsl.txt")
 
 $ExecutableVisualStudioCode = "/mnt/c/Program Files/Microsoft VS Code/bin/code"
 
@@ -19,5 +19,5 @@ foreach ($Extension in $ResourceExtensions) {
 Remove-Item `
     -ErrorAction "SilentlyContinue" `
     -Force `
-    -Path "$Env:USERPROFILE\vscode-remote-wsl\" `
+    -Path (Join-Path -Path $env:USERPROFILE -ChildPath "vscode-remote-wsl\") `
     -Recurse
