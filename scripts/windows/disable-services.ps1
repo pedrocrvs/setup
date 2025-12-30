@@ -4,6 +4,7 @@ $ErrorActionPreference = "Stop"
 $ServicesToDisable = @(
     "CDPSvc"
     "CDPUserSvc"
+    "DiagTrack"
     "edgeupdate"
     "iphlpsvc"
     "lfsvc"
