@@ -232,9 +232,9 @@ gh auth login --git-protocol="https" --hostname="github.com" --web
 Clone esse repositório.
 
 ```powershell
-git clone "https://github.com/pedrocrvs/setup.git" "$Env:USERPROFILE/setup"
+git clone "https://github.com/pedrocrvs/setup.git" "$env:USERPROFILE/setup"
 
-Set-Location "$Env:USERPROFILE/setup"; git lfs pull
+Set-Location "$env:USERPROFILE/setup"; git lfs pull
 ```
 
 ### _Resources_

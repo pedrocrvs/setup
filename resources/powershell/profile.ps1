@@ -41,7 +41,7 @@ function Get-IPAddress {
 
 
 function Get-PathEntries {
-    return $Env:PATH -split ";" | Where-Object { $_.Trim() -ne "" }
+    return $env:PATH -split ";" | Where-Object { $_.Trim() -ne "" }
 }
 
 
@@ -75,43 +75,43 @@ function Remove-Junk {
     $ErrorActionPreference = "SilentlyContinue"
 
     $JunkItems = @(
-        "$Env:APPDATA\VoiceAccess"
-        "$Env:LOCALAPPDATA\cache"
-        "$Env:LOCALAPPDATA\CEF"
-        "$Env:LOCALAPPDATA\Comms"
-        "$Env:LOCALAPPDATA\ConnectedDevicesPlatform"
-        "$Env:LOCALAPPDATA\CrashDumps"
-        "$Env:LOCALAPPDATA\D3DSCache"
-        "$Env:LOCALAPPDATA\IconCache.db"
-        "$Env:LOCALAPPDATA\NVIDIA Corporation"
-        "$Env:LOCALAPPDATA\NVIDIA"
-        "$Env:LOCALAPPDATA\PeerDistRepub"
-        "$Env:LOCALAPPDATA\PlaceholderTileLogoFolder"
-        "$Env:LOCALAPPDATA\Programs"
-        "$Env:LOCALAPPDATA\Publishers"
-        "$Env:LOCALAPPDATA\SquirrelTemp"
-        "$Env:LOCALAPPDATA\VirtualStore"
-        "$Env:USERPROFILE\.cache"
-        "$Env:USERPROFILE\Documents\Custom Office Templates"
-        "$Env:USERPROFILE\Documents\Power BI Desktop"
-        "$Env:USERPROFILE\Favorites"
-        "$Env:USERPROFILE\Microsoft"
-        "$Env:USERPROFILE\Saved Games"
+        "$env:APPDATA\VoiceAccess"
+        "$env:LOCALAPPDATA\cache"
+        "$env:LOCALAPPDATA\CEF"
+        "$env:LOCALAPPDATA\Comms"
+        "$env:LOCALAPPDATA\ConnectedDevicesPlatform"
+        "$env:LOCALAPPDATA\CrashDumps"
+        "$env:LOCALAPPDATA\D3DSCache"
+        "$env:LOCALAPPDATA\IconCache.db"
+        "$env:LOCALAPPDATA\NVIDIA Corporation"
+        "$env:LOCALAPPDATA\NVIDIA"
+        "$env:LOCALAPPDATA\PeerDistRepub"
+        "$env:LOCALAPPDATA\PlaceholderTileLogoFolder"
+        "$env:LOCALAPPDATA\Programs"
+        "$env:LOCALAPPDATA\Publishers"
+        "$env:LOCALAPPDATA\SquirrelTemp"
+        "$env:LOCALAPPDATA\VirtualStore"
+        "$env:USERPROFILE\.cache"
+        "$env:USERPROFILE\Documents\Custom Office Templates"
+        "$env:USERPROFILE\Documents\Power BI Desktop"
+        "$env:USERPROFILE\Favorites"
+        "$env:USERPROFILE\Microsoft"
+        "$env:USERPROFILE\Saved Games"
     )
 
     $JunkDirectoriesItems = @(
-        "$Env:LOCALAPPDATA\Microsoft\Windows\WER\"
-        "$Env:LOCALAPPDATA\Temp\"
-        "$Env:USERPROFILE\Downloads\"
-        "$Env:USERPROFILE\Music\"
-        "$Env:USERPROFILE\Pictures\"
-        "$Env:USERPROFILE\Videos\"
+        "$env:LOCALAPPDATA\Microsoft\Windows\WER\"
+        "$env:LOCALAPPDATA\Temp\"
+        "$env:USERPROFILE\Downloads\"
+        "$env:USERPROFILE\Music\"
+        "$env:USERPROFILE\Pictures\"
+        "$env:USERPROFILE\Videos\"
     ) | Get-ChildItem
 
     $CacheAndLogsParentDirectories = @(
-        "$Env:LOCALAPPDATA\Microsoft\OneDrive\"
-        "$Env:LOCALAPPDATA\Microsoft\Teams\"
-        "$Env:LOCALAPPDATA\OneDrive\"
+        "$env:LOCALAPPDATA\Microsoft\OneDrive\"
+        "$env:LOCALAPPDATA\Microsoft\Teams\"
+        "$env:LOCALAPPDATA\OneDrive\"
     )
 
     $CacheAndLogsDirectories = Get-ChildItem -Path $CacheAndLogsParentDirectories -Recurse -Directory | Where-Object { $_.Name -match 'cache|log' }
