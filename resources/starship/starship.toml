@@ -27,10 +27,8 @@ format = "$symbol "
 
 [directory]
 disabled = false
-format = "$path[$read_only]($read_only_style) "
+format = "$path "
 home_symbol = "~"
-read_only = " \uf023"
-read_only_style = "red"
 truncate_to_repo = true
 truncation_length = 3
 truncation_symbol = "../"
