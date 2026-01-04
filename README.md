@@ -249,7 +249,17 @@ Scripts que contenham `adm` em seu nome precisam de permissões de administrador
 
 Alguns desses _scripts_ criam _symbolic links_ apontando para os arquivos em [`resources/`](resources/).
 
-O _developer mode_ é necessário para a criação de _symbolic links_ sem permissões de administrador no Windows 11.
+O _developer mode_ é necessário para a criação de _symbolic links_, sem permissões de administrador no Windows 11.
+
+Inicie o PowerShell como administrador e habilite o _developer mode_.
+
+```powershell
+$RegistryPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock"
+
+New-Item -Force -Path $RegistryPath
+
+New-ItemProperty -Force -Name "AllowDevelopmentWithoutDevLicense" -Path $RegistryPath -PropertyType "DWORD" -Value 1
+```
 
 ## `chrome`
 
