@@ -258,7 +258,6 @@ A configuração do Google Chrome deve ser feita manualmente. Para isso, acesse 
 Desabilite as _flags_ especificadas abaixo.
 
 - `autofill-enable-save-and-fill`
-- `autofill-improved-labels`
 - `enable-autofill-credit-card-upload`
 - `fluent-overlay-scrollbars`
 - `fluent-scrollbars`
