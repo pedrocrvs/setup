@@ -82,9 +82,6 @@ winget install --source "winget" --scope "machine" --id "GitHub.cli"
 winget install --source "winget" --scope "machine" --id "Google.Chrome"
 winget install --source "winget" --scope "machine" --id "Microsoft.PowerShell"
 winget install --source "winget" --scope "machine" --id "Microsoft.VisualStudioCode" --override '/VERYSILENT /MERGETASKS="!runcode,!desktopicon,addcontextmenufiles,addcontextmenufolders,associatefiles,path"'
-
-winget install --source "winget" --id "Microsoft.WindowsTerminal"
-winget install --source "winget" --id "Yaak.app"
 ```
 
 > Os _softwares_ especificados abaixo são utilizados apenas em meu trabalho profissional.
@@ -94,6 +91,7 @@ winget install --source "winget" --scope "machine" --id "Microsoft.OneDrive"
 winget install --source "winget" --scope "machine" --id "Microsoft.PowerBI"
 
 winget install --source "winget" --id "Microsoft.Teams"
+winget install --source "winget" --id "Yaak.app"
 ```
 
 ## `wsl`
@@ -120,7 +118,7 @@ wsl --set-default "Debian"
 
 ### `apt`
 
-Utilizando o [`apt`](https://manpages.debian.org/stretch/apt/apt.8.en.html), sincronize os índices de pacotes e instale as atualizações disponíveis.
+Sincronize os índices de pacotes e instale as atualizações disponíveis.
 
 ```bash
 sudo apt update && sudo apt upgrade --yes
@@ -157,7 +155,7 @@ sudo curl --fail "https://apt.fury.io/nushell/gpg.key" | sudo gpg --dearmor --ye
 
 Adicione os repositórios especificados abaixo como fontes de pacotes para o `apt`.
 
-Em seguida, com as novas fontes, sincronize os índices de pacotes.
+Em seguida, sincrone os índices de pacotes com as novas fontes.
 
 ```bash
 printf "Types: deb\nURIs: https://download.docker.com/linux/debian/\nSuites: trixie\nComponents: stable\nSigned-By: /etc/apt/keyrings/docker.gpg\n" | sudo tee "/etc/apt/sources.list.d/docker.sources"
