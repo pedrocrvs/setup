@@ -243,6 +243,8 @@ O diretório [`resources/`](resources/) contém arquivos de configuração dos [
 
 O diretório [`scripts/`](scripts/) contém _scripts_ que configuram os _softwares_.
 
+Scripts que contenham `adm` em seu nome precisam de permissões de administrador no Windows 11 para serem executados.
+
 #### _Symbolic links_
 
 Alguns desses _scripts_ criam _symbolic links_ apontando para os arquivos em [`resources/`](resources/).
