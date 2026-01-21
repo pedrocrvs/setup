@@ -153,8 +153,10 @@
   "terminal.integrated.fontFamily": "'CommitMono Nerd Font'",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.initialHint": false,
   "terminal.integrated.lineHeight": 1.25,
   "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.suggest.enabled": false,
   "terminal.integrated.tabs.enabled": false,
 
   "terminal.integrated.profiles.linux": {

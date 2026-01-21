@@ -37,7 +37,6 @@
   { "command": "-chatEditor.action.toggleDiff", "key": "shift+alt+f7" },
   { "command": "-chatEditor.action.undoHunk", "key": "ctrl+n" },
 
-
   // "debug" Visual Studio Code 1.100.3
   { "command": "-debug.copyWatchExpression", "key": "ctrl+alt+c" },
   { "command": "-debug.openBreakpointToSide", "key": "alt+enter" },
@@ -49,6 +48,9 @@
   { "command": "-debug.renameWatchExpression", "key": "f2" },
   { "command": "-debug.setVariable", "key": "f2" },
   { "command": "-debug.toggleBreakpoint", "key": "space" },
+
+  // "editor.action.announceCursorPosition" Visual Studio Code 1.108.0
+  { "command": "-editor.action.announceCursorPosition", "key": "ctrl+shift+g" },
 
   // "editor.debug.action" Visual Studio Code 1.100.3
   { "command": "-editor.debug.action.closeExceptionWidget", "key": "escape" },
@@ -484,7 +486,7 @@
   { "command": "workbench.action.terminal.kill", "key": "ctrl+shift+w", "when": "terminalFocus" },
 
   // "workbench.action.toggleAuxiliaryBar"
-  { "key": "ctrl+shift+b", "command": "workbench.action.toggleAuxiliaryBar" },
+  { "command": "workbench.action.toggleAuxiliaryBar", "key": "ctrl+shift+b" },
 
   // "workbench.panel.chat"
   { "command": "dbcode.connections.view.focus", "key": "ctrl+shift+q" },
