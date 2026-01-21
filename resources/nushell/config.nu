@@ -281,8 +281,6 @@ $env.SHELL = "/usr/bin/nu"
 # Custom commands
 
 def "prune docker" []: nothing -> nothing {
-    try { ^docker info } catch { start docker }
-
     ^docker system prune --all --force
 
     null
@@ -299,12 +297,6 @@ def "remove junk" []: nothing -> nothing {
     rm --force --permanent --recursive --verbose ~/.local/share/trash/
 
     null
-}
-
-def "start docker" []: nothing -> int {
-    ^sudo --validate
-
-    job spawn { sudo --non-interactive dockerd out+err> /dev/null }
 }
 
 def "update apt" []: nothing -> nothing {
