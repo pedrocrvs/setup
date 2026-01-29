@@ -56,6 +56,7 @@ Os principais _softwares_ instalados com as instruções neste repositório são
 - [`psql`](https://www.postgresql.org/docs/current/app-psql.html)
 - [`pwsh`](https://learn.microsoft.com/en-us/powershell)
 - [`ruff`](https://github.com/astral-sh/ruff)
+- [`shellcheck`](https://github.com/koalaman/shellcheck)
 - [`sqlfluff`](https://github.com/sqlfluff/sqlfluff)
 - [`starship`](https://github.com/starship/starship)
 - [`task`](https://github.com/go-task/task)
@@ -208,6 +209,7 @@ Instale os pacotes especificados abaixo.
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "go-task"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "ouch"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "ruff"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "shellcheck"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "sqlfluff"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "starship"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "uv"
