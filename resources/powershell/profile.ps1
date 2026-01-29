@@ -23,23 +23,6 @@ function Format-ByteSize {
 
 
 
-function Get-IPAddress {
-    param (
-        [Parameter(Mandatory = $false)]
-        [string]$Uri = "http://ipinfo.io/ip"
-    )
-    try {
-        $ResponseContent = Invoke-WebRequest -Uri $Uri | Select-Object -ExpandProperty "Content"
-        $IPAddress = $ResponseContent.Trim()
-        return $IPAddress
-    }
-    catch {
-        Write-Host "Failed to fetch the IP address" -ForegroundColor "Red"
-    }
-}
-
-
-
 function Get-PathEntries {
     return $env:PATH -split ";" | Where-Object { $_.Trim() -ne "" }
 }
@@ -213,8 +196,6 @@ function Update-Winget {
 
 
 
-Set-Alias -Name "ip" -Value Set-ClipboardToIPAddress
-Set-Alias -Name "isudo" -Value Get-ImAdministrator
 Set-Alias -Name "junk" -Value Remove-Junk
 Set-Alias -Name "ll" -Value Invoke-CustomGetChildItem
 Set-Alias -Name "mouse" -Value Start-MouseMovement
