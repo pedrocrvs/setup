@@ -147,7 +147,22 @@ $env.config.keybindings ++= [
 
 
 # Menus
-
+$env.config.menus = [] ++ [
+    {
+        marker: null
+        name: completion_menu
+        only_buffer_difference: false
+        style: {
+            description_text: dark_gray
+            selected_text: { bg: "#294266" fg: default }
+            text: default
+        }
+        type: {
+            columns: 1
+            layout: "columnar"
+        }
+    }
+]
 
 
 # Plugin behavior
