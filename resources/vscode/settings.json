@@ -208,9 +208,9 @@
   "workbench.statusBar.visible": false,
 
   "workbench.colorCustomizations": {
-    "terminal.ansiBlack": "#000000",
+    "terminal.ansiBlack": "#262626",
     "terminal.ansiBlue": "#4981F2",
-    "terminal.ansiBrightBlack": "#828282",
+    "terminal.ansiBrightBlack": "#808080",
     "terminal.ansiBrightBlue": "#80AAFF",
     "terminal.ansiBrightCyan": "#B3FFFF",
     "terminal.ansiBrightGreen": "#BFFFB3",
