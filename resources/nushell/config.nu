@@ -34,7 +34,7 @@ $env.config.completions.use_ls_colors = false
 
 
 # External completions
-$env.config.completions.external.completer = {|spans: list<string>| carapace $spans.0 nushell ...$spans | from json | if ($in | default [] | where value =~ '^-.*ERR$' | is-empty) { $in } else { null }}
+$env.config.completions.external.completer = {|spans: list<string>| carapace $spans.0 nushell ...$spans | from json | if ($in | default [] | where value =~ '^.*ERR$' | is-empty) { $in | upsert "style" null } else { null }}
 $env.config.completions.external.enable = true
 $env.config.completions.external.max_results = 10
 
