@@ -207,7 +207,8 @@ function Start-MouseMovement {
 
 function Update-Winget {
     winget upgrade --source "winget" --scope "user" --all
-    winget upgrade --source "winget" --scope "machine" --all
+
+    Start-Process "winget" -ArgumentList "upgrade --source winget --scope machine --all" -Verb "RunAs"
 }
 
 
