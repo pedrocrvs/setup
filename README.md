@@ -48,6 +48,7 @@ Os principais _softwares_ instalados com as instruções neste repositório são
 - [`docker`](https://docs.docker.com/engine)
 - [`fzf`](https://github.com/junegunn/fzf)
 - [`gcloud`](https://cloud.google.com/sdk/docs/install)
+- [`gemini-cli`](https://github.com/google-gemini/gemini-cli)
 - [`gh`](https://github.com/cli/cli)
 - [`git-lfs`](https://github.com/git-lfs/git-lfs)
 - [`git`](https://git-scm.com)
@@ -206,6 +207,7 @@ Instale os pacotes especificados abaixo.
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "carapace"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "fzf"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "gcc"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "gemini-cli"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "go-task"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "ouch"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "ruff"

@@ -1,0 +1,48 @@
+{
+    "experimental": {
+        "useOSC52Paste": true
+    },
+
+    "general": {
+        "enableAutoUpdate": false,
+        "enableAutoUpdateNotification ": false
+    },
+
+    "privacy": {
+        "usageStatisticsEnabled": false
+    },
+
+    "security": {
+        "disableYoloMode": true,
+        "enablePermanentToolApproval": true,
+
+        "auth": {
+            "selectedType": "oauth-personal"
+        },
+
+        "environmentVariableRedaction": {
+            "enabled": true
+        }
+    },
+
+    "tools": {
+        "autoAccept": true,
+        "sandbox": false
+    },
+
+    "ui": {
+        "dynamicWindowTitle ": false,
+        "dynamicWindowTitle": false,
+        "hideBanner": true,
+        "hideContextSummary": true,
+        "hideFooter": true,
+        "hideTips": true,
+        "hideWindowTitle": true,
+        "theme": "ANSI",
+        "useBackgroundColor": false,
+
+        "accessibility": {
+            "enableLoadingPhrases": false
+        }
+    }
+}
