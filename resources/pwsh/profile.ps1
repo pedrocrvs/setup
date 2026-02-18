@@ -188,7 +188,7 @@ function Start-MouseMovement {
 
 
 
-function Update-Winget {
+function Upgrade-All {
     winget upgrade --source "winget" --scope "user" --all
 
     Start-Process "winget" -ArgumentList "upgrade --source winget --scope machine --all" -Verb "RunAs"
@@ -200,6 +200,7 @@ Set-Alias -Name "junk" -Value Remove-Junk
 Set-Alias -Name "ll" -Value Invoke-CustomGetChildItem
 Set-Alias -Name "mouse" -Value Start-MouseMovement
 Set-Alias -Name "pp" -Value Get-PathEntries
+Set-Alias -Name "up" -Value Upgrade-All
 
 
 
