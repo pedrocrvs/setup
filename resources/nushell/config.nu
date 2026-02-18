@@ -348,20 +348,14 @@ def "remove junk" []: nothing -> nothing {
     rm --force --permanent --recursive --verbose ~/.dotnet/
 
     rm --force --permanent --recursive --verbose ~/.local/share/trash/
-
-    null
 }
 
-def "update apt" []: nothing -> nothing {
-    sudo apt update
-    sudo apt upgrade --yes
-    sudo apt autoremove --purge --yes
-    sudo apt clean
+def "upgrade all" []: nothing -> nothing {
+    ^sudo apt update
+    ^sudo apt upgrade --yes
+    ^sudo apt autoremove --purge --yes
+    ^sudo apt clean
 
-    null
-}
-
-def "update brew" []: nothing -> nothing {
     ^brew update
     ^brew upgrade --formula
     ^brew autoremove
@@ -377,6 +371,10 @@ alias code = ^"/mnt/c/Program Files/Microsoft VS Code/bin/code"
 
 alias explorer = ^"/mnt/c/Windows/explorer.exe"
 
+alias junk = remove junk
+
 alias ll = ls --all --long
 
 alias rr = rm --force --recursive --trash --verbose
+
+alias up = upgrade all
