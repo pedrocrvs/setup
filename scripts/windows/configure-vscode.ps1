@@ -50,7 +50,6 @@ $COMShell = New-Object -ComObject "WScript.Shell"
 
 $Shortcut = $COMShell.CreateShortcut($DestinationShortcut)
 
-$Shortcut.Arguments = "--remote wsl+Debian"
 $Shortcut.Description = "Visual Studio Code shortcut"
 $Shortcut.TargetPath = "C:\Program Files\Microsoft VS Code\Code.exe"
 $Shortcut.WindowStyle = 3
