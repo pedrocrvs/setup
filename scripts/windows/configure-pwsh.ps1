@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 
 
-$ResourcesDirectory = Join-Path -Path $PSScriptRoot -ChildPath "..\..\resources\powershell\"
+$ResourcesDirectory = Join-Path -Path $PSScriptRoot -ChildPath "..\..\resources\pwsh\"
 
 $ResourceConfigFile = "profile.ps1"
 
