@@ -117,44 +117,68 @@ $env.config.render_right_prompt_on_last_line = false
 $env.config.keybindings ++= [
     {
         event: null
-        keycode: Left
+        keycode: left
         mode: [emacs, vi_normal, vi_insert]
-        modifier: Shift
+        modifier: shift
     }
     {
         event: null
-        keycode: Right
+        keycode: right
         mode: [emacs, vi_normal, vi_insert]
-        modifier: Shift
+        modifier: shift
     }
     {
         event: null
-        keycode: Left
+        keycode: left
         mode: [emacs, vi_normal, vi_insert]
-        modifier: Control_shift
+        modifier: control_shift
     }
     {
         event: null
-        keycode: Right
+        keycode: right
         mode: [emacs, vi_normal, vi_insert]
-        modifier: Control_shift
+        modifier: control_shift
     }
     {
         event: {
             send: ExecuteHostCommand,
-            cmd: 'let projects = $env.HOME | path join "projects/"; let seletected = ls --short-names $projects | where "type" == "dir" | get "name" | to text | fzf | if $in != "" { let selected = [$projects $in] | path join; ^"/mnt/c/Program Files/Microsoft VS Code/bin/code" $selected }'
+            cmd: '
+                let projects: string = $env.HOME | path join "projects/"
+
+                let selected = ls --short-names $projects | where "type" == "dir" | get "name" | to text | fzf | str trim
+
+                if ($selected | is-not-empty) {
+                    let selected_path = $projects | path join $selected
+
+                    code $selected_path
+                }
+            '
         }
-        keycode: Char_y
-        mode: Emacs
-        modifier: Alt
+        keycode: char_o
+        mode: emacs
+        modifier: alt
         name: open_project
     }
     {
-        event: { send: executehostcommand, cmd: "job unfreeze" },
-        keycode: "char_z",
+        event: { edit: undo },
+        keycode: "char_u",
         mode: emacs
         modifier: control,
-        name: "unfreeze",
+        name: undo
+    }
+    {
+        event: {edit: redo}
+        keycode: char_u
+        mode: emacs
+        modifier: control_shift
+        name: redo
+    }
+    {
+        event: { send: executehostcommand, cmd: "job unfreeze" },
+        keycode: char_z
+        mode: emacs
+        modifier: control
+        name: unfreeze
     }
 ]
 
