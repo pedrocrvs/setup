@@ -34,7 +34,21 @@ $env.config.completions.use_ls_colors = false
 
 
 # External completions
-$env.config.completions.external.completer = {|spans: list<string>| carapace $spans.0 nushell ...$spans | from json | if ($in | default [] | where value =~ '^.*ERR$' | is-empty) { $in | upsert "style" null } else { null }}
+def complete [spans: list<string>]: nothing -> list<string> {
+  let executable: string = $spans.0 | split row "/" | last | str replace "\"" "" | str replace ".exe" ""
+
+  let command: list<string> = $spans | skip 1 | prepend $executable
+
+  let completions = carapace $executable nushell ...$command | from json
+
+  if ($completions | default [] | where "value" =~ "^.*ERR$" | is-empty) {
+    $completions | upsert "style" null
+  } else {
+    []
+  }
+}
+
+$env.config.completions.external.completer = {|spans: list<string>| complete $spans }
 $env.config.completions.external.enable = true
 $env.config.completions.external.max_results = 10
 
