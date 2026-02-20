@@ -4,8 +4,7 @@
 
   // chat
   "chat.agent.enabled": false,
-  "chat.commandCenter.enabled": false,
-  "chat.mcp.access": "none",
+  "chat.disableAIFeatures": true,
 
   // diffEditor
   "diffEditor.wordWrap": "off",
@@ -203,6 +202,7 @@
   "workbench.panel.showLabels": false,
   "workbench.reduceMotion": "on",
   "workbench.settings.editor": "json",
+  "workbench.settings.showAISearchToggle": false,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.statusBar.visible": false,
