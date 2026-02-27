@@ -116,30 +116,6 @@ $env.config.render_right_prompt_on_last_line = false
 # Keybindings
 $env.config.keybindings ++= [
     {
-        event: null
-        keycode: left
-        mode: [emacs, vi_normal, vi_insert]
-        modifier: shift
-    }
-    {
-        event: null
-        keycode: right
-        mode: [emacs, vi_normal, vi_insert]
-        modifier: shift
-    }
-    {
-        event: null
-        keycode: left
-        mode: [emacs, vi_normal, vi_insert]
-        modifier: control_shift
-    }
-    {
-        event: null
-        keycode: right
-        mode: [emacs, vi_normal, vi_insert]
-        modifier: control_shift
-    }
-    {
         event: {
             send: ExecuteHostCommand,
             cmd: '
@@ -161,13 +137,13 @@ $env.config.keybindings ++= [
     }
     {
         event: { edit: undo },
-        keycode: "char_u",
+        keycode: char_u,
         mode: emacs
         modifier: control,
         name: undo
     }
     {
-        event: {edit: redo}
+        event: { edit: redo }
         keycode: char_u
         mode: emacs
         modifier: control_shift
