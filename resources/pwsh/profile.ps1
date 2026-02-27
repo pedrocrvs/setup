@@ -189,9 +189,9 @@ function Start-MouseMovement {
 
 
 function Update-All {
-    winget upgrade --source "winget" --scope "user" --all
+    winget upgrade --all --disable-interactivity --include-pinned --include-unknown --scope user --source winget --uninstall-previous
 
-    Start-Process "winget" -ArgumentList "upgrade --source winget --scope machine --all" -Verb "RunAs"
+    Start-Process "winget" -ArgumentList "upgrade --all --disable-interactivity --include-pinned --include-unknown --scope machine --source winget --uninstall-previous" -Verb "RunAs"
 }
 
 
