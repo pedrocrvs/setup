@@ -17,7 +17,7 @@ $env.config.show_banner = false
 
 
 # Command editor settings
-$env.config.buffer_editor = "/mnt/c/Program Files/Microsoft VS Code/bin/code"
+$env.config.buffer_editor = "code --wait"
 $env.config.cursor_shape.emacs = "inherit"
 $env.config.edit_mode = "emacs"
 
