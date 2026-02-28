@@ -189,9 +189,13 @@ function Start-MouseMovement {
 
 
 function Update-All {
-    winget upgrade --all --disable-interactivity --include-pinned --include-unknown --scope user --source winget --uninstall-previous
+    $commonArguments = @("--all", "--disable-interactivity", "--include-pinned", "--include-unknown", "--source", "winget", "--uninstall-previous")
 
-    Start-Process "winget" -ArgumentList "upgrade --all --disable-interactivity --include-pinned --include-unknown --scope machine --source winget --uninstall-previous" -Verb "RunAs"
+    winget upgrade --scope user @commonArguments
+
+    $machineArguments = @("upgrade", "--scope", "machine") + $commonArguments
+
+    Start-Process -FilePath "winget" -ArgumentList $machineArguments -Verb "RunAs"
 }
 
 
