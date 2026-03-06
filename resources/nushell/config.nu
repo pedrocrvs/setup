@@ -317,6 +317,7 @@ def "prune docker" []: nothing -> nothing {
 
 def "remove junk" []: nothing -> nothing {
     rm --force --permanent --verbose ~/.bash_history
+    rm --force --permanent --verbose ~/.python_history
     rm --force --permanent --verbose ~/.sudo_as_admin_successful
     rm --force --permanent --verbose ~/.wget-hsts
 
