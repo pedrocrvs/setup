@@ -48,6 +48,7 @@ Os principais _softwares_ instalados com as instruções neste repositório são
 - [`docker`](https://docs.docker.com/engine)
 - [`fzf`](https://github.com/junegunn/fzf)
 - [`gcloud`](https://cloud.google.com/sdk/docs/install)
+- [`gcloud`](https://docs.cloud.google.com/sdk/gcloud)
 - [`gemini-cli`](https://github.com/google-gemini/gemini-cli)
 - [`gh`](https://github.com/cli/cli)
 - [`git-lfs`](https://github.com/git-lfs/git-lfs)
@@ -59,7 +60,7 @@ Os principais _softwares_ instalados com as instruções neste repositório são
 - [`ruff`](https://github.com/astral-sh/ruff)
 - [`shellcheck`](https://github.com/koalaman/shellcheck)
 - [`sqlfluff`](https://github.com/sqlfluff/sqlfluff)
-- [`starship`](https://github.com/starship/starship)
+- [`starship`](https://github.com/starship/starshgitip)
 - [`task`](https://github.com/go-task/task)
 - [`terminal`](https://github.com/microsoft/terminal)
 - [`ty`](https://github.com/astral-sh/ty)
@@ -153,6 +154,7 @@ Baixe e converta as chaves GPG especificadas abaixo, salvando-as no diretório `
 ```bash
 sudo curl --fail "https://download.docker.com/linux/debian/gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/docker.gpg"
 sudo curl --fail "https://cli.github.com/packages/githubcli-archive-keyring.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/gh.gpg"
+sudo curl --fail "https://packages.cloud.google.com/apt/doc/apt-key.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/gcloud.gpg"
 sudo curl --fail "https://apt.fury.io/nushell/gpg.key" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/nushell.gpg"
 ```
 
@@ -163,6 +165,7 @@ Em seguida, sincrone os índices de pacotes com as novas fontes.
 ```bash
 printf "Types: deb\nURIs: https://download.docker.com/linux/debian/\nSuites: trixie\nComponents: stable\nSigned-By: /etc/apt/keyrings/docker.gpg\n" | sudo tee "/etc/apt/sources.list.d/docker.sources"
 printf "Types: deb\nURIs: https://cli.github.com/packages/\nSuites: stable\nComponents: main\nSigned-By: /etc/apt/keyrings/gh.gpg\n" | sudo tee "/etc/apt/sources.list.d/github-cli.sources"
+printf "Types: deb\nURIs: https://packages.cloud.google.com/apt/\nSuites: cloud-sdk\nComponents: main\nSigned-By: /etc/apt/keyrings/gcloud.gpg\n"  | sudo tee "/etc/apt/sources.list.d/google-cloud-sdk.sources"
 printf "Types: deb\nURIs: https://apt.fury.io/nushell/\nSuites: /\nComponents:\nSigned-By: /etc/apt/keyrings/nushell.gpg\n" | sudo tee "/etc/apt/sources.list.d/nushell.sources"
 
 sudo apt update
@@ -173,6 +176,7 @@ Instale os pacotes especificados abaixo.
 ```bash
 sudo apt install --yes "docker-ce" "docker-ce-cli" "containerd.io" "docker-buildx-plugin" "docker-compose-plugin"
 sudo apt install --yes "gh"
+sudo apt install --yes "google-cloud-cli"
 sudo apt install --yes "nushell"
 ```
 
@@ -182,17 +186,6 @@ Adicione o usuário referenciado pela variável `$USER` ao grupo `"docker"`.
 sudo usermod --append --groups "docker" "$USER"
 ```
 
-> Os pacotes especificados abaixo são utilizados apenas em meu trabalho profissional.
-
-```bash
-sudo curl --fail "https://packages.cloud.google.com/apt/doc/apt-key.gpg" | sudo gpg --dearmor --yes --output="/etc/apt/keyrings/gcloud.gpg"
-
-printf "Types: deb\nURIs: https://packages.cloud.google.com/apt/\nSuites: cloud-sdk\nComponents: main\nSigned-By: /etc/apt/keyrings/gcloud.gpg\n"  | sudo tee "/etc/apt/sources.list.d/google-cloud-sdk.sources"
-
-sudo apt update
-
-sudo apt install --yes "google-cloud-cli"
-```
 
 ### `brew`
 
