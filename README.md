@@ -62,10 +62,10 @@ Os principais _softwares_ instalados com as instruções neste repositório são
 - [`starship`](https://github.com/starship/starship)
 - [`task`](https://github.com/go-task/task)
 - [`terminal`](https://github.com/microsoft/terminal)
+- [`ty`](https://github.com/astral-sh/ty)
 - [`uv`](https://github.com/astral-sh/uv)
 - [`winget`](https://github.com/microsoft/winget-cli)
 - [`wsl`](https://learn.microsoft.com/en-us/windows/wsl)
-- [`ty`](https://github.com/astral-sh/ty)
 - [`yaak`](https://github.com/mountain-loop/yaak)
 
 ## `winget`

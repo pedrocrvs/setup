@@ -1,3 +1,4 @@
+astral-sh.ty
 charliermarsh.ruff
 dbcode.dbcode
 esbenp.prettier-vscode

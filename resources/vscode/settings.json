@@ -231,6 +231,10 @@
     "terminalCursor.foreground": "#E6E6E6"
   },
 
+  // astral-sh.ty
+  "ty.importStrategy": "useBundled",
+  "ty.inlayHints.callArgumentNames": false,
+  "ty.inlayHints.variableTypes": false,
 
   // charliermarsh.ruff
   "ruff.configurationPreference": "filesystemFirst",
@@ -257,6 +261,7 @@
   "python.analysis.diagnosticMode": "openFilesOnly",
   "python.analysis.gotoDefinitionInStringLiteral": true,
   "python.analysis.typeCheckingMode": "standard",
+  "python.languageServer": "None",
   "python.terminal.activateEnvironment": false,
 
   // ms-toolsai.jupyter
