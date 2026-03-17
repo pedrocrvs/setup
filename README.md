@@ -65,6 +65,7 @@ Os principais _softwares_ instalados com as instruções neste repositório são
 - [`uv`](https://github.com/astral-sh/uv)
 - [`winget`](https://github.com/microsoft/winget-cli)
 - [`wsl`](https://learn.microsoft.com/en-us/windows/wsl)
+- [`ty`](https://github.com/astral-sh/ty)
 - [`yaak`](https://github.com/mountain-loop/yaak)
 
 ## `winget`
@@ -214,6 +215,7 @@ Instale os pacotes especificados abaixo.
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "shellcheck"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "sqlfluff"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "starship"
+/home/linuxbrew/.linuxbrew/bin/brew install --formula "ty"
 /home/linuxbrew/.linuxbrew/bin/brew install --formula "uv"
 ```
 
