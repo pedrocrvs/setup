@@ -81,3 +81,6 @@ select = [
     "D418",
     "D419",
 ]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"tests/*" = ["S101"]
